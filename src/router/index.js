@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/views/Home/Home';
+import WorkList from '@/views/Work/WorkList';
 
 
 
@@ -12,6 +13,11 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
-    }
+    },
+    {
+      path: '/work_list',
+      name: 'WorkList',
+      component: WorkList
+    },
   ]
 })

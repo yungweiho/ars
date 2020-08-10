@@ -1,44 +1,51 @@
 <template lang="pug">
 .pr
+  .prTitle Projects
+  .prContainer
+    .prCard(v-for="item in projectData" :style="{background: 'url(' + item.pic + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+      .prCardTextBlock  
+        .prCardTitle {{ item.title }}
+        .prCardContent {{ item.subtitle }}
 </template>
 
 <script>
 export default {
   data() {
     return {
-    //   projectData: [
-    //     {
-    //       title: '李國鼎（K.T.）科技與人文藝術創意競賽',
-    //       subtitle: '第14屆得獎作品',
-    //       pic: require(''),
-    //     },
-    //     {
-    //       title: '李國鼎（K.T.）科技與人文藝術創意競賽',
-    //       subtitle: '第15屆得獎作品',
-    //       pic: require(''),
-    //     },
-    //     {
-    //       title: '李國鼎（K.T.）科技與人文藝術創意競賽',
-    //       subtitle: '',
-    //       pic: require(''),
-    //     },
-    //     {
-    //       title: '李國鼎（K.T.）科技與人文藝術創意競賽',
-    //       subtitle: '',
-    //       pic: require(''),
-    //     },
-    //     {
-    //       title: '清華花園',
-    //       subtitle: '校景360度遊園',
-    //       pic: require(''),
-    //     },
-    //     {
-    //       title: 'COVID-19',
-    //       subtitle: '新冠肺炎下的清華',
-    //       pic: require(''),
-    //     },
+      projectData: [
+        {
+          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
+          subtitle: '第15屆得獎作品',
+          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+        },
+        {
+          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
+          subtitle: '第15屆得獎作品',
+          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+        },
+        {
+          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
+          subtitle: '第15屆得獎作品',
+          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+        },
+        {
+          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
+          subtitle: '第15屆得獎作品',
+          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+        },
+        {
+          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
+          subtitle: '第15屆得獎作品',
+          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+        },
+        {
+          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
+          subtitle: '第15屆得獎作品',
+          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'
+        },
         
-    //   ]
+        
+      ]
     }
   }
 }
@@ -50,7 +57,78 @@ export default {
   width: 100%
   height: 70vw
   background-color: white
+  +flexcolumn
+  // justify-items: center
+  align-items: center
+  .prTitle
+    width: 100%
+    font-size: 30px
+    font-weight: bold
+    text-align: center
+    margin-top: 50px
+    letter-spacing: 1.5px
+    color: rgba(#333,0.7)
+  .prContainer
+    // +bb
+    width: 80%
+    max-width: 1693px
+    +flexrow
+    flex-wrap: wrap
+    margin-top: 40px
+    .prCard
+      position: relative
+      width: 28.2%
+      height: 15vw
+      margin-right: 2.5%
+      margin-left: 2.5%
+      margin-bottom: 50px
+      border-radius: 6px
+      max-width: 477px
+      max-height: 320px
+      cursor: pointer
+      transition: 0.5s
 
+      &:hover
+        .prCardTextBlock
+          animation: none
+          transition: 0.5s
+
+          .prCardContent
+            opacity: 1
+            transform: translateY(0%)
+            transition: 0.5s
+
+      .prCardTextBlock
+        width: 100%
+        height: 100%
+        background-color: rgba(#333, 0.5)
+        box-sizing: border-box
+        padding: 25% 0
+        // animation: cardsplight 2s ease infinite
+        transition: 0.5s
+        border-radius: 6px
+
+        .prCardTitle
+          color: white
+          font-size: 20px
+          letter-spacing: 1.5px
+          text-align: center
+        .prCardContent
+          color: white
+          font-size: 20px
+          letter-spacing: 1.5px
+          text-align: center
+          margin-top: 5%
+          opacity: 0
+          transform: translateY(50%)
+          transition: 0.5s
+
+@keyframes cardsplight
+  0%, 100%
+    opacity: 1
+
+  50%
+    opacity: 0
 
 
 </style>

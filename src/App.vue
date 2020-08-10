@@ -2,18 +2,18 @@
 #app
   header.Head(:class="{scroll: slideHeight > 50}")
     nav.MenuBlock(:class="{scroll: slideHeight > 50}")
-      .MenuItem(v-for="item in navData") {{ item.title }}
+      router-link.MenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
   main
     router-view
   footer
 </template>
 
 <script>
-
 export default {
   name: 'app',
   data() {
     return {
+      pass: false,
       slideHeight: null,
       navData: [
         {
@@ -26,7 +26,7 @@ export default {
         },
         {
           title: '作品介紹',
-          url: '',
+          url: '/work_list',
         },
       ]
     }

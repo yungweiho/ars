@@ -10,7 +10,7 @@ import Projects from '@/components/Projects';
 export default {
   components: {
     Slide,
-    Projects
+    Projects,
   }
 
 }
