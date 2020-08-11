@@ -1,7 +1,7 @@
 <template lang="pug">
 .Home
   Slide
-  Projects
+  Projects#project
 </template>
 
 <script>

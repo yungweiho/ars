@@ -15,7 +15,7 @@ export default new Router({
       component: Home
     },
     {
-      path: '/work_list',
+      path: '/work_list/:workid',
       name: 'WorkList',
       component: WorkList
     },

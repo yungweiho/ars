@@ -2,9 +2,9 @@
 #app
   header.Head(:class="{scroll: slideHeight > 50}")
     nav.MenuBlock(:class="{scroll: slideHeight > 50}")
-      router-link.MenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
+      a.MenuItem(v-for="item in navData" :href="item.url") {{ item.title }}
   main
-    router-view
+    router-view(:key="$route.fullPath")
   footer
 </template>
 
@@ -26,7 +26,7 @@ export default {
         },
         {
           title: '作品介紹',
-          url: '/work_list',
+          url: '#project',
         },
       ]
     }
@@ -55,6 +55,9 @@ body, html
   margin: 0
   padding: 0
   overflow-x: hidden
+
+html
+  scroll-behavior: smooth
 #app
   width: 100%
   min-height: 100vh
