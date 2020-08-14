@@ -16,41 +16,41 @@
 
 <script>
 let code = `
-  function setup() {
+  let clr_circle=['#7400B8', '#6930C3', '#5E60CE', '#5390D9', '#4EA8DE', '#48BFE3', '#56CFE1', '#64DFDF', '#72EFDD', '#80FFDB'];
+let circle_light_list=[];
+function setup() {
 	createCanvas(windowWidth, windowHeight);
-	background(0);
+	background(0, 0.01);
+	// frameRate(1)
 }
 
 function draw() {
 	// let bgR = random(0,0.5)
-	background(0)
-	// text(mouseX, 10, 10)
+	background(0, 0.01)
 	translate(width/2, height/2)
-	// rotate(frameCount/1000*PI)
 	cle()
-	// ellipse(mouseX, mouseY, 20, 20);
-	// let an = random(-2,2)
-	// background(0,0,0, 0.5);
-
-	if(mouseX>width/2-250 && mouseX<width/2 + 250 && mouseY > height/2-250 && mouseY < height/2 + 250) {
-		// line(mouseX - width/2, mouseY - height/2, 100*cos(an*PI), 100*sin(an*PI))
+	if(mouseX>width/2-(windowWidth+1000)/2 && mouseX<width/2 + (windowWidth+1000)/2 && mouseY > height/2-(windowWidth+1000)/2 && mouseY < height/2 + (windowWidth+1000)/2) {
 		for(var i = 0; i < 2*PI; i += 0.005*PI) {
-			line(mouseX - width/2, mouseY - height/2, 250*cos(i), 250*sin(i))
-		}
+			line(mouseX - width/2, mouseY - height/2, (windowWidth+1000)/2*cos(i), (windowWidth+1000)/2*sin(i))
+			}
 	} else {
-		// line(0, 0, 100*cos(an*PI), 100*sin(an*PI))
 		for(var i = 0; i < 2*PI; i += 0.005*PI) {
-			line(0, 0, 250*cos(i), 250*sin(i))
+			line(mouseX - width/2, mouseY - height/2, (windowWidth+1000)/2*cos(i), (windowWidth+1000)/2*sin(i))
 		}
 	}
 
 }
 
 function cle() {
+	// blendMode(MULTIPLY);
+	colorMode(HSB)
+	strokeWeight(1)
 	noFill()
-	stroke("#d152f7")
-	ellipse(0,0,500)
+	stroke(frameCount/10%360, 80, 150)
+	ellipse(0,0,windowWidth+1000)
 }
+
+
 `
 export default {
   data() {
