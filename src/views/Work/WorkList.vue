@@ -177,15 +177,272 @@ export default {
               title: '數位動畫組',
               works: [
                 {
-                  title: 'SOMNUS',
-                  description: '《SOMNUS》為一款第一人稱射擊遊戲。本作在第一人稱射擊遊戲的基礎上，融合了動作遊戲常有的完美迴避，讓玩家在享受FPS的射擊感的同時，還能一併體驗到動作遊戲的高靈活度。玩家將扮演本作主角榮格，一名藉由潛入他人的意識，獵殺由潛意識幻化成的夢魘，來治療各種不治之症的密醫；這次，他將潛入一名因故而成為植物人的歌劇女星的意識中，透過找尋到的線索，一步步拼湊出使她甦醒的關鍵，與深藏在背後的陰謀…',
+                  title: '化羽',
+                  description: '隨著民主潮流的推波，女權運動近年來蓬勃發展，全球各地女性自主意識提升，許多女性權益看似逐漸改善，但即便是在二十一世紀今日，仍有許多國家及地區的傳統習俗或宗教文化，對女性平權的議題設下重重枷鎖，甚至視為異端禁止討論參與。藉由本次的動畫短片創作「化羽」，希望透過故事中父權至上的封建社會背景，傳達出女性自主意識的覺醒，期盼觀眾能瞭解爭取自由與權益的女性們，我們應給更多的尊重同理與包容。在製作及畫面技術上，小組三人發揮長才，使用PS、AI等繪圖軟體設計出人物以及場景；也使用了Cilp來繪製出逐格動畫，將所有繪製好的場景、角色、動態逐格結合進AE，使用合成及特效來呈現出完整的作品。',
+                  authors: [
+                    {
+                      name: '吳盈潔',
+                      school: '樹德科技大學',
+                      major: '動畫與遊戲設計系'
+                    },
+                    {
+                      name: '張敬恩',
+                      school: '樹德科技大學',
+                      major: '動畫與遊戲設計系'
+                    },
+                    {
+                      name: '柯雅琦',
+                      school: '樹德科技大學',
+                      major: '動畫與遊戲設計系'
+                    },
+                  ],
                   pic: [
-                    require('../../assets/KT15/game/somnus/somnus_01.png'),
-                    require('../../assets/KT15/game/somnus/somnus_02.png'),
-                    require('../../assets/KT15/game/somnus/somnus_03.png'),
-                    require('../../assets/KT15/game/somnus/somnus_04.png'),
+                    require('../../assets/KT15/animate/hua/hua_01.png'),
+                    require('../../assets/KT15/animate/hua/hua_02.png'),
+                    require('../../assets/KT15/animate/hua/hua_03.png'),
+                    require('../../assets/KT15/animate/hua/hua_04.png'),
+                    require('../../assets/KT15/animate/hua/hua_05.png'),
+                    require('../../assets/KT15/animate/hua/hua_06.png'),
                   ]
-                }
+                },
+                {
+                  title: '沉沒',
+                  description: '故事描述一名女高中生被班上的同學利用、冷落的日常生活。在這樣的生活狀況之下主角逐漸感到絕望，並因壓力提升而開始產生了與深海有關的幻象。',
+                  authors: [
+                    {
+                      name: '羅巧涵',
+                      school: '台南應用科技大學',
+                      major: '多媒體動畫系'
+                    },
+                    {
+                      name: '余聿平',
+                      school: '台南應用科技大學',
+                      major: '多媒體動畫系'
+                    },{
+                      name: '陳玟憶',
+                      school: '台南應用科技大學',
+                      major: '多媒體動畫系'
+                    },{
+                      name: '陳依君',
+                      school: '台南應用科技大學',
+                      major: '多媒體動畫系'
+                    },{
+                      name: '冀心嵐',
+                      school: '台南應用科技大學',
+                      major: '多媒體動畫系'
+                    },{
+                      name: '黃阡莉',
+                      school: '台南應用科技大學',
+                      major: '多媒體動畫系'
+                    },
+                  ],
+                  pic: [
+                    require('../../assets/KT15/animate/chen/chen_01.png'),
+                    require('../../assets/KT15/animate/chen/chen_02.png'),
+                    require('../../assets/KT15/animate/chen/chen_03.png'),
+                  ]
+                },
+                {
+                  title: '妳只在乎妳在乎的',
+                  description: '本作以導演好友的生命經驗， 發現他對於母愛總是充滿渴望，可是當他真正面對母親時，卻又無法拉近彼此的距離，隨著時光飛逝， 兩者都錯過挽回的機會， 留下無奈。透過回憶了解母親從未給予小孩真正想要的、運用孩童視角劃分現實與過去的時間軸與情緒氛圍， 將理性和感性連同環境比例區隔開、把影片溫度與童趣感用手繪筆觸加上紙質疊加出來、盡可能將手繪動畫質感還原到電腦動畫媒材上。',
+                  authors: [
+                    {
+                      name: '張䕒澤',
+                      school: '國立臺南藝術大學',
+                      major: '動畫藝術與影像美學研究所'
+                    },
+                  ],
+                  pic: [
+                    require('../../assets/KT15/animate/mother/mother_01.png'),
+                    require('../../assets/KT15/animate/mother/mother_02.png'),
+                    require('../../assets/KT15/animate/mother/mother_03.png'),
+                    require('../../assets/KT15/animate/mother/mother_04.png'),
+                    require('../../assets/KT15/animate/mother/mother_05.png'),
+                  ]
+                },
+                {
+                  title: '苒冉',
+                  description: '西元2048年，在經歷過第三次世界大戰和人類對地球造成不可逆汙染的未來，風雲變色，失序的世界中使得大部分土地失去生機，徒留受到核汙染基因變異的生物和極少數散落各地的倖存者人類。身為其中一人的主角獨自生活在末日後的世界，從小就對機械有興趣，擅長東拼西湊組裝各種零件的他，在那裡為了實現自己的心願四處奔走搜集零件，完成一件可以讓意識回到過去的機器，接著由過去記憶中的場景交代主角的身世背景，並藉此響應環保議題。動畫為3D與2D混合使用的風格，場景為3D建模而角色則為2D繪製，藉由風格差異區隔兩者，突顯出主角與末日後的世界格格不入。',
+                  authors: [
+                    {
+                      name: '王安懿',
+                      school: '國立臺北教育大學',
+                      major: '藝術與造形設計學系'
+                    },
+                    {
+                      name: '王琬琇',
+                      school: '國立臺北教育大學',
+                      major: '藝術與造形設計學系'
+                    },
+                  ],
+                  pic: [
+                    require('../../assets/KT15/animate/zan/zan_01.png'),
+                    require('../../assets/KT15/animate/zan/zan_02.png'),
+                    require('../../assets/KT15/animate/zan/zan_03.png'),
+                    require('../../assets/KT15/animate/zan/zan_04.png'),
+                  ]
+                },
+                {
+                  title: '浮標',
+                  description: '浮標，是一種簡易的標地物，隨著浮動，它所框出的不確定範圍被人們作為一種象徵性的空間代表，這讓我們對空間有了更多的解讀性。此故事中將以浮標的概念來揭示生活中的人與人之間的空間關係。主角是一名游泳選手，故事描述著主角在與人相處時，透過分類、預想他人行為，使自己能夠解讀社會上所發生的事情。但在片段的事件中卻產生了框架時而明確時而模糊的狀態，最後主角在理解框架的形式後，奮力地跳入泳池中…。以「水」為意象，象徵人與人相處因立場不同而產生時而明確，時而模糊的矛盾現象，我們使用3D的技術呈現現實與抽象的空間關係，更輔以2D的特色，帶出作品的溫度與深度，來呈現「框架」的核心概念！',
+                  authors: [
+                    {
+                      name: '沈莉臻',
+                      school: '國立臺灣藝術大學',
+                      major: '多媒體動畫藝術學系'
+                    },
+                    {
+                      name: '張家寧',
+                      school: '國立臺灣藝術大學',
+                      major: '多媒體動畫藝術學系'
+                    },
+                    {
+                      name: '黃芊華',
+                      school: '國立臺灣藝術大學',
+                      major: '多媒體動畫藝術學系'
+                    },
+                  ],
+                  pic: [
+                    require('../../assets/KT15/animate/phoo/phoo_01.png'),
+                    require('../../assets/KT15/animate/phoo/phoo_02.png'),
+                    require('../../assets/KT15/animate/phoo/phoo_03.png'),
+                    require('../../assets/KT15/animate/phoo/phoo_04.png'),
+                  ]
+                },
+                {
+                  title: '森生',
+                  description: '發想與動機:PM2.5是一種空氣污染，而當人們處在霧霾環境中呼吸,那些過小的顆粒無法被口罩抑制或是人體產生的防禦機制給阻擋在外,他將導致呼吸困難和增加肺部疾病的風險。主旨:人們的呼吸是需要森林予以的淨化,眾多樹苗才能成林,可綠植卻隨著發展的過程而漸失,在這個世代裡,如何取得平衡並使人反思人與自然之間的關係是件相當重要的議題。理念:影片中透過實體化霧霾以有趣的互動呈現出主角、植物及霧霾三方,相互制衡的關係,來讓人省思和探討自然與發展之間可否取得平衡,並讓每個人透過小小的舉動來改善及預防空氣汙染,愛護森林及減少砍后,讓我們在未來能有個可以好好深呼吸的地方。',
+                  authors: [
+                    {
+                      name: '彭俞瑄',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系動畫組'
+                    },
+                    {
+                      name: '翁嘉妤',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系動畫組'
+                    },
+                    {
+                      name: '梁雅鈞',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系動畫組'
+                    },
+                    {
+                      name: '江家均',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系動畫組'
+                    },
+                    {
+                      name: '江家均',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系動畫組'
+                    },
+                    {
+                      name: '簡瑜君',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系動畫組'
+                    },
+                  ],
+                  pic: [
+                    require('../../assets/KT15/animate/san/san_01.png'),
+                    require('../../assets/KT15/animate/san/san_02.png'),
+                    require('../../assets/KT15/animate/san/san_03.png'),
+                    require('../../assets/KT15/animate/san/san_04.png'),
+                  ]
+                },
+                {
+                  title: '綻放之種',
+                  description: '綻放之種(2020) 以女性的角度出發，記錄少女在初次經歷戀愛的過程中，愛情悄然進入心房的心境描寫。以植物作為女性符號象征的複合式媒材，種子代表生命的誕生與再生，植物透過種子把生命延續到未來，愛情的旅程也是如此。將愛情最原始的形態視覺化，試圖尋找一種情感關係中的心靈寄託，脫離東方社會傳統思潮的束縛，從種子蛻變為小芽茁壯成長。每個女人都有愛與被愛的權利，請為自己勇於追逐愛情感到驕傲吧！',
+                  description_en: 'Blüte (2020) explores the perspective of a woman as she experiences the first tinge of love as it colors her teenage heart for the first time. Plants have been chosen the composite medium of choice to symbolize feminity. Seeds represents birth and rebirth. Plants extend life through seeds into the future, and so does the journey of love. Visualize the most primitive form of love, and try to find the spiritual core of a relationship. Break through traditional Eastern notions of love, and let the seeds grow valiantly into a budding plant. Every woman has the right to love and be loved, so please be proud of your courage to chase after love!',
+                  authors: [
+                    {
+                      name: '潘妍希',
+                      school: '國立臺灣藝術大學',
+                    },
+                    {
+                      name: '劉靜怡',
+                      school: '國立臺灣藝術大學',
+                    },
+                  ],
+                  pic: [
+                    require('../../assets/KT15/animate/zhan/zhan_01.png'),
+                    require('../../assets/KT15/animate/zhan/zhan_02.png'),
+                    require('../../assets/KT15/animate/zhan/zhan_03.png'),
+                    require('../../assets/KT15/animate/zhan/zhan_04.png'),
+                  ]
+                },
+                {
+                  title: '餘溫',
+                  description: '「大體老師」，是指捐贈自己的遺體，供醫學院學生在解剖課上使用的亡者，是學生的第一位手術患者兼重要的老師。藉由作品中大體老師和學生間的特殊感情，破除大眾對大體解剖課的偏見和不安，傳達遺體捐贈的真正意義。',
+                  authors: [
+                    {
+                      name: '楊皓茨',
+                      school: '國立臺灣藝術大學',
+                      major: '多媒體動畫藝術學系'
+                    },
+                    {
+                      name: '張沄寧',
+                      school: '國立臺灣藝術大學',
+                      major: '多媒體動畫藝術學系'
+                    },
+                    {
+                      name: '紀宥亘',
+                      school: '國立臺灣藝術大學',
+                      major: '多媒體動畫藝術學系'
+                    },
+                    {
+                      name: '邱郁茜',
+                      school: '國立臺灣藝術大學',
+                      major: '多媒體動畫藝術學系'
+                    },
+                  ],
+                  pic: [
+                    require('../../assets/KT15/animate/yui/yui_01.png'),
+                    require('../../assets/KT15/animate/yui/yui_02.png'),
+                    require('../../assets/KT15/animate/yui/yui_03.png'),
+                    require('../../assets/KT15/animate/yui/yui_04.png'),
+                    require('../../assets/KT15/animate/yui/yui_05.png'),
+                  ]
+                },
+                {
+                  title: '願',
+                  description: '天燈自古以來有著傳遞訊息、祈福許願的作用，在台灣並列為「北天燈，南蜂炮，東寒單」三大民俗之一的美名，成為百年歷史的在地習俗。而這些天燈都承載著我們親手寫下的祝福與希望，作為心靈上的寄託，向天祈禱著希望心中所想的願望能成真。主要在敘述在每個人心中都曾有過可能是天馬行空又或是不可能實現的願望，正因為如此，讓我們對於未來的目標更加明確，在過程中可能失敗，卻還是勇往直前，『願』你我都能朝著自己的願望前進。我們也希望透過本片讓世界各地的人了解天燈除了能許下人們心中的願望，並且能知道放天燈的傳統文化，傳承了中華文化裡美好的習俗。',
+                  authors: [
+                    {
+                      name: '楊宛蓁',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系'
+                    },
+                    {
+                      name: '邱昱絜',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系'
+                    },
+                    {
+                      name: '尹新瑋',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系'
+                    },
+                    {
+                      name: '劉炳成',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系'
+                    },
+                    {
+                      name: '蔡卉婷',
+                      school: '南臺科技大學',
+                      major: '視覺傳達設計系'
+                    },
+                    
+                  ],
+                  pic: [
+                    require('../../assets/KT15/animate/yuang/yuang_01.png'),
+                    require('../../assets/KT15/animate/yuang/yuang_02.png'),
+                    require('../../assets/KT15/animate/yuang/yuang_03.png'),
+                    require('../../assets/KT15/animate/yuang/yuang_04.png'),
+                  ]
+                },
               ]
             },
             {
