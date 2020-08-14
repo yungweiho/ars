@@ -3,14 +3,15 @@
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true")
     .wlTitle {{ work_list_title }}
-  .wlBlock(v-if="$route.params.workid == 1")
+  .wlBlock(v-if="$route.params.workid == 1 && $route.path == '/work_list/' + $route.params.workid")
     .wlTabBlock group
       .wlTab(v-for="item in KT_gorup_list" :key="item.title" :class="{select: $route.query.group === item.title}" @click="$router.push({query: {group: item.title}})") {{ item.title }}
-  .wlCardBlock
-    .wlCard(v-for="item in show_works" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+  .wlCardBlock(v-if="$route.path == '/work_list/' + $route.params.workid")
+    router-link.wlCard(v-for="item in show_works" :to="'/work_list/' + $route.params.workid + '/work/' + item.title" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
         .wlCardTitle {{ item.title }}
         .wlCardSubtitle 
+  router-view(:work_list="workList")
         
 </template>
 

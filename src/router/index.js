@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/views/Home/Home';
 import WorkList from '@/views/Work/WorkList';
+import Work from '@/views/Work/Work';
 
 
 
@@ -17,7 +18,14 @@ export default new Router({
     {
       path: '/work_list/:workid',
       name: 'WorkList',
-      component: WorkList
+      component: WorkList,
+      children: [
+        {
+          path: 'work/:workname',
+          name: 'Work',
+          component: Work
+        }
+      ]
     },
   ]
 })
