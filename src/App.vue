@@ -6,6 +6,8 @@
   main
     router-view(:key="$route.fullPath")
   footer
+    .Foot
+      .FootText 國立清華大學
 </template>
 
 <script>
@@ -100,5 +102,17 @@ html
         letter-spacing: 1.5px
         font-size: 15px
         cursor: pointer
-
+.Foot
+  width: 100%
+  height: 100px
+  background-color: black
+  +flexcolumn
+  align-items: center
+  margin-top: 50px
+  box-sizing: border-box
+  padding: 40px
+  .FootText
+    color: #fff
+    font-size: 15px
+    letter-spacing: 1.5px
 </style>
