@@ -24,7 +24,7 @@ export default {
         },
         {
           title: '展覽簡介',
-          url: '',
+          url: '#introduction',
         },
         {
           title: '360度逛展覽',

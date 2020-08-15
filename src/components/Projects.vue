@@ -109,7 +109,7 @@ export default {
         height: 100%
         background-color: rgba(#333, 0.5)
         box-sizing: border-box
-        padding: 25% 0
+        padding: 25% 10px
         // animation: cardsplight 2s ease infinite
         transition: 0.5s
         border-radius: 6px
