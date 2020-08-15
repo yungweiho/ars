@@ -1,7 +1,7 @@
 <template lang="pug">
 .wl
   .wlBanner
-    //- p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
+    p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
     .wlTitle {{ work_list_title }}
   .wlBlock(v-if="$route.params.workid == 1 && $route.path == '/work_list/' + $route.params.workid")
     .wlTabBlock group
@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import pvm from 'p5-vue-mirror'
-
 let code = `
   let clr_circle=['#7400B8', '#6930C3', '#5E60CE', '#5390D9', '#4EA8DE', '#48BFE3', '#56CFE1', '#64DFDF', '#72EFDD', '#80FFDB'];
 let circle_light_list=[];
@@ -56,9 +54,6 @@ function cle() {
 
 `
 export default {
-  components: {
-    pvm
-  },
   data() {
     return {
       p5_file: code,
@@ -864,8 +859,14 @@ export default {
       ]
     }
   },
+  created() {
+    
+  },
   mounted() {
-
+    // 如果是點KT就給第一組group
+    if (this.$route.fullPath === '/work_list/1') {
+      this.$router.push({query: {group: '數位遊戲組'}})
+    }
   },
   computed: {
     // KT的組別列表

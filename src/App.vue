@@ -17,6 +17,10 @@ export default {
       slideHeight: null,
       navData: [
         {
+          title: 'Home',
+          url: '/',
+        },
+        {
           title: '展覽簡介',
           url: '',
         },
@@ -77,7 +81,7 @@ html
     .MenuBlock
       position: absolute
       background-color: rgba(#fff, 0.7)
-      width: 30vw
+      width: 40vw
       height: 50px
       right: 0
       z-index: 9
