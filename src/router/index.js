@@ -3,6 +3,8 @@ import Router from 'vue-router';
 import Home from '@/views/Home/Home';
 import WorkList from '@/views/Work/WorkList';
 import Work from '@/views/Work/Work';
+import Projects from '@/components/Projects';
+import Intro from '@/components/Intro';
 
 
 
@@ -26,6 +28,16 @@ export default new Router({
           component: Work
         }
       ]
+    },
+    {
+      path: '/introduction',
+      name: 'Intro',
+      component: Intro
+    },
+    {
+      path: '/projects',
+      name: 'Projects',
+      component: Projects
     },
   ]
 })

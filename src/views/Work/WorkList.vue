@@ -907,8 +907,8 @@ export default {
 <style lang="sass" scoped>
 @import '@/assets/mixin.sass'
 .p5
-  +ie
-    display: none
+  // +ie
+  //   display: none
 .wl
   width: 100%
   +flexcolumn

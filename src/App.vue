@@ -2,7 +2,7 @@
 #app
   header.Head(:class="{scroll: slideHeight > 50}")
     nav.MenuBlock(:class="{scroll: slideHeight > 50}")
-      a.MenuItem(v-for="item in navData" :href="item.url") {{ item.title }}
+      router-link.MenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
   main
     router-view(:key="$route.fullPath")
   footer
@@ -24,7 +24,7 @@ export default {
         },
         {
           title: '展覽簡介',
-          url: '#introduction',
+          url: '/introduction',
         },
         {
           title: '360度逛展覽',
@@ -32,7 +32,7 @@ export default {
         },
         {
           title: '作品介紹',
-          url: '#project',
+          url: '/projects',
         },
       ]
     }
@@ -43,8 +43,11 @@ export default {
   methods:{
     scroll() {
     this.slideHeight = window.scrollY || window.pageYOffset || document.documentElement.scrollTop
-    }
+    },
   },
+  computed: {
+    
+  }
   
 }
 </script>
@@ -108,7 +111,7 @@ html
   background-color: black
   +flexcolumn
   align-items: center
-  margin-top: 50px
+  // margin-top: 50px
   box-sizing: border-box
   padding: 40px
   .FootText
