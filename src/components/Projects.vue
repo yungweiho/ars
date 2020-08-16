@@ -1,5 +1,7 @@
 <template lang="pug">
 .pr
+  .prBanner
+    p5-vue-mirror(v-model="banner" :hidecode="true" :enableMotion="true")
   .prTitle Projects
   .prContainer
     router-link.prCard(v-for="item in projectData" :to="item.url" :key="item.title" :style="{background: 'url(' + item.pic + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
@@ -9,9 +11,35 @@
 </template>
 
 <script>
+let code = `
+ function setup() {
+	createCanvas(windowWidth, windowHeight);
+	background(100);
+}
+
+function draw() {
+	background(0)
+	noStroke()
+	// colorMode(HSB)
+	translate(width/2,height/2)
+	rotate(50)
+	var clr1 = color("#03fce8");
+	var clr2 = color("#ff00bb");
+	for(var o=-height;o<height;o+=80){
+		for(var i=-width;i<width;i+=10){
+			let delta = map(i,-width,width,0,10)
+			let ratio = map(sin(frameCount/40 +o+delta),-1,1,0,1)
+			let mix_clr = lerpColor(clr1, clr2, ratio)
+			fill(mix_clr)
+			ellipse(i,ratio +o,(sin(frameCount/40+delta +o/100)+1)*30)
+		}
+	}
+}
+`
 export default {
   data() {
     return {
+      banner: code,
       projectData: [
         {
           title: '李國鼎（K.T.）科技與人文藝術創意競賽',
@@ -56,16 +84,30 @@ export default {
   }
 }
 </script>
-
+<style lang="sass">
+@import '@/assets/mixin.sass'
+.pr
+  iframe
+    width: 100%
+    height: 15vw
+    position: absolute
+    +phone
+      height: 100px
+</style>
 <style lang="sass" scoped>
 @import '@/assets/mixin.sass'
 .pr
   width: 100%
-  height: 70vw
+  // height: 70vw
   background-color: white
   +flexcolumn
   // justify-items: center
   align-items: center
+  .prBanner
+    width: 100%
+    height: 15vw
+    +phone
+      height: 100px
   .prTitle
     width: 100%
     font-size: 30px
@@ -73,7 +115,7 @@ export default {
     text-align: center
     margin-top: 50px
     letter-spacing: 1.5px
-    color: rgba(#333,0.7)
+    // color: rgba(#333,0.7)
   .prContainer
     // +bb
     width: 80%

@@ -17,38 +17,31 @@
 
 <script>
 let code = `
-  let clr_circle=['#7400B8', '#6930C3', '#5E60CE', '#5390D9', '#4EA8DE', '#48BFE3', '#56CFE1', '#64DFDF', '#72EFDD', '#80FFDB'];
-let circle_light_list=[];
+  var colors = ["#136734","#138140","#EC7E28","#382B76","#874910", "#417652", "#5FAB70", "#F0882D", "#6B4DA8", "#956E4B"]
+
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-	background(0, 0.01);
-	// frameRate(1)
+	background(0);
+	frameRate(5)
 }
 
 function draw() {
-	// let bgR = random(0,0.5)
-	background(0, 0.01)
-	translate(width/2, height/2)
-	cle()
-	if(mouseX>width/2-(windowWidth+1000)/2 && mouseX<width/2 + (windowWidth+1000)/2 && mouseY > height/2-(windowWidth+1000)/2 && mouseY < height/2 + (windowWidth+1000)/2) {
-		for(var i = 0; i < 2*PI; i += 0.005*PI) {
-			line(mouseX - width/2, mouseY - height/2, (windowWidth+1000)/2*cos(i), (windowWidth+1000)/2*sin(i))
-			}
-	} else {
-		for(var i = 0; i < 2*PI; i += 0.005*PI) {
-			line(mouseX - width/2, mouseY - height/2, (windowWidth+1000)/2*cos(i), (windowWidth+1000)/2*sin(i))
-		}
+	background(0);
+	// blendMode(SCREEN)
+	noStroke()
+	translate(width/2,height/2)
+	var clr = random(colors)
+	fill(clr)
+	// ellipse(random(-5,width+5), random(-5,height+5), random(0,100));
+	for(var i=0;i<500;i++){
+		let ang = i/10+ frameCount/50
+		let r = i + noise(i/10)*map(mouseX,0,width,0,100)
+		// rect(cos(ang)*r,sin(ang)*r,50)
+		ellipse(cos(ang)*r,sin(ang)*r, random(0,30))
+		fill(clr,80,80)
+		textSize(20)
+		// text("HELLO"[i%5],cos(ang)*r,sin(ang)*r)
 	}
-
-}
-
-function cle() {
-	// blendMode(MULTIPLY);
-	colorMode(HSB)
-	strokeWeight(1)
-	noFill()
-	stroke(frameCount/10%360, 80, 150)
-	ellipse(0,0,windowWidth+1000)
 }
 
 

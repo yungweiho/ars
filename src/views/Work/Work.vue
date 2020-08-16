@@ -5,7 +5,9 @@
       .line_top
       .workName {{ $route.params.workname }}
       .line_top
-    .workSlideBlock(v-for="(item, i) in work_item.pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+    .workSlideContainer
+      transition(name="fade" mode="out-in")
+        .workSlideBlock(v-for="(item, i) in work_item.pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .workSlidePrev(@click="p === 0? p = work_item.pic.length-1 : p--")
         .line1
         .line2
@@ -89,52 +91,55 @@ export default {
     // margin-top: 10px
   
   
-    
+.workSlideContainer
+  width: 100%
+  position: relative
 
 .workSlideBlock
+  position: absolute
   width: 100%
   height: 40vw
   position: relative
-  .workSlidePrev
-    position: absolute
-    top: 50%
-    left: 2%
-    cursor: pointer
-    .line1
-      border-radius: 30%
-      width: 3px
-      height: 20px
-      background-color: #fff
-      transform: rotate(45deg)
-      box-shadow: 1px 1px 6px 3px rgba(#333, 0.7)
-    .line2
-      border-radius: 30%
-      width: 3px
-      height: 20px
-      background-color: #fff
-      transform: rotate(-45deg)
-      margin-top: -8px
-      box-shadow: -1px 3px 6px 3px rgba(#333, 0.7)
-  .workSlideNext
-    position: absolute
-    top: 50%
-    right: 2%
-    cursor: pointer
-    .line3
-      border-radius: 30%
-      width: 3px
-      height: 20px
-      background-color: #fff
-      transform: rotate(-45deg)
-      box-shadow: 1px 1px 6px 3px rgba(#333, 0.7)
-    .line4
-      border-radius: 30%
-      width: 3px
-      height: 20px
-      background-color: #fff
-      transform: rotate(45deg)
-      margin-top: -8px
-      box-shadow: -1px 3px 6px 3px rgba(#333, 0.7)
+.workSlidePrev
+  position: absolute
+  top: 50%
+  left: 2%
+  cursor: pointer
+  .line1
+    border-radius: 30%
+    width: 3px
+    height: 20px
+    background-color: #fff
+    transform: rotate(45deg)
+    box-shadow: 1px 1px 6px 3px rgba(#333, 0.7)
+  .line2
+    border-radius: 30%
+    width: 3px
+    height: 20px
+    background-color: #fff
+    transform: rotate(-45deg)
+    margin-top: -8px
+    box-shadow: -1px 3px 6px 3px rgba(#333, 0.7)
+.workSlideNext
+  position: absolute
+  top: 50%
+  right: 2%
+  cursor: pointer
+  .line3
+    border-radius: 30%
+    width: 3px
+    height: 20px
+    background-color: #fff
+    transform: rotate(-45deg)
+    box-shadow: 1px 1px 6px 3px rgba(#333, 0.7)
+  .line4
+    border-radius: 30%
+    width: 3px
+    height: 20px
+    background-color: #fff
+    transform: rotate(45deg)
+    margin-top: -8px
+    box-shadow: -1px 3px 6px 3px rgba(#333, 0.7)
 .workSlideOtherPicBlock
   width: 100%
   +flexrow

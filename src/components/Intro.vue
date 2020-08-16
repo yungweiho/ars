@@ -8,29 +8,32 @@
 </template>
 
 <script>
-let code = `
+let code = 
+`
+let posZ = 0;
 function setup() {
 	createCanvas(windowWidth, windowHeight);
-	background(100);
+	background(0);
 }
 
 function draw() {
+  
+  colorMode(HSB)
+	let clr1 = color(frameCount/100%100, 100, 100);
+	let clr2 = color(frameCount/100%360, 100, 100);
+	noFill();
 	background(0)
-	noStroke()
-	// colorMode(HSB)
-	translate(width/2,height/2)
-	rotate(50)
-	var clr1 = color("#03fce8");
-	var clr2 = color("#ff00bb");
-	for(var o=-height;o<height;o+=80){
-		for(var i=-width;i<width;i+=10){
-			let delta = map(i,-width,width,0,10)
-			let ratio = map(sin(frameCount/40 +o+delta),-1,1,0,1)
-			let mix_clr = lerpColor(clr1, clr2, ratio)
-			fill(mix_clr)
-			ellipse(i,ratio +o,(sin(frameCount/40+delta +o/100)+1)*30)
+	for (var i = 0; i < 100; i++) {
+		let mix_clr = lerpColor(clr1, clr2, 1/i*10)
+		stroke(color('white'));
+		beginShape();
+		for(var posX = -5; posX <= width + 5; posX ++) {
+			var posY = map(noise(posX*0.001, i * 0.01, posZ),0,1,0,height);
+			vertex(posX, posY);
 		}
+		endShape();
 	}
+	posZ += 0.05
 }
 `
 export default {
@@ -50,6 +53,8 @@ export default {
     height: 15vw
     position: absolute
     top: 0
+    +phone
+      height: 100px
     // z-index: 100
 </style>
 <style lang="sass" scoped>

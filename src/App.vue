@@ -3,8 +3,14 @@
   header.Head(:class="{scroll: slideHeight > 50}")
     nav.MenuBlock(:class="{scroll: slideHeight > 50}")
       router-link.MenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
+    .SmallMenuIcon(@click="small_menu = !small_menu")
+      .line1(:class="{push: small_menu === true}")
+      .line2(:class="{push: small_menu === true}")
+    .SmallMenuBlock(:class="{push: small_menu === true}")
+      router-link.SmallMenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
   main
-    router-view(:key="$route.fullPath")
+    transition(name="fade" mode="out-in")
+      router-view(:key="$route.fullPath")
   footer
     .Foot
       .FootText 國立清華大學
@@ -17,6 +23,8 @@ export default {
     return {
       pass: false,
       slideHeight: null,
+      // small menu on/off
+      small_menu: false,
       navData: [
         {
           title: 'Home',
@@ -95,6 +103,8 @@ html
       padding: 15px
       box-sizing: border-box
       border-radius: 3px
+      +pad
+        display: none
       &.scroll
         background-color: initial
         .MenuItem
@@ -118,4 +128,66 @@ html
     color: #fff
     font-size: 15px
     letter-spacing: 1.5px
+
+.SmallMenuIcon
+  position: relative
+  width: 50px
+  height: 50px
+  background-color: rgba(#fff, 0.5)
+  border-radius: 6px
+  position: absolute
+  right: 20px
+  top: 20px
+  +flexcolumn
+  align-items: center
+  justify-content: space-around
+  box-sizing: border-box
+  padding: 12px 0
+  display: none
+  +pad
+    display: flex
+
+
+  .line1
+    width: 70%
+    border-top: solid 5px rgba(black, 0.7)
+    transition: 0.3s
+    transform-origin: 23% 100%
+    &.push
+      transform: rotate(45deg)
+      transition: 0.3s
+
+  .line2
+    width: 70%
+    border-top: solid 5px rgba(black, 0.7)
+    transition: 0.3s
+    transform-origin: 30% 20%
+    &.push
+      transform: rotate(-45deg)
+      transition: 0.3s
+.SmallMenuBlock
+  position: fixed
+  width: 200px
+  height: 1000px
+  background-color: rgba(#fff, 1)
+  top: 100px
+  right: 0
+  +flexcolumn
+  align-items: center
+  box-sizing: border-box
+  padding: 50px 0
+  transform: translateX(100%)
+  transition: 0.3s
+  display: none
+  +pad
+    display: flex
+
+  &.push
+    transform: translateX(0)
+    transition: 0.3s
+  
+  .SmallMenuItem
+    font-size: 18px
+    letter-spacing: 1.5px
+    margin-bottom: 20px
 </style>
