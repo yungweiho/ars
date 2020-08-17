@@ -7,11 +7,11 @@
     .wlTabBlock group
       .wlTab(v-for="item in KT_gorup_list" :key="item.title" :class="{select: $route.query.group === item.title}" @click="$router.push({query: {group: item.title}})") {{ item.title }}
   .wlCardBlock(v-if="$route.path == '/work_list/' + $route.params.workid")
-    router-link.wlCard(v-for="item in show_works" :to="'/work_list/' + $route.params.workid + '/work/' + item.title" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+    router-link.wlCard(v-for="(item, i) in show_works" :key="$route.query.group" :to="'/work_list/' + $route.params.workid + '/work/' + item.title" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
         .wlCardTitle {{ item.title }}
         .wlCardSubtitle 
-  router-view(:work_list="workList")
+  router-view(:work_list="workList" :key="$route.fullPath")
         
 </template>
 
@@ -906,6 +906,8 @@ export default {
   width: 100%
   +flexcolumn
   align-items: center
+  box-sizing: border-box
+  padding: 0 0 200px 0
   .wlBanner
     width: 100%
     height: 15vw

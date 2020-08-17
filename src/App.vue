@@ -10,7 +10,7 @@
       router-link.SmallMenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
   main
     transition(name="fade" mode="out-in")
-      router-view(:key="$route.fullPath")
+      router-view(:key="$route.path")
   footer
     .Foot
       .FootText 國立清華大學
