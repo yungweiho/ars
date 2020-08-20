@@ -19,6 +19,7 @@
     "regenerator-runtime": "^0.13.7",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.2",
+    "three": "^0.119.1",
     "vue": "^2.6.11",
     "vue-router": "^3.4.2"
   },
@@ -29,6 +30,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "photo-sphere-viewer": "^4.0.6",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

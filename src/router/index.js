@@ -5,6 +5,7 @@ import WorkList from '@/views/Work/WorkList';
 import Work from '@/views/Work/Work';
 import Projects from '@/components/Projects';
 import Intro from '@/components/Intro';
+import vi from '@/components/vi';
 
 
 
@@ -38,6 +39,11 @@ export default new Router({
       path: '/projects',
       name: 'Projects',
       component: Projects
+    },
+    {
+      path: '/vi',
+      name: 'vi',
+      component: vi
     },
   ]
 })
