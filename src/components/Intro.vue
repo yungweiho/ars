@@ -23,7 +23,7 @@ function draw() {
 	let clr2 = color(frameCount/100%360, 100, 100);
 	noFill();
 	background(0)
-	for (var i = 0; i < 100; i++) {
+	for (var i = 0; i < 120; i+=3) {
 		let mix_clr = lerpColor(clr1, clr2, 1/i*10)
 		stroke(color('white'));
 		beginShape();
