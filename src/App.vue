@@ -36,7 +36,7 @@ export default {
         },
         {
           title: '360度逛展覽',
-          url: '',
+          url: '/map',
         },
         {
           title: '作品介紹',

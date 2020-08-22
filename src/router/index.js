@@ -5,7 +5,8 @@ import WorkList from '@/views/Work/WorkList';
 import Work from '@/views/Work/Work';
 import Projects from '@/components/Projects';
 import Intro from '@/components/Intro';
-import vi from '@/components/vi';
+import Sphere from '@/views/Sphere/Sphere';
+import Map from '@/views/Sphere/Map';
 
 
 
@@ -41,9 +42,15 @@ export default new Router({
       component: Projects
     },
     {
-      path: '/vi',
-      name: 'vi',
-      component: vi
+      path: '/sphere',
+      name: 'Sphere',
+      component: Sphere
     },
+    {
+      path: '/map',
+      name: 'Map',
+      component: Map
+    },
+    
   ]
 })

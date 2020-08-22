@@ -17,8 +17,6 @@
 
 <script>
 let code = `
-  var colors = ["#136734","#138140","#EC7E28","#382B76","#874910", "#417652", "#5FAB70", "#F0882D", "#6B4DA8", "#956E4B"]
-
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(0);
@@ -28,22 +26,26 @@ function setup() {
 function draw() {
 	background(0);
 	// blendMode(SCREEN)
-	noStroke()
+	// noStroke()
 	translate(width/2,height/2)
-	var clr = random(colors)
-	fill(clr)
+	// var ratio = map(frameCount%50, 0, 49, 0, 1)
+	// var clr1 = color('#fff')
+	// var clr2 = color('#a6a6a6')
+	// var mix_clr = lerpColor(clr1, clr2, ratio)
+
+	fill(color('#707070'))
 	// ellipse(random(-5,width+5), random(-5,height+5), random(0,100));
-	for(var i=0;i<500;i++){
+	for(var i=0;i<300;i++){
 		let ang = i/10+ frameCount/50
 		let r = i + noise(i/10)*map(mouseX,0,width,0,100)
+		rotate(frameCount/1000)
 		// rect(cos(ang)*r,sin(ang)*r,50)
-		ellipse(cos(ang)*r,sin(ang)*r, random(0,30))
-		fill(clr,80,80)
+		rect(cos(ang)*r,sin(ang)*r, 20, 20)
+		fill(color('#707070'),80,80)
 		textSize(20)
 		// text("HELLO"[i%5],cos(ang)*r,sin(ang)*r)
 	}
 }
-
 
 `
 
@@ -924,6 +926,7 @@ export default {
       font-weight: bold
       color: white
       letter-spacing: 1.5px
+      text-shadow: 1px 1px 3px rgba(#333, 0.5)
   .wlBlock
     width: 100%
     +flexcolumn

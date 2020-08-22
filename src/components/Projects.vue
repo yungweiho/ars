@@ -23,8 +23,8 @@ function draw() {
 	// colorMode(HSB)
 	translate(width/2,height/2)
 	rotate(50)
-	var clr1 = color("#03fce8");
-	var clr2 = color("#ff00bb");
+	var clr1 = color("#fff");
+	var clr2 = color("#a6a6a6");
 	for(var o=-height;o<height;o+=80){
 		for(var i=-width;i<width;i+=10){
 			let delta = map(i,-width,width,0,10)
