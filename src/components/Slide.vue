@@ -107,34 +107,6 @@ export default {
           ]
         },
         {
-          title: '收妖',
-          description: '收妖是一款以八家將為主題的遊戲，與新加坡南洋理工學院的學生們體驗與不同國家的人一起製作一個專案。當時我們採用台灣的民俗文化為題材，透過製作八家將的專案，來讓南洋理工學院的學生們瞭解到台灣的文化。我們角色的臉譜、服飾，是參照"全臺白龍庵如良應興堂"，再擊倒Boss後會撥放的動畫也是參照"全臺白龍庵如良應興堂"夜巡時要把妖怪收服時的動作，以及最重要的我們的關卡也是設定在五福大帝:劉部宣靈公誕辰繞境日巡的前晚，家將會在宣靈公出巡前衛主神開路，掃除妖孽的環節。我們希望讓更多人透過遊戲來了解台灣的家將文化。',
-          authors: [
-            {
-              name: '劉炫佑',
-              school: '臺北海洋科技大學',
-              major: '數位遊戲與動畫設計系'
-            },
-            {
-              name: '陳學文',
-              school: '臺北海洋科技大學',
-              major: '數位遊戲與動畫設計系'
-            },
-            {
-              name: '陳翔天',
-              school: '臺北海洋科技大學',
-              major: '數位遊戲與動畫設計系'
-            },
-          ],
-          pic: [
-            require('../assets/KT15/game/shoyau/shoyau_01.png'),
-            require('../assets/KT15/game/shoyau/shoyau_02.png'),
-            require('../assets/KT15/game/shoyau/shoyau_03.png'),
-            require('../assets/KT15/game/shoyau/shoyau_04.png'),
-            require('../assets/KT15/game/shoyau/shoyau_05.png'),
-          ]
-        },
-        {
           title: '俠盜異聞錄',
           description: '市面上許多遊戲的設計目的都是以遊戲性為主，因此也造成許多玩家在遊戲中不知道遊戲的目的及意義。因此我們希望製作一款有故事主線，並結合遊戲性的設計。藉由本科系熟悉的3D建模、程式設計等等，來完成這項作品。對於大家而言，羅賓漢作為英國民間傳說中的英雄人物，本身就有許多故事及迷團，豐富的素材加上人物本身的魅力，這也是我們小組選擇以羅賓漢作為遊戲主題的緣由。',
           authors: [
@@ -159,48 +131,6 @@ export default {
             require('../assets/KT15/game/shadau/shadau_02.png'),
             require('../assets/KT15/game/shadau/shadau_03.png'),
             require('../assets/KT15/game/shadau/shadau_04.png'),
-          ]
-        },
-        {
-          title: '格羅佛 Grover',
-          description: '隨著巨雷劃破雲霄，守護部族的大燈籠損毀，黑暗力量再次壟罩整座森林，為了拯救僅存的同伴，主角-格羅佛必須收集那些被黑暗驅散的光明之蟲，並將牠們歸還到守護部族與森林的燈籠中，因此他踏上抵抗黑暗的旅程。故事內容講述個體無法改變大環境，但當單一的信念匯集起來，能成為力量去影響它。可能沒辦法完全改善狀況，但也許能避免最糟的情況發生。以平台遊戲凸顯畫面的精緻，為了不受限於環境設備，我們同時將遊戲放上了PC平台與安卓平台，讓玩家隨時隨地都能體驗我們的遊戲。',
-          authors: [
-            {
-              name: '楊于萱',
-              school: '嶺東科技大學',
-              major: '數位媒體設計系'
-            },
-            {
-              name: '詹琪婷',
-              school: '嶺東科技大學',
-              major: '數位媒體設計系'
-            },
-            {
-              name: '張君儀',
-              school: '嶺東科技大學',
-              major: '數位媒體設計系'
-            },
-            {
-              name: '王宜翎',
-              school: '嶺東科技大學',
-              major: '數位媒體設計系'
-            },
-            {
-              name: '郭姿吟',
-              school: '嶺東科技大學',
-              major: '數位媒體設計系'
-            },
-            {
-              name: '陳季葳',
-              school: '嶺東科技大學',
-              major: '數位媒體設計系'
-            },
-          ],
-          pic: [
-            require('../assets/KT15/game/grover/grover_01.png'),
-            require('../assets/KT15/game/grover/grover_02.png'),
-            require('../assets/KT15/game/grover/grover_03.png'),
-            require('../assets/KT15/game/grover/grover_04.png'),
           ]
         },
         {

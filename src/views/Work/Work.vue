@@ -18,11 +18,15 @@
       .workSlideOtherPic(v-for="(item, i) in work_item.pic" :key="i" @click="p = i" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
     .workTextBlock
       .workText {{ work_item.description }}
-      .workText(v-if="work_item.description_en") {{ work_item.description_en }}
+      .workText.en(v-if="work_item.description_en") {{ work_item.description_en }}
     .workAuthorBlock(v-for="au in work_item.authors")
       .workAuthorName {{ au.name }}
       .workAuthorSchool {{ au.school }}
       .workAuthorSchool {{ au.major }}
+    .workAuthorBlock(v-if="work_item.authors_en" v-for="au in work_item.authors_en")
+      .workAuthorName {{ au.name }}
+      .workAuthorSchool \ {{ au.major }}
+      .workAuthorSchool \ {{ au.school }}
 </template>
 
 <script>
@@ -70,6 +74,14 @@ export default {
   .workBlock
     width: 70%
     margin-top: 50px
+    +smallcom
+      width: 80%
+    +pad
+      width: 90%
+    +phone
+      width: 95%
+    +phone5
+      width: 100%
 .workNameBlock
   width: 100%
   +flexrow
@@ -100,11 +112,19 @@ export default {
   width: 100%
   height: 40vw
   position: relative
+  +smallcom
+    height: 45vw
+  +pad
+    height: 50vw
+  +phone
+    height: 55vw
 .workSlidePrev
   position: absolute
   top: 50%
   left: 2%
   cursor: pointer
+  +phone
+    left: 5%
   .line1
     border-radius: 30%
     width: 3px
@@ -125,6 +145,8 @@ export default {
   top: 50%
   right: 2%
   cursor: pointer
+  +phone
+    right: 5%
   .line3
     border-radius: 30%
     width: 3px
@@ -149,7 +171,13 @@ export default {
     height: 5.5vw
     margin-right: 10px
     cursor: pointer
-
+    +smallcom
+      height: 6vw
+    +pad
+      height: 7vw
+    +phone
+      height: 10vw
+      width: 15%
 .workTextBlock
   width: 100%
   margin-top: 30px
@@ -157,16 +185,23 @@ export default {
   border-bottom: solid 1px #555
   box-sizing: border-box
   padding: 0 0 20px 0
+  +phone
+    padding: 0 10px 20px 10px
   .workText
     font-size: 18px
     letter-spacing: 1.5px
     line-height: 35px
+    margin-top: 20px
+  .en
+    letter-spacing: 1px
+    text-align: justify
 .workAuthorBlock
   width: 100%
   +flexrow
   margin-top: 10px
   letter-spacing: 1.5px
   color: #555
+  flex-wrap: wrap
   .workAuthorName
     font-size: 18px
   .workAuthorSchool

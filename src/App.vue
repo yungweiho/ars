@@ -91,6 +91,8 @@ html
       padding: 0
       background-color: rgba(black, 0.5)
       height: 50px
+      +phone
+        height: 90px
     .MenuBlock
       position: absolute
       background-color: rgba(#fff, 0.7)

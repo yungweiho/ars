@@ -41,7 +41,7 @@ function draw() {
 		rotate(frameCount/1000)
 		// rect(cos(ang)*r,sin(ang)*r,50)
 		rect(cos(ang)*r,sin(ang)*r, 20, 20)
-		fill(color('#707070'),80,80)
+		fill(color('#707070'))
 		textSize(20)
 		// text("HELLO"[i%5],cos(ang)*r,sin(ang)*r)
 	}
@@ -142,34 +142,34 @@ export default {
                     require('../../assets/KT15/game/vuvu/vuvu_08.png'),
                   ]
                 },
-                {
-                  title: '收妖',
-                  description: '收妖是一款以八家將為主題的遊戲，與新加坡南洋理工學院的學生們體驗與不同國家的人一起製作一個專案。當時我們採用台灣的民俗文化為題材，透過製作八家將的專案，來讓南洋理工學院的學生們瞭解到台灣的文化。我們角色的臉譜、服飾，是參照"全臺白龍庵如良應興堂"，再擊倒Boss後會撥放的動畫也是參照"全臺白龍庵如良應興堂"夜巡時要把妖怪收服時的動作，以及最重要的我們的關卡也是設定在五福大帝:劉部宣靈公誕辰繞境日巡的前晚，家將會在宣靈公出巡前衛主神開路，掃除妖孽的環節。我們希望讓更多人透過遊戲來了解台灣的家將文化。',
-                  authors: [
-                    {
-                      name: '劉炫佑',
-                      school: '臺北海洋科技大學',
-                      major: '數位遊戲與動畫設計系'
-                    },
-                    {
-                      name: '陳學文',
-                      school: '臺北海洋科技大學',
-                      major: '數位遊戲與動畫設計系'
-                    },
-                    {
-                      name: '陳翔天',
-                      school: '臺北海洋科技大學',
-                      major: '數位遊戲與動畫設計系'
-                    },
-                  ],
-                  pic: [
-                    require('../../assets/KT15/game/shoyau/shoyau_01.png'),
-                    require('../../assets/KT15/game/shoyau/shoyau_02.png'),
-                    require('../../assets/KT15/game/shoyau/shoyau_03.png'),
-                    require('../../assets/KT15/game/shoyau/shoyau_04.png'),
-                    require('../../assets/KT15/game/shoyau/shoyau_05.png'),
-                  ]
-                },
+                // {
+                //   title: '收妖',
+                //   description: '收妖是一款以八家將為主題的遊戲，與新加坡南洋理工學院的學生們體驗與不同國家的人一起製作一個專案。當時我們採用台灣的民俗文化為題材，透過製作八家將的專案，來讓南洋理工學院的學生們瞭解到台灣的文化。我們角色的臉譜、服飾，是參照"全臺白龍庵如良應興堂"，再擊倒Boss後會撥放的動畫也是參照"全臺白龍庵如良應興堂"夜巡時要把妖怪收服時的動作，以及最重要的我們的關卡也是設定在五福大帝:劉部宣靈公誕辰繞境日巡的前晚，家將會在宣靈公出巡前衛主神開路，掃除妖孽的環節。我們希望讓更多人透過遊戲來了解台灣的家將文化。',
+                //   authors: [
+                //     {
+                //       name: '劉炫佑',
+                //       school: '臺北海洋科技大學',
+                //       major: '數位遊戲與動畫設計系'
+                //     },
+                //     {
+                //       name: '陳學文',
+                //       school: '臺北海洋科技大學',
+                //       major: '數位遊戲與動畫設計系'
+                //     },
+                //     {
+                //       name: '陳翔天',
+                //       school: '臺北海洋科技大學',
+                //       major: '數位遊戲與動畫設計系'
+                //     },
+                //   ],
+                //   pic: [
+                //     require('../../assets/KT15/game/shoyau/shoyau_01.png'),
+                //     require('../../assets/KT15/game/shoyau/shoyau_02.png'),
+                //     require('../../assets/KT15/game/shoyau/shoyau_03.png'),
+                //     require('../../assets/KT15/game/shoyau/shoyau_04.png'),
+                //     require('../../assets/KT15/game/shoyau/shoyau_05.png'),
+                //   ]
+                // },
                 {
                   title: '俠盜異聞錄',
                   description: '市面上許多遊戲的設計目的都是以遊戲性為主，因此也造成許多玩家在遊戲中不知道遊戲的目的及意義。因此我們希望製作一款有故事主線，並結合遊戲性的設計。藉由本科系熟悉的3D建模、程式設計等等，來完成這項作品。對於大家而言，羅賓漢作為英國民間傳說中的英雄人物，本身就有許多故事及迷團，豐富的素材加上人物本身的魅力，這也是我們小組選擇以羅賓漢作為遊戲主題的緣由。',
@@ -197,48 +197,48 @@ export default {
                     require('../../assets/KT15/game/shadau/shadau_04.png'),
                   ]
                 },
-                {
-                  title: '格羅佛 Grover',
-                  description: '隨著巨雷劃破雲霄，守護部族的大燈籠損毀，黑暗力量再次壟罩整座森林，為了拯救僅存的同伴，主角-格羅佛必須收集那些被黑暗驅散的光明之蟲，並將牠們歸還到守護部族與森林的燈籠中，因此他踏上抵抗黑暗的旅程。故事內容講述個體無法改變大環境，但當單一的信念匯集起來，能成為力量去影響它。可能沒辦法完全改善狀況，但也許能避免最糟的情況發生。以平台遊戲凸顯畫面的精緻，為了不受限於環境設備，我們同時將遊戲放上了PC平台與安卓平台，讓玩家隨時隨地都能體驗我們的遊戲。',
-                  authors: [
-                    {
-                      name: '楊于萱',
-                      school: '嶺東科技大學',
-                      major: '數位媒體設計系'
-                    },
-                    {
-                      name: '詹琪婷',
-                      school: '嶺東科技大學',
-                      major: '數位媒體設計系'
-                    },
-                    {
-                      name: '張君儀',
-                      school: '嶺東科技大學',
-                      major: '數位媒體設計系'
-                    },
-                    {
-                      name: '王宜翎',
-                      school: '嶺東科技大學',
-                      major: '數位媒體設計系'
-                    },
-                    {
-                      name: '郭姿吟',
-                      school: '嶺東科技大學',
-                      major: '數位媒體設計系'
-                    },
-                    {
-                      name: '陳季葳',
-                      school: '嶺東科技大學',
-                      major: '數位媒體設計系'
-                    },
-                  ],
-                  pic: [
-                    require('../../assets/KT15/game/grover/grover_01.png'),
-                    require('../../assets/KT15/game/grover/grover_02.png'),
-                    require('../../assets/KT15/game/grover/grover_03.png'),
-                    require('../../assets/KT15/game/grover/grover_04.png'),
-                  ]
-                },
+                // {
+                //   title: '格羅佛 Grover',
+                //   description: '隨著巨雷劃破雲霄，守護部族的大燈籠損毀，黑暗力量再次壟罩整座森林，為了拯救僅存的同伴，主角-格羅佛必須收集那些被黑暗驅散的光明之蟲，並將牠們歸還到守護部族與森林的燈籠中，因此他踏上抵抗黑暗的旅程。故事內容講述個體無法改變大環境，但當單一的信念匯集起來，能成為力量去影響它。可能沒辦法完全改善狀況，但也許能避免最糟的情況發生。以平台遊戲凸顯畫面的精緻，為了不受限於環境設備，我們同時將遊戲放上了PC平台與安卓平台，讓玩家隨時隨地都能體驗我們的遊戲。',
+                //   authors: [
+                //     {
+                //       name: '楊于萱',
+                //       school: '嶺東科技大學',
+                //       major: '數位媒體設計系'
+                //     },
+                //     {
+                //       name: '詹琪婷',
+                //       school: '嶺東科技大學',
+                //       major: '數位媒體設計系'
+                //     },
+                //     {
+                //       name: '張君儀',
+                //       school: '嶺東科技大學',
+                //       major: '數位媒體設計系'
+                //     },
+                //     {
+                //       name: '王宜翎',
+                //       school: '嶺東科技大學',
+                //       major: '數位媒體設計系'
+                //     },
+                //     {
+                //       name: '郭姿吟',
+                //       school: '嶺東科技大學',
+                //       major: '數位媒體設計系'
+                //     },
+                //     {
+                //       name: '陳季葳',
+                //       school: '嶺東科技大學',
+                //       major: '數位媒體設計系'
+                //     },
+                //   ],
+                //   pic: [
+                //     require('../../assets/KT15/game/grover/grover_01.png'),
+                //     require('../../assets/KT15/game/grover/grover_02.png'),
+                //     require('../../assets/KT15/game/grover/grover_03.png'),
+                //     require('../../assets/KT15/game/grover/grover_04.png'),
+                //   ]
+                // },
                 {
                   title: '迷謎餌 MELEER',
                   description: '《迷謎餌MELEER》是一款讓好友們開心遊玩的多人連線派對遊戲，翻轉以往的殺敵數獲勝規則，加入了緊張刺激的”丟迷謎”替死鬼要素！與其打死不如壓垮對手，即使對方擁有金幣數量優勢，你也可以藉由此玩法反敗為勝，同樣的，即便金幣全失， ”迷謎化” 也能讓你狂暴起來！帶你扳回一成，獲得更多金幣！！',
@@ -276,122 +276,122 @@ export default {
                     require('../../assets/KT15/game/meleer/meleer_04.png'),
                   ]
                 },
-                {
-                  title: '開拓者 Kyronus',
-                  description: '《Kyronus 開拓者》是一款可以與真實世界產生連結的手機經營遊戲，透過在真實世界中移動來收集資源，建造各式各樣建築物，並且復刻出現實生活所存在的建築、特色地景等，在遊戲世界中打造屬於你自己獨一無二的星球！我們希望以遊戲化的方式，利用手機遊戲作為媒介，透過 GPS 定位功能，作為玩家開拓台灣的起點，並鼓勵玩家親自實地到訪文化建築或地景。透過遊玩的過程，讓更多玩家能看見更多台灣特色建築，再從建築背景衍伸帶出台灣文化價值。',
-                  authors: [
-                    {
-                      name: '郭家銘',
-                      school: '國立成功大學',
-                      major: '工業設計所'
-                    },
-                    {
-                      name: '楊閔安',
-                      school: '國立成功大學',
-                      major: '工業設計所'
-                    },
-                    {
-                      name: '黃俊豪',
-                      school: '國立成功大學',
-                      major: '資訊工程學系'
-                    },
-                    {
-                      name: '張祐禎',
-                      school: '國立成功大學',
-                      major: '資訊工程學系'
-                    },
-                    {
-                      name: '趙啟峰',
-                      school: '國立成功大學',
-                      major: '都市計畫學系'
-                    },
-                    {
-                      name: '黃奕齊',
-                      school: '國立成功大學',
-                      major: '都市計畫學系'
-                    },
-                  ],
-                  pic: [
-                    require('../../assets/KT15/game/kyronus/kyronus_01.png'),
-                    require('../../assets/KT15/game/kyronus/kyronus_02.png'),
-                    require('../../assets/KT15/game/kyronus/kyronus_03.png'),
-                    require('../../assets/KT15/game/kyronus/kyronus_04.png'),
-                  ]
-                },
-                {
-                  title: '嗚啊嗚啊 WOO',
-                  description: '《嗚啊嗚啊》為一款雙人對戰的角色扮演(Role Playing Game)遊戲，以動物求偶為主要特色，玩家將扮演會變身的小精靈，變身成為不同動物，進入動物的世界，感受他們獨有的有趣求偶行為。雙方共用一個螢幕展示遊戲畫面，各自拿取遊戲手把進行，透過身體動作操控動物們做出求偶的行為，此種特別的體驗，能激發人們對動物的想像，能比閱讀視聽獲得更深刻的動物知識。我們希望藉由此有趣且獨特的主題，讓大家在玩樂的同時輕鬆學習動物相關知識，達到寓教於樂的效果，遊戲使用強烈的影像吸引關注，以鮮明夢幻的色彩與圓潤的線條作為風格基礎，將動物風格設定為老少咸宜的可愛風，搭配誇張的Ｑ彈角色動畫，塑造出強烈的視覺對比感。',
-                  authors: [
-                    {
-                      name: '曹彩妤',
-                      school: '國立臺北科技大學',
-                      major: '互動設計系'
-                    },
-                    {
-                      name: '呂怡潔',
-                      school: '國立臺北科技大學',
-                      major: '互動設計系'
-                    },
-                    {
-                      name: '江禕涵',
-                      school: '國立臺北科技大學',
-                      major: '互動設計系'
-                    },
-                    {
-                      name: '曾怡萍',
-                      school: '國立臺北科技大學',
-                      major: '互動設計系'
-                    },
-                    {
-                      name: '李宜襄',
-                      school: '國立臺北科技大學',
-                      major: '互動設計系'
-                    },
-                  ],
-                  pic: [
-                    require('../../assets/KT15/game/woo/woo_01.png'),
-                    require('../../assets/KT15/game/woo/woo_02.png'),
-                    require('../../assets/KT15/game/woo/woo_03.png'),
-                    require('../../assets/KT15/game/woo/woo_04.png'),
-                  ]
-                },
-                {
-                  title: '蓋亞 GAIA',
-                  description: '動作遊戲一定要拼命的無雙嗎？我們想用非主流的玩法，玩家需思考和地圖的關係，讓玩家體驗不同的打王經驗。不像主流遊戲有複雜的系統、技能，簡化遊戲系統，將一切的操作包圍在射箭瞬間移動，達到遊玩體驗。想起一次在關渡平原，見田園中到處攀著紅色的螺，那是外來種生物「福壽螺」，這些外來種侵蝕了原生種的居住地，滿地可見的外來種（大花咸豐草等），決定以我們『台灣』為背景，遊戲當中的BOSS設計成台灣未來種，讓玩家遊玩遊戲的時候，體驗擊殺怪物的快感外，也透過遊戲去思考環境和自身。在《Gaia》中我們表達出得生態議題是在外來物種怪物侵入的背景之下，環境迫害，玩家需擊敗這些怪物，拯救這個區域。',
-                  authors: [
-                    {
-                      name: '許智傑',
-                      school: '世新大學',
-                      major: '數位多媒體設計系遊戲組'
-                    },
-                    {
-                      name: '蔡昀臻',
-                      school: '世新大學',
-                      major: '數位多媒體設計系遊戲設計組'
-                    },
-                    {
-                      name: '邱振華',
-                      school: '世新大學',
-                      major: '數位多媒體設計系遊戲組'
-                    },
-                    {
-                      name: '滕子葳',
-                      school: '世新大學',
-                      major: '數位多媒體設計系遊戲組'
-                    },
-                    {
-                      name: '林子勛',
-                      school: '世新大學',
-                      major: '數位多媒體設計系遊戲組'
-                    },
-                  ],
-                  pic: [
-                    require('../../assets/KT15/game/gaia/gaia_01.png'),
-                    require('../../assets/KT15/game/gaia/gaia_02.png'),
-                    require('../../assets/KT15/game/gaia/gaia_03.png'),
-                    require('../../assets/KT15/game/gaia/gaia_04.png'),
-                  ]
-                },
+                // {
+                //   title: '開拓者 Kyronus',
+                //   description: '《Kyronus 開拓者》是一款可以與真實世界產生連結的手機經營遊戲，透過在真實世界中移動來收集資源，建造各式各樣建築物，並且復刻出現實生活所存在的建築、特色地景等，在遊戲世界中打造屬於你自己獨一無二的星球！我們希望以遊戲化的方式，利用手機遊戲作為媒介，透過 GPS 定位功能，作為玩家開拓台灣的起點，並鼓勵玩家親自實地到訪文化建築或地景。透過遊玩的過程，讓更多玩家能看見更多台灣特色建築，再從建築背景衍伸帶出台灣文化價值。',
+                //   authors: [
+                //     {
+                //       name: '郭家銘',
+                //       school: '國立成功大學',
+                //       major: '工業設計所'
+                //     },
+                //     {
+                //       name: '楊閔安',
+                //       school: '國立成功大學',
+                //       major: '工業設計所'
+                //     },
+                //     {
+                //       name: '黃俊豪',
+                //       school: '國立成功大學',
+                //       major: '資訊工程學系'
+                //     },
+                //     {
+                //       name: '張祐禎',
+                //       school: '國立成功大學',
+                //       major: '資訊工程學系'
+                //     },
+                //     {
+                //       name: '趙啟峰',
+                //       school: '國立成功大學',
+                //       major: '都市計畫學系'
+                //     },
+                //     {
+                //       name: '黃奕齊',
+                //       school: '國立成功大學',
+                //       major: '都市計畫學系'
+                //     },
+                //   ],
+                //   pic: [
+                //     require('../../assets/KT15/game/kyronus/kyronus_01.png'),
+                //     require('../../assets/KT15/game/kyronus/kyronus_02.png'),
+                //     require('../../assets/KT15/game/kyronus/kyronus_03.png'),
+                //     require('../../assets/KT15/game/kyronus/kyronus_04.png'),
+                //   ]
+                // },
+                // {
+                //   title: '嗚啊嗚啊 WOO',
+                //   description: '《嗚啊嗚啊》為一款雙人對戰的角色扮演(Role Playing Game)遊戲，以動物求偶為主要特色，玩家將扮演會變身的小精靈，變身成為不同動物，進入動物的世界，感受他們獨有的有趣求偶行為。雙方共用一個螢幕展示遊戲畫面，各自拿取遊戲手把進行，透過身體動作操控動物們做出求偶的行為，此種特別的體驗，能激發人們對動物的想像，能比閱讀視聽獲得更深刻的動物知識。我們希望藉由此有趣且獨特的主題，讓大家在玩樂的同時輕鬆學習動物相關知識，達到寓教於樂的效果，遊戲使用強烈的影像吸引關注，以鮮明夢幻的色彩與圓潤的線條作為風格基礎，將動物風格設定為老少咸宜的可愛風，搭配誇張的Ｑ彈角色動畫，塑造出強烈的視覺對比感。',
+                //   authors: [
+                //     {
+                //       name: '曹彩妤',
+                //       school: '國立臺北科技大學',
+                //       major: '互動設計系'
+                //     },
+                //     {
+                //       name: '呂怡潔',
+                //       school: '國立臺北科技大學',
+                //       major: '互動設計系'
+                //     },
+                //     {
+                //       name: '江禕涵',
+                //       school: '國立臺北科技大學',
+                //       major: '互動設計系'
+                //     },
+                //     {
+                //       name: '曾怡萍',
+                //       school: '國立臺北科技大學',
+                //       major: '互動設計系'
+                //     },
+                //     {
+                //       name: '李宜襄',
+                //       school: '國立臺北科技大學',
+                //       major: '互動設計系'
+                //     },
+                //   ],
+                //   pic: [
+                //     require('../../assets/KT15/game/woo/woo_01.png'),
+                //     require('../../assets/KT15/game/woo/woo_02.png'),
+                //     require('../../assets/KT15/game/woo/woo_03.png'),
+                //     require('../../assets/KT15/game/woo/woo_04.png'),
+                //   ]
+                // },
+                // {
+                //   title: '蓋亞 GAIA',
+                //   description: '動作遊戲一定要拼命的無雙嗎？我們想用非主流的玩法，玩家需思考和地圖的關係，讓玩家體驗不同的打王經驗。不像主流遊戲有複雜的系統、技能，簡化遊戲系統，將一切的操作包圍在射箭瞬間移動，達到遊玩體驗。想起一次在關渡平原，見田園中到處攀著紅色的螺，那是外來種生物「福壽螺」，這些外來種侵蝕了原生種的居住地，滿地可見的外來種（大花咸豐草等），決定以我們『台灣』為背景，遊戲當中的BOSS設計成台灣未來種，讓玩家遊玩遊戲的時候，體驗擊殺怪物的快感外，也透過遊戲去思考環境和自身。在《Gaia》中我們表達出得生態議題是在外來物種怪物侵入的背景之下，環境迫害，玩家需擊敗這些怪物，拯救這個區域。',
+                //   authors: [
+                //     {
+                //       name: '許智傑',
+                //       school: '世新大學',
+                //       major: '數位多媒體設計系遊戲組'
+                //     },
+                //     {
+                //       name: '蔡昀臻',
+                //       school: '世新大學',
+                //       major: '數位多媒體設計系遊戲設計組'
+                //     },
+                //     {
+                //       name: '邱振華',
+                //       school: '世新大學',
+                //       major: '數位多媒體設計系遊戲組'
+                //     },
+                //     {
+                //       name: '滕子葳',
+                //       school: '世新大學',
+                //       major: '數位多媒體設計系遊戲組'
+                //     },
+                //     {
+                //       name: '林子勛',
+                //       school: '世新大學',
+                //       major: '數位多媒體設計系遊戲組'
+                //     },
+                //   ],
+                //   pic: [
+                //     require('../../assets/KT15/game/gaia/gaia_01.png'),
+                //     require('../../assets/KT15/game/gaia/gaia_02.png'),
+                //     require('../../assets/KT15/game/gaia/gaia_03.png'),
+                //     require('../../assets/KT15/game/gaia/gaia_04.png'),
+                //   ]
+                // },
                 {
                   title: '蔓不生長 Antivine',
                   description: '自古以來流傳了一種植物病，染上後曬到陽光，身上的植物會急遽生長，把生物變成植物，主角的妹妹就是染上了這種植物病，傳說只要能穿越遺跡抵達大陸的另外一端，就可以找到治癒的方法，於是，哥哥便帶上妹妹踏上了冒險之旅...關卡利用不同的季節來表示玩家已經經過許久的冒險，並且在途中遇到不同的體驗讓玩家置身其中，感受裡面的故事。經過重重的解謎難關，了解故事的始末，並且推動哥哥與妹妹未來的命運。',
@@ -447,6 +447,7 @@ export default {
                 {
                   title: '化羽',
                   description: '隨著民主潮流的推波，女權運動近年來蓬勃發展，全球各地女性自主意識提升，許多女性權益看似逐漸改善，但即便是在二十一世紀今日，仍有許多國家及地區的傳統習俗或宗教文化，對女性平權的議題設下重重枷鎖，甚至視為異端禁止討論參與。藉由本次的動畫短片創作「化羽」，希望透過故事中父權至上的封建社會背景，傳達出女性自主意識的覺醒，期盼觀眾能瞭解爭取自由與權益的女性們，我們應給更多的尊重同理與包容。在製作及畫面技術上，小組三人發揮長才，使用PS、AI等繪圖軟體設計出人物以及場景；也使用了Cilp來繪製出逐格動畫，將所有繪製好的場景、角色、動態逐格結合進AE，使用合成及特效來呈現出完整的作品。',
+                  description_en: `Following the trend of democracy, feminist movement flourished in recent years. All over the world, women’s awareness of autonomy has risen, and many women’s rights also seemed to have gradually improved. However, even today of the 21st century, the issues of women's equality are still chained by traditional customs or religious cultures in many regions and countries, and even been regarded as heterodox and banned on discussion and participation. By this short animation “The Empress,” the awakening of women’s awareness of autonomy is conveyed via the feudal society background of the patriarchalism reigning supreme in the story, expecting that the audience can understand the women striving for freedom and rights and that we should provide more respect, empathy and tolerance. On the production and graphic technology, our three team members used specialized drawing software, such as Photoshop and Illustrator, to design roles and scenes. Clip Studio Paint was also used to produce frame-by-frame animations, combining with the drawn scenes, roles and motions into After Effects frame by frame. The completed creation was presented by synthetization and special effects.`,
                   authors: [
                     {
                       name: '吳盈潔',
@@ -464,6 +465,23 @@ export default {
                       major: '動畫與遊戲設計系'
                     },
                   ],
+                  authors_en: [
+                    {
+                      name: 'Ying-Chieh Wu',
+                      school: 'Shu-Te University',
+                      major: 'Department of Animation and Game Design'
+                    },
+                    {
+                      name: 'Ching-En Chang',
+                      school: 'Shu-Te University',
+                      major: 'Department of Animation and Game Design'
+                    },
+                    {
+                      name: 'Ya-Chi Ko',
+                      school: 'Shu-Te University',
+                      major: 'Department of Animation and Game Design'
+                    },
+                  ],
                   pic: [
                     require('../../assets/KT15/animate/hua/hua_01.png'),
                     require('../../assets/KT15/animate/hua/hua_02.png'),
@@ -476,6 +494,7 @@ export default {
                 {
                   title: '沉沒',
                   description: '故事描述一名女高中生被班上的同學利用、冷落的日常生活。在這樣的生活狀況之下主角逐漸感到絕望，並因壓力提升而開始產生了與深海有關的幻象。',
+                  description_en: `The story describes a high school girl’s everyday life, being used and cold-shouldered by her classmates. Under such living conditions, the leading role feels desperate bit by bit, and due to increased pressure, starts to feel an illusion about deep seas.`,
                   authors: [
                     {
                       name: '羅巧涵',
@@ -486,22 +505,58 @@ export default {
                       name: '余聿平',
                       school: '台南應用科技大學',
                       major: '多媒體動畫系'
-                    },{
+                    },
+                    {
                       name: '陳玟憶',
                       school: '台南應用科技大學',
                       major: '多媒體動畫系'
-                    },{
+                    },
+                    {
                       name: '陳依君',
                       school: '台南應用科技大學',
                       major: '多媒體動畫系'
-                    },{
+                    },
+                    {
                       name: '冀心嵐',
                       school: '台南應用科技大學',
                       major: '多媒體動畫系'
-                    },{
+                    },
+                    {
                       name: '黃阡莉',
                       school: '台南應用科技大學',
                       major: '多媒體動畫系'
+                    },
+                  ],
+                  authors_en: [
+                    {
+                      name: 'Chiao-Han Lo',
+                      school: 'Tainan University of Technology',
+                      major: 'Department of Multimedia and Animation'
+                    },
+                    {
+                      name: 'Yu-Ping Yu',
+                      school: 'Tainan University of Technology',
+                      major: 'Department of Multimedia and Animation'
+                    },
+                    {
+                      name: 'Wen-Yi Chen',
+                      school: 'Tainan University of Technology',
+                      major: 'Department of Multimedia and Animation'
+                    },
+                    {
+                      name: 'Yi-Chun Chen',
+                      school: 'Tainan University of Technology',
+                      major: 'Department of Multimedia and Animation'
+                    },
+                    {
+                      name: 'Hsin-Lan Chi',
+                      school: 'Tainan University of Technology',
+                      major: 'Department of Multimedia and Animation'
+                    },
+                    {
+                      name: 'Chien-Li Huang',
+                      school: 'Tainan University of Technology',
+                      major: 'Department of Multimedia and Animation'
                     },
                   ],
                   pic: [
@@ -513,11 +568,19 @@ export default {
                 {
                   title: '妳只在乎妳在乎的',
                   description: '本作以導演好友的生命經驗， 發現他對於母愛總是充滿渴望，可是當他真正面對母親時，卻又無法拉近彼此的距離，隨著時光飛逝， 兩者都錯過挽回的機會， 留下無奈。透過回憶了解母親從未給予小孩真正想要的、運用孩童視角劃分現實與過去的時間軸與情緒氛圍， 將理性和感性連同環境比例區隔開、把影片溫度與童趣感用手繪筆觸加上紙質疊加出來、盡可能將手繪動畫質感還原到電腦動畫媒材上。',
+                  description_en: `This animation is based on the director’s life experience. He found that he always eagers for mother’s love, but when really facing his mother, he failed to bring them closer. While time passed, they both missed the opportunity to retrieve the situation, only leaving helplessness. By recalling that mother never gave her child what he really wanted, a child’s angle of view was adopted to differentiate the timeline and emotional atmosphere of the present and the past, dividing rationality, sensibility and environment proportion. The animation sensibility and childlike sense were overlaid by hand-drawing strokes and paper textures; the textures of hand-drawing animation were tried to be recovered to the materials of computer animation.`,
                   authors: [
                     {
                       name: '張䕒澤',
                       school: '國立臺南藝術大學',
                       major: '動畫藝術與影像美學研究所'
+                    },
+                  ],
+                  authors_en: [
+                    {
+                      name: 'Chia-Tse Chang',
+                      school: 'Tainan National University of the Arts',
+                      major: 'Institute of Animation and Film Art'
                     },
                   ],
                   pic: [
@@ -531,6 +594,7 @@ export default {
                 {
                   title: '苒冉',
                   description: '西元2048年，在經歷過第三次世界大戰和人類對地球造成不可逆汙染的未來，風雲變色，失序的世界中使得大部分土地失去生機，徒留受到核汙染基因變異的生物和極少數散落各地的倖存者人類。身為其中一人的主角獨自生活在末日後的世界，從小就對機械有興趣，擅長東拼西湊組裝各種零件的他，在那裡為了實現自己的心願四處奔走搜集零件，完成一件可以讓意識回到過去的機器，接著由過去記憶中的場景交代主角的身世背景，並藉此響應環保議題。動畫為3D與2D混合使用的風格，場景為3D建模而角色則為2D繪製，藉由風格差異區隔兩者，突顯出主角與末日後的世界格格不入。',
+                  description_en: `In 2048, the future experiencing the third world war and the irreversible pollution on the earth made by humans, everything has changed. In this disorderly world, most lands lost their vitality, only leaving the creatures with genetic mutation from nuclear pollution and very few human survivors scattered in different places. The leading role, one of those humans, living alone in the world after the doom, has always been interested in machinery since he was young. He is good at assembling different kinds of parts. In order to make his dream come true, he tries hard to gather parts from different places to create a machine which can bring consciousness back to the past. And then, the leading role’s family background is disclosed from the scenes in the past memories, and thereby responding to environmental protection issues. In the animation, combined with 3D and 2D styles, the scenes are modeled by 3D, and the roles are drawn by 2D. Differentiating two settings by style, it more clearly shows that the leading role is incompatible with the world after the doom.`,
                   authors: [
                     {
                       name: '王安懿',
@@ -543,6 +607,18 @@ export default {
                       major: '藝術與造形設計學系'
                     },
                   ],
+                  authors_en: [
+                    {
+                      name: 'An-Yi Wang',
+                      school: 'National Taipei University of Education',
+                      major: 'Department of Arts and Design'
+                    },
+                    {
+                      name: 'Wan-Hsiu Wang',
+                      school: 'National Taipei University of Education',
+                      major: 'Department of Arts and Design'
+                    },
+                  ],
                   pic: [
                     require('../../assets/KT15/animate/zan/zan_01.png'),
                     require('../../assets/KT15/animate/zan/zan_02.png'),
@@ -553,6 +629,7 @@ export default {
                 {
                   title: '浮標',
                   description: '浮標，是一種簡易的標地物，隨著浮動，它所框出的不確定範圍被人們作為一種象徵性的空間代表，這讓我們對空間有了更多的解讀性。此故事中將以浮標的概念來揭示生活中的人與人之間的空間關係。主角是一名游泳選手，故事描述著主角在與人相處時，透過分類、預想他人行為，使自己能夠解讀社會上所發生的事情。但在片段的事件中卻產生了框架時而明確時而模糊的狀態，最後主角在理解框架的形式後，奮力地跳入泳池中…。以「水」為意象，象徵人與人相處因立場不同而產生時而明確，時而模糊的矛盾現象，我們使用3D的技術呈現現實與抽象的空間關係，更輔以2D的特色，帶出作品的溫度與深度，來呈現「框架」的核心概念！',
+                  description_en: `Buoy is a kind of simple target; while floating, its framed uncertain area is regarded as a kind of symbolic space representative. It makes us interpret a space more differently. In this story, the concept of buoy is used to reveal the space relationships between people in life. The leading role is a swimming player. The story tells that when the leading role gets along with others, she anticipates people’s behaviors by categorization, which makes her be able to interpret what happens in the society. Nevertheless, in the fragments of events, the frames fall into the status sometimes clear and sometimes blurred. In the end, the leading role jumps hard into the swimming pool after understanding the form of frames… As the imagery, “water” symbolizes the contradictory phenomenon that people get along with each other by sometimes clear and sometimes blurred relationships due to different standpoints. We use 3D technology, assisted with 2D features, to present the space relationship between reality and abstraction, bringing out the creation’s sensibility and deepness, to show the core concept of “frame”!`,
                   authors: [
                     {
                       name: '沈莉臻',
@@ -570,6 +647,23 @@ export default {
                       major: '多媒體動畫藝術學系'
                     },
                   ],
+                  authors_en: [
+                    {
+                      name: 'Li-Chen Shen',
+                      school: 'National Taiwan University of Arts',
+                      major: 'Department of Multimedia and Animation Arts'
+                    },
+                    {
+                      name: 'Chia-Ning Chang',
+                      school: 'National Taiwan University of Arts',
+                      major: 'Department of Multimedia and Animation Arts'
+                    },
+                    {
+                      name: 'Chien-Hua Huang',
+                      school: 'National Taiwan University of Arts',
+                      major: 'Department of Multimedia and Animation Arts'
+                    },
+                  ],
                   pic: [
                     require('../../assets/KT15/animate/phoo/phoo_01.png'),
                     require('../../assets/KT15/animate/phoo/phoo_02.png'),
@@ -580,6 +674,7 @@ export default {
                 {
                   title: '森生',
                   description: '發想與動機:PM2.5是一種空氣污染，而當人們處在霧霾環境中呼吸,那些過小的顆粒無法被口罩抑制或是人體產生的防禦機制給阻擋在外,他將導致呼吸困難和增加肺部疾病的風險。主旨:人們的呼吸是需要森林予以的淨化,眾多樹苗才能成林,可綠植卻隨著發展的過程而漸失,在這個世代裡,如何取得平衡並使人反思人與自然之間的關係是件相當重要的議題。理念:影片中透過實體化霧霾以有趣的互動呈現出主角、植物及霧霾三方,相互制衡的關係,來讓人省思和探討自然與發展之間可否取得平衡,並讓每個人透過小小的舉動來改善及預防空氣汙染,愛護森林及減少砍后,讓我們在未來能有個可以好好深呼吸的地方。',
+                  description_en: `Motive: PM2.5 is a kind of air pollution. When we breathe in the hazy environment with small particles unable to be blocked out by masks or human defense mechanisms, our risks of breathing difficulties and lung diseases will increase. Purpose: Our breathing needs to be purified by forests. A forest can only be formed by numerous saplings, but on the contrary planting gradually disappears in the process of development. In this generation, how to reach the balance and make people think over the relationship between humans and nature is a very important issue. Idea: In the film, hazes are materialized, and the mutually balanced relationships among the leading role, plants and hazes are presented by interesting interactions, so as to make people reflect over and discuss whether nature and development can achieve their balance. Small actions are also taken by each one to improve and prevent air pollution, protect forests and decrease logging, leaving a place we can well breathe deeply in the future.`,
                   authors: [
                     {
                       name: '彭俞瑄',
@@ -610,6 +705,38 @@ export default {
                       name: '簡瑜君',
                       school: '南臺科技大學',
                       major: '視覺傳達設計系動畫組'
+                    },
+                  ],
+                  authors_en: [
+                    {
+                      name: 'Yu-Hsuan Peng',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Animation Division, Department of Visual Communication Design'
+                    },
+                    {
+                      name: 'Chia-Yu Weng',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Animation Division, Department of Visual Communication Design'
+                    },
+                    {
+                      name: 'Ya-Chun Liang',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Animation Division, Department of Visual Communication Design'
+                    },
+                    {
+                      name: 'Chia-Chun Chiang',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Animation Division, Department of Visual Communication Design'
+                    },
+                    {
+                      name: 'Hsing-Hui Wang',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Animation Division, Department of Visual Communication Design'
+                    },
+                    {
+                      name: 'Yu-Chun Chien',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Animation Division, Department of Visual Communication Design'
                     },
                   ],
                   pic: [
@@ -643,6 +770,7 @@ export default {
                 {
                   title: '餘溫',
                   description: '「大體老師」，是指捐贈自己的遺體，供醫學院學生在解剖課上使用的亡者，是學生的第一位手術患者兼重要的老師。藉由作品中大體老師和學生間的特殊感情，破除大眾對大體解剖課的偏見和不安，傳達遺體捐贈的真正意義。',
+                  description_en: `“Cadaver,” the dead human body donated by oneself, providing medical students for anatomy classes, is students’ first patient undergoing surgery and important teacher. By the special emotions between cadaver and students, people’s prejudice and unease towards anatomy classes are eliminated, and the true meaning of body donation is conveyed.`,
                   authors: [
                     {
                       name: '楊皓茨',
@@ -665,6 +793,28 @@ export default {
                       major: '多媒體動畫藝術學系'
                     },
                   ],
+                  authors_en: [
+                    {
+                      name: 'Hao-Tzu Yang',
+                      school: 'National Taiwan University of Arts',
+                      major: 'Department of Multimedia and Animation Arts'
+                    },
+                    {
+                      name: 'Yun-Ning Chang',
+                      school: 'National Taiwan University of Arts',
+                      major: 'Department of Multimedia and Animation Arts'
+                    },
+                    {
+                      name: 'Yu-Huan Chi',
+                      school: 'National Taiwan University of Arts',
+                      major: 'Department of Multimedia and Animation Arts'
+                    },
+                    {
+                      name: 'Yu-Chien Chiu',
+                      school: 'National Taiwan University of Arts',
+                      major: 'Department of Multimedia and Animation Arts'
+                    },
+                  ],
                   pic: [
                     require('../../assets/KT15/animate/yui/yui_01.png'),
                     require('../../assets/KT15/animate/yui/yui_02.png'),
@@ -676,6 +826,7 @@ export default {
                 {
                   title: '願',
                   description: '天燈自古以來有著傳遞訊息、祈福許願的作用，在台灣並列為「北天燈，南蜂炮，東寒單」三大民俗之一的美名，成為百年歷史的在地習俗。而這些天燈都承載著我們親手寫下的祝福與希望，作為心靈上的寄託，向天祈禱著希望心中所想的願望能成真。主要在敘述在每個人心中都曾有過可能是天馬行空又或是不可能實現的願望，正因為如此，讓我們對於未來的目標更加明確，在過程中可能失敗，卻還是勇往直前，『願』你我都能朝著自己的願望前進。我們也希望透過本片讓世界各地的人了解天燈除了能許下人們心中的願望，並且能知道放天燈的傳統文化，傳承了中華文化裡美好的習俗。',
+                  description_en: `Sky lantern, used for passing messages, praying for blessings and making wishes    since ancient times, has a good name of top three folk activities in Taiwan “sky lanterns in the North; beehive fireworks in the South; and Handan in the East.” It became a local custom lasting one hundred years. These sky lanterns carry our blessings and wishes written with our own hands, as spiritual sustenance, praying to God for dreams coming true. It mainly describes that everyone had either imaginative or unachievable wishes in mind. Just because of that, our goals in the future will be more specific. It may fail in the process, but we still advance bravely towards our own wishes. Through this film, we hope that the people around the world can understand that people can make wishes via sky lanterns, and understand the traditional culture of releasing sky lanterns, passing on this wonderful custom in the Chinese culture.`,
                   authors: [
                     {
                       name: '楊宛蓁',
@@ -701,6 +852,33 @@ export default {
                       name: '蔡卉婷',
                       school: '南臺科技大學',
                       major: '視覺傳達設計系'
+                    },
+                  ],
+                  authors_en: [
+                    {
+                      name: 'Wan-Chen Yang',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Department of Visual Communication Design'
+                    },
+                    {
+                      name: 'Yu-Chieh Chiu',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Department of Visual Communication Design'
+                    },
+                    {
+                      name: 'Hsin-Wei Yin',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Department of Visual Communication Design'
+                    },
+                    {
+                      name: 'Ping-Cheng Liu',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Department of Visual Communication Design'
+                    },
+                    {
+                      name: 'Hui-Ting Tsai',
+                      school: 'Southern Taiwan University of Science and Technology',
+                      major: 'Department of Visual Communication Design'
                     },
                   ],
                   pic: [
@@ -898,6 +1076,8 @@ export default {
     height: 15vw
     position: absolute
     // z-index: 100
+    +phone
+      height: 100px
 </style>
 <style lang="sass" scoped>
 @import '@/assets/mixin.sass'
@@ -918,6 +1098,8 @@ export default {
     background-size: cover
     background-repeat: no-repeat
     background-position: center
+    +phone
+      height: 100px
     .wlTitle
       position: absolute
       bottom: 20px
