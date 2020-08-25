@@ -1165,6 +1165,10 @@ export default {
             opacity: 1
             transform: translateY(0%)
             transition: 0.5s
+      &:last-child:nth-child(3n-1)
+        margin-right: 35%
+        
+        
       .wlCardTextBlock
         width: 100%
         height: 100%
