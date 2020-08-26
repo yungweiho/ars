@@ -1,5 +1,5 @@
 <template>
-<svg id="圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1017.11 510.88">
+<svg id="map" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1017.11 510.88">
   <defs>
     
   </defs>
@@ -253,7 +253,8 @@ export default {
 </script>
 
 <style lang="sass">
-
+#map
+  z-index: -2
 
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 
   fill: rgba(#fff, 0)

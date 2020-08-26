@@ -173,6 +173,7 @@ export default {
   box-sizing: border-box
   padding: 0 50px 100px 50px
   background-color: rgba(#DEDEDE, 0.5)
+  z-index: -3
 .light_core
   position: absolute
   width: 30px
@@ -186,7 +187,7 @@ export default {
   text-align: center
   font-weight: bold
   font-size: 20px
-  // z-index: 2
+  // z-index: 20
   .light
     position: absolute
     top: 50%
