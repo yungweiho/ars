@@ -41,7 +41,7 @@ export default {
       this.ctx.save()
       this.ctx.translate(400,100)
       // this.ctx.rotate(10)
-      this.drawCircle(35,(angle+1),(angle+80)%360/360)
+      this.drawCircle(10,angle)
       // this.drawCircle(35,angle+72,(angle+490)%360/360)
       // this.drawCircle(35,angle+144,(angle+160)%360/360)
       // this.drawCircle(35,angle+216,(angle+110)%360/360)
@@ -51,17 +51,18 @@ export default {
       this.drawCenterCircle() 
       this.rotatePath()
       this.ctx.restore()
+      // angle++
       // window.requestAnimationFrame(this.draw)
 
     },
     //小圓
-    drawCircle(r,angle,z) {
+    drawCircle(r,angle) {
       // this.ctx.save()
       // this.ctx.translate(450,450)
       this.ctx.beginPath()
-      var x = r*4.28*Math.cos(angle*Math.PI/180)
+      var x = r*3*Math.cos(angle*Math.PI/180)
       var y = r*Math.sin(angle*Math.PI/180)
-      this.ctx.arc(x, y, Math.abs(10*Math.sin(Math.PI*z)+8), 0, Math.PI*2)
+      this.ctx.arc(x, y, 10, 0, Math.PI*2)
       this.ctx.fillStyle = '#000';
       this.ctx.fill();
       this.ctx.closePath();
@@ -69,7 +70,7 @@ export default {
     //中心圓
     drawCenterCircle() {
       this.ctx.beginPath()
-      this.ctx.arc(70, 0, 10, 0, Math.PI*2)
+      this.ctx.arc(0, 0, 20, 0, Math.PI*2)
       this.ctx.fillStyle = '#000';
       this.ctx.fill()
       this.ctx.closePath()
@@ -78,8 +79,9 @@ export default {
     rotatePath() {
       this.ctx.beginPath()
       this.ctx.save()
-      this.ctx.ellipse(0, 0, 150, 35, 0, Math.PI*2, false)
+      this.ctx.ellipse(0, 0, 30, 10, 35, Math.PI*2, false)
       this.ctx.strokeStyle = '#000'
+      this.ctx.lineWidth = 1;
       this.ctx.stroke()
       this.ctx.restore()
     },
@@ -132,6 +134,7 @@ export default {
   // +flexCenter
   margin: 0
   padding: 0
+  +bb
   box-sizing: border-box
   // margin-top: 30px
   +smallcom
