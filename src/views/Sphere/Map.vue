@@ -2,6 +2,8 @@
 .ma
   .maBanner
   .maBlock
+    .textBlock
+      .text
     Map_sketch
     //- ball_icon
     //- 北門
@@ -158,6 +160,13 @@ export default {
   components: {
     Map_sketch,
     ball_icon
+  },
+  data() {
+    return {
+      school_scene: [
+        
+      ]
+    }
   }
 
 }

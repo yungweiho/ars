@@ -27,19 +27,19 @@ export default {
       small_menu: false,
       navData: [
         {
-          title: 'Home',
+          title: 'HOME',
           url: '/',
         },
         {
-          title: '展覽簡介',
+          title: 'ABOUT',
           url: '/introduction',
         },
         {
-          title: '360度逛展覽',
+          title: 'SCHOOL SCENE',
           url: '/map',
         },
         {
-          title: '作品介紹',
+          title: 'PROJECTS',
           url: '/projects',
         },
       ]

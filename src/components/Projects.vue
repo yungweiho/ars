@@ -42,32 +42,32 @@ export default {
       banner: code,
       projectData: [
         {
-          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
-          subtitle: '第15屆得獎作品',
-          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+          title: 'K. T. Creativity Award',
+          subtitle: 'K.T.15',
+          pic: require('../assets/KT15/kt15.jpg'),
           url: '/work_list/1',
         },
         {
-          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
-          subtitle: '第15屆得獎作品',
+          title: 'K. T. Creativity Award',
+          subtitle: 'K.T.14 in Tsing Hua',
+          pic: require('../assets/KT14/kt14.jpg'),
+          url: '/work_list',
+        },
+        {
+          title: 'Flower Illuminating Forest',
+          subtitle: 'FBI Lab, HSCC Lab',
           pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
           url: '/work_list',
         },
         {
-          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
-          subtitle: '第15屆得獎作品',
+          title: 'School Scene',
+          subtitle: 'National Tsing Hua University',
           pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
           url: '/work_list',
         },
         {
-          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
-          subtitle: '第15屆得獎作品',
-          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-          url: '/work_list',
-        },
-        {
-          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
-          subtitle: '第15屆得獎作品',
+          title: 'COVID Flower Behavioral Art Everywhere',
+          subtitle: 'focusing on observations in Tsing Hua University',
           pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
           url: '/work_list',
         },
@@ -149,7 +149,7 @@ export default {
       .prCardTextBlock
         width: 100%
         height: 100%
-        background-color: rgba(#333, 0.5)
+        background-color: rgba(#333, 0.7)
         box-sizing: border-box
         padding: 25% 10px
         // animation: cardsplight 2s ease infinite
