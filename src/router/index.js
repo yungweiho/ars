@@ -7,6 +7,7 @@ import Projects from '@/components/Projects';
 import Intro from '@/components/Intro';
 import Sphere from '@/views/Sphere/Sphere';
 import Map from '@/views/Sphere/Map';
+import Whole_view from '@/views/Sphere/Whole_view';
 
 
 
@@ -50,6 +51,11 @@ export default new Router({
       path: '/map',
       name: 'Map',
       component: Map
+    },
+    {
+      path: '/panorama',
+      name: 'Whole_view',
+      component: Whole_view
     },
     
   ]

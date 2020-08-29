@@ -254,7 +254,7 @@ export default {
 
 <style lang="sass">
 #map
-  z-index: -2
+  z-index: 2
 
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 
   fill: rgba(#fff, 0)

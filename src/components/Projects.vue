@@ -62,7 +62,7 @@ export default {
         {
           title: 'School Scene',
           subtitle: 'National Tsing Hua University',
-          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+          pic: require('../assets/tsing_hua.jpg'),
           url: '/work_list',
         },
         {
