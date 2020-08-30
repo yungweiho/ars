@@ -96,7 +96,7 @@ html
     .MenuBlock
       position: absolute
       background-color: rgba(#fff, 0.7)
-      width: 40vw
+      min-width: 40vw
       height: 50px
       right: 0
       z-index: 9

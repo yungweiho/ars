@@ -1,8 +1,16 @@
 <template lang="pug">
 .ma
   .maBanner
+  //- 移動版地點
+  .ma_mobile_text_block(v-for="(item, i) in school_scene")
+    .number_title {{ abc[i] }}
+    .ma_mobile_place {{ item.title }}
+    .mobile_light(@click="to_sphere(i)")
+      .mobile_light_circle
+      .mobile_small_ball
+  //- 移動版地圖
+  el-image(:src="url" :preview-src-list="srcList").ma_map_mobile
   .maBigTitle
-
   .maBlock
     Map_sketch
     //- ball_icon
@@ -179,6 +187,11 @@ export default {
   },
   data() {
     return {
+      abc: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+      url: require('../../assets/map/map.png'),
+        srcList: [
+          require('../../assets/map/map.png')
+        ],
       visible: false,
       school_scene: [
         {
@@ -304,6 +317,10 @@ span
   padding: 0 50px 100px 50px
   background-color: rgba(#DEDEDE, 0.5)
   z-index: 1
+  +smallcom
+    padding: 0 10px 100px 10px
+    z-index: initial
+    
 .light_core
   position: absolute
   width: 30px
@@ -343,9 +360,13 @@ span
   top: 9vw
   left: 2vw
   z-index: 5
+  +smallcom
+    display: none
 .maBanner
   width: 100%
   height: 15vw
+  +phone
+    height: 100px
 
 .north_door
   position: absolute
@@ -444,6 +465,8 @@ span
   box-sizing: border-box
   padding: 20px
   box-shadow: 0px 0px 100px 1px rgba(#333, 0.2)
+  +smallcom
+    display: none
 
 .hover_button
   position: absolute
@@ -451,10 +474,61 @@ span
   padding: 15px
   border-radius: 100px
   opacity: 0
+.ma_map_mobile
+  width: 100%
+  height: 50vw
+  // margin-left: 2.5%
+  background: url('../../assets/map/map.png')
+  +bgcon
+  display: none
 
+  +smallcom
+    display: block
 
-
-
+.ma_mobile_text_block
+  width: 100%
+  position: relative
+  // +bb
+  +flexrow
+  display: none
+  +smallcom
+    display: flex
+  .number_title
+    color: white
+    width: 25px
+    height: 25px
+    border-radius: 100%
+    background-color: #000
+    text-align: center
+    margin-right: 10px
+  .ma_mobile_place
+    margin-bottom: 20px
+    letter-spacing: 1px
+.mobile_light
+  position: relative
+  width: 8px
+  height: 8px
+  background: #000
+  border-radius: 100%
+  margin-left: 20px
+  margin-top: 5px
+  // margin-right: 10px
+  animation: rote 5s linear infinite
+  .mobile_light_circle
+    position: absolute
+    width: 20px
+    height: 20px
+    border: solid 0.5px #000
+    border-radius: 100%
+    top: -7px
+    left: -7px
+  .mobile_small_ball
+    position: absolute
+    width: 5px
+    height: 5px
+    border-radius: 100%
+    background-color: #000
+    top: -9px
 @keyframes light_big
   0%
     transform: scale(0)
