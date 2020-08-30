@@ -1,9 +1,9 @@
 <template lang="pug">
 .ma
   .maBanner
+  .maBigTitle
+
   .maBlock
-    .textBlock
-      .text
     Map_sketch
     //- ball_icon
     //- 北門
@@ -15,7 +15,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[0].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[0].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(0)") panorama photo
-        el-button(slot="reference" style="opacity: 0" @click="visible = !visible")
+        el-button(slot="reference").hover_button
     //- 南門
     .light_core.south_door B
       .light
@@ -25,7 +25,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[1].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[1].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(1)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 名人堂入口
     .light_core.famous_entry C
       .light
@@ -35,7 +35,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[2].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[2].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(2)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 名人堂一樓
     .light_core.famous_1f D
       .light
@@ -45,7 +45,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[3].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[3].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(3)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 成功湖克恭橋
     .light_core.success_bridge E
       .light
@@ -55,7 +55,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[4].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[4].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(4)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 成功湖湖畔
     .light_core.success_lake F
       .light
@@ -65,7 +65,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[5].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[5].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(5)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 月涵亭
     .light_core.moon G
       .light
@@ -75,7 +75,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[6].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[6].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(6)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 梅陵
     .light_core.mei H
       .light
@@ -85,7 +85,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[7].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[7].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(7)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 梅亭
     .light_core.mei_2 I
       .light
@@ -95,7 +95,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[8].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[8].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(8)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 奕亭_外
     .light_core.yi_out J
       .light
@@ -105,7 +105,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[9].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[9].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(9)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 奕亭_內
     .light_core.yi_in K
       .light
@@ -115,7 +115,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[10].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[10].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(10)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 沉思者
     .light_core.thinking L
       .light
@@ -125,7 +125,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[11].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[11].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(11)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 無聲的對話
     .light_core.no_talk M
       .light
@@ -135,7 +135,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[12].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[12].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(12)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 葉子
     .light_core.leaf N
       .light
@@ -145,7 +145,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[13].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[13].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(13)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 原子爐
     .light_core.atom O
       .light
@@ -155,7 +155,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[14].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[14].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(14)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
     //- 放射治療室
     .light_core.radiation P
       .light
@@ -165,7 +165,7 @@
         .point_pic(:style="{background: 'url(' + school_scene[15].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[15].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(15)") panorama photo
-        el-button(slot="reference" style="opacity: 0")
+        el-button(slot="reference").hover_button
 
 </template>
 
@@ -333,84 +333,97 @@ span
     transform-origin: 50% 50%
     animation: light_big 2s ease infinite
     z-index: -1
-
+.maBigTitle
+  position: absolute
+  width: 45vw
+  height: 10vw
+  // +bb
+  background: url('../../assets/sphere/title.png')
+  +bgcon
+  top: 9vw
+  left: 2vw
+  z-index: 5
 .maBanner
   width: 100%
   height: 15vw
 
 .north_door
   position: absolute
-  top: 41vw
-  left: 25.5vw
+  top: 850px
+  left: 540px
 
 .south_door
   position: absolute
-  top: 2vw
-  left: 67.5vw
+  top: 40px
+  left: 1300px
 
 .famous_entry
   position: absolute
-  top: 26vw
-  left: 50.5vw
+  top: 570px
+  left: 1050px
 
 .famous_1f
   position: absolute
-  top: 26vw
-  left: 52.5vw
+  top: 570px
+  left: 1085px
 
 .success_bridge
   position: absolute
-  top: 26vw
-  left: 30vw
+  top: 520px
+  left: 650px
 
 .success_lake
   position: absolute
-  top: 24.5vw
-  left: 32vw
+  top: 520px
+  left: 700px
 .moon
   position: absolute
-  top: 18.5vw
-  left: 70vw
+  top: 400px
+  left: 1450px
 
 .mei
   position: absolute
-  top: 20vw
-  left: 71.5vw
+  top: 430px
+  left: 1500px
 
 .mei_2
   position: absolute
-  top: 20vw
-  left: 68vw
+  top: 450px
+  left: 1450px
 
 .yi_out
   position: absolute
-  top: 5vw
-  left: 60vw
+  top: 150px
+  left: 1200px
 
 .yi_in
   position: absolute
-  top: 6vw
-  left: 58vw
+  top: 150px
+  left: 1165px
 
 .thinking
   position: absolute
-  top: 34vw
-  left: 38.5vw
+  top: 710px
+  left: 800px
+.no_talk
+  position: absolute
+  top: 180px
+  left: 1080px
 
 .leaf
   position: absolute
-  top: 6vw
-  left: 69.5vw
+  top: 145px
+  left: 1450px
 
 .atom
   position: absolute
-  top: 12.5vw
-  left: 50vw
+  top: 250px
+  left: 1040px
 
 .radiation
   position: absolute
-  top: 12.5vw
-  left: 52vw
+  top: 278px
+  left: 1060px
 
 .point_pic
   width: 100%
@@ -422,6 +435,22 @@ span
   font-weight: bold
   padding: 5px 0
   letter-spacing: 1px
+
+.maBlock
+  width: 100%
+  border: double 5px rgba(#999, 0.5)
+  overflow: auto
+  border-radius: 6px
+  box-sizing: border-box
+  padding: 20px
+  box-shadow: 0px 0px 100px 1px rgba(#333, 0.2)
+
+.hover_button
+  position: absolute
+  margin-left: -22px
+  padding: 15px
+  border-radius: 100px
+  opacity: 0
 
 
 
