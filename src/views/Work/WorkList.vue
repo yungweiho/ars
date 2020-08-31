@@ -56,8 +56,8 @@ export default {
       workList: [
         {
           id: 1,
-          project: '李國鼎（K.T.）科技與人文藝術創意競賽',
-          subtitle: '第15屆得獎作品',
+          project: 'K. T. Creativity Award',
+          subtitle: 'K.T.15',
           pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
           group: [
             {
@@ -1111,7 +1111,7 @@ export default {
               ]
             },
           ]
-        }
+        },
       ]
     }
   },
