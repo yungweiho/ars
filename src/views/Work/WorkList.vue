@@ -73,6 +73,14 @@ export default {
                 {
                   title: 'SOMNUS',
                   description: '《SOMNUS》為一款第一人稱射擊遊戲。本作在第一人稱射擊遊戲的基礎上，融合了動作遊戲常有的完美迴避，讓玩家在享受FPS的射擊感的同時，還能一併體驗到動作遊戲的高靈活度。玩家將扮演本作主角榮格，一名藉由潛入他人的意識，獵殺由潛意識幻化成的夢魘，來治療各種不治之症的密醫；這次，他將潛入一名因故而成為植物人的歌劇女星的意識中，透過找尋到的線索，一步步拼湊出使她甦醒的關鍵，與深藏在背後的陰謀…',
+                  description_en: `“SOMNUS,” a first-person shooting game, combines with perfect avoidance usually
+                    seen in action games, allowing players to not only enjoy the sense of first person
+                    shooting but also experience the high flexibility of the action game at the same time.
+                    Players will play the leading role of Jung, a quacksalver treating all kinds of incurable
+                    diseases via killing nightmares transformed from subconsciousness by slipping into
+                    people’s consciousness. At this time, he will slip into the consciousness of a female
+                    opera singer, who became a vegetable for some reason, to step by step piece up the
+                    key to her recovery and the conspiracy deeply hidden behind via the found clues.`,
                   authors: [
                     {
                       name: '林易辰',
@@ -105,6 +113,38 @@ export default {
                       major: '多媒體與電腦娛樂科學系'
                     },
                   ],
+                  authors_en: [
+                    {
+                      name: 'Yi-Chen Lin',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Wei-Hsiang Lin',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Cheng-Yun Lin',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Ping-Cheng Kuo',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Yu-Chieh Wang',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Hao Hsu',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                  ],
                   pic: [
                     require('../../assets/KT15/game/somnus/somnus_01.png'),
                     require('../../assets/KT15/game/somnus/somnus_02.png'),
@@ -115,6 +155,7 @@ export default {
                 {
                   title: 'VUVU',
                   description: '本遊戲是一款基於台灣特有種野生動物為主的探究式生物數位遊戲教具,遊戲內容主要圍繞在以雲豹居住的高海拔闊葉林、黑熊居住的中海拔鞍馬山霧林和石虎居住的低海拔稻 田為故事背景，學生可以在行動裝置上透過該生態模擬數位遊戲式教具去模擬台灣山區的生態,從而觀察環境與動物之間的相互影響關係,希望透過遊戲模擬情景的方式達到在科學課程中有效的 融入探究式學習,利用從「學習既有知識」為主的學習方式,轉為強調實作尋求解答「創造知識」的體驗學習。本生物課程數位遊戲教具系統不僅能提升學習能量、學習動機與互動性也能更加多元。',
+                  description_en: 'Mainly based on Taiwanese distinctive wild animals, this game is a digital teaching aid for exploring creatures. The story of this game happens in a high-altitude broad-leaved forest where clouded leopards live in, a middle-altitude cloud forest in Anma Mountain where black bears live in, and a low-altitude rice field where leopard cats live in. Via the game-like digital teaching aid for ecological simulation on the mobile device, students can simulate the ecology of the mountain areas in Taiwan, observing the interactive relationship between the environment and animals. By simulating the circumstances in the game, explorative learning is expected to be effectively integrated into scientific courses, transforming the main learning method of “learning the existing knowledge” into the immersive learning of “creating knowledge” that emphasizes on practice and solution finding. This game-like digital teaching aid system for biology courses will increase learning capability, motive as well as diversity.',
                   authors: [
                     {
                       name: '卓宜萱',
@@ -138,6 +179,29 @@ export default {
                       school: '國立雲林科技大學',
                     },
                   ],
+                  authors_en: [
+                    {
+                      name: 'Yi-Hsuan Cho',
+                      school: 'National Yunlin University of Science and Technology',
+                    },
+                    {
+                      name: 'Chun-Hui Yang',
+                      school: 'National Yunlin University of Science and Technology',
+                    },
+                    {
+                      name: 'Chiu-Wei Chien',
+                      major: 'Institute of Multimedia Engineering',
+                      school: 'National Chiao Tung University',
+                    },
+                    {
+                      name: 'Pin-Yi Hsu',
+                      school: 'National Yunlin University of Science and Technology',
+                    },
+                    {
+                      name: 'Pei-Yi Chen',
+                      school: 'National Yunlin University of Science and Technology',
+                    },
+                  ],
                   pic: [
                     require('../../assets/KT15/game/vuvu/vuvu_01.png'),
                     require('../../assets/KT15/game/vuvu/vuvu_02.png'),
@@ -149,37 +213,16 @@ export default {
                     require('../../assets/KT15/game/vuvu/vuvu_08.png'),
                   ]
                 },
-                // {
-                //   title: '收妖',
-                //   description: '收妖是一款以八家將為主題的遊戲，與新加坡南洋理工學院的學生們體驗與不同國家的人一起製作一個專案。當時我們採用台灣的民俗文化為題材，透過製作八家將的專案，來讓南洋理工學院的學生們瞭解到台灣的文化。我們角色的臉譜、服飾，是參照"全臺白龍庵如良應興堂"，再擊倒Boss後會撥放的動畫也是參照"全臺白龍庵如良應興堂"夜巡時要把妖怪收服時的動作，以及最重要的我們的關卡也是設定在五福大帝:劉部宣靈公誕辰繞境日巡的前晚，家將會在宣靈公出巡前衛主神開路，掃除妖孽的環節。我們希望讓更多人透過遊戲來了解台灣的家將文化。',
-                //   authors: [
-                //     {
-                //       name: '劉炫佑',
-                //       school: '臺北海洋科技大學',
-                //       major: '數位遊戲與動畫設計系'
-                //     },
-                //     {
-                //       name: '陳學文',
-                //       school: '臺北海洋科技大學',
-                //       major: '數位遊戲與動畫設計系'
-                //     },
-                //     {
-                //       name: '陳翔天',
-                //       school: '臺北海洋科技大學',
-                //       major: '數位遊戲與動畫設計系'
-                //     },
-                //   ],
-                //   pic: [
-                //     require('../../assets/KT15/game/shoyau/shoyau_01.png'),
-                //     require('../../assets/KT15/game/shoyau/shoyau_02.png'),
-                //     require('../../assets/KT15/game/shoyau/shoyau_03.png'),
-                //     require('../../assets/KT15/game/shoyau/shoyau_04.png'),
-                //     require('../../assets/KT15/game/shoyau/shoyau_05.png'),
-                //   ]
-                // },
                 {
                   title: '俠盜異聞錄',
                   description: '市面上許多遊戲的設計目的都是以遊戲性為主，因此也造成許多玩家在遊戲中不知道遊戲的目的及意義。因此我們希望製作一款有故事主線，並結合遊戲性的設計。藉由本科系熟悉的3D建模、程式設計等等，來完成這項作品。對於大家而言，羅賓漢作為英國民間傳說中的英雄人物，本身就有許多故事及迷團，豐富的素材加上人物本身的魅力，這也是我們小組選擇以羅賓漢作為遊戲主題的緣由。',
+                  description_en: `In the market, many games are designed mainly for gameplay, which hereby makes
+                    many players unable to realize the games’ purposes and meanings. Consequently,
+                    we expected to design a game with a story main line and gameplay. This creation
+                    was completed with 3D modeling and programming that our department students
+                    are familiar with. As a hero in the British popular legend, Robin Hood has many
+                    stories and mysteries. His rich materials and charisma are exactly the reasons why
+                    our team chose Robin Hood as the theme of the game.`,
                   authors: [
                     {
                       name: '陳韋蓁',
@@ -197,6 +240,23 @@ export default {
                       major: '資訊模擬與設計系'
                     },
                   ],
+                  authors_en: [
+                    {
+                      name: 'Wei-Chen Chen',
+                      school: 'Shih Chien University',
+                      major: 'Department of Computer Simulation and Design'
+                    },
+                    {
+                      name: 'Yen-Chiao Lin',
+                      school: 'Shih Chien University',
+                      major: 'Department of Computer Simulation and Design'
+                    },
+                    {
+                      name: 'Ying-Fang Chang',
+                      school: 'Shih Chien University',
+                      major: 'Department of Computer Simulation and Design'
+                    },
+                  ],
                   pic: [
                     require('../../assets/KT15/game/shadau/shadau_01.png'),
                     require('../../assets/KT15/game/shadau/shadau_02.png'),
@@ -204,51 +264,16 @@ export default {
                     require('../../assets/KT15/game/shadau/shadau_04.png'),
                   ]
                 },
-                // {
-                //   title: '格羅佛 Grover',
-                //   description: '隨著巨雷劃破雲霄，守護部族的大燈籠損毀，黑暗力量再次壟罩整座森林，為了拯救僅存的同伴，主角-格羅佛必須收集那些被黑暗驅散的光明之蟲，並將牠們歸還到守護部族與森林的燈籠中，因此他踏上抵抗黑暗的旅程。故事內容講述個體無法改變大環境，但當單一的信念匯集起來，能成為力量去影響它。可能沒辦法完全改善狀況，但也許能避免最糟的情況發生。以平台遊戲凸顯畫面的精緻，為了不受限於環境設備，我們同時將遊戲放上了PC平台與安卓平台，讓玩家隨時隨地都能體驗我們的遊戲。',
-                //   authors: [
-                //     {
-                //       name: '楊于萱',
-                //       school: '嶺東科技大學',
-                //       major: '數位媒體設計系'
-                //     },
-                //     {
-                //       name: '詹琪婷',
-                //       school: '嶺東科技大學',
-                //       major: '數位媒體設計系'
-                //     },
-                //     {
-                //       name: '張君儀',
-                //       school: '嶺東科技大學',
-                //       major: '數位媒體設計系'
-                //     },
-                //     {
-                //       name: '王宜翎',
-                //       school: '嶺東科技大學',
-                //       major: '數位媒體設計系'
-                //     },
-                //     {
-                //       name: '郭姿吟',
-                //       school: '嶺東科技大學',
-                //       major: '數位媒體設計系'
-                //     },
-                //     {
-                //       name: '陳季葳',
-                //       school: '嶺東科技大學',
-                //       major: '數位媒體設計系'
-                //     },
-                //   ],
-                //   pic: [
-                //     require('../../assets/KT15/game/grover/grover_01.png'),
-                //     require('../../assets/KT15/game/grover/grover_02.png'),
-                //     require('../../assets/KT15/game/grover/grover_03.png'),
-                //     require('../../assets/KT15/game/grover/grover_04.png'),
-                //   ]
-                // },
                 {
                   title: '迷謎餌 MELEER',
                   description: '《迷謎餌MELEER》是一款讓好友們開心遊玩的多人連線派對遊戲，翻轉以往的殺敵數獲勝規則，加入了緊張刺激的”丟迷謎”替死鬼要素！與其打死不如壓垮對手，即使對方擁有金幣數量優勢，你也可以藉由此玩法反敗為勝，同樣的，即便金幣全失， ”迷謎化” 也能讓你狂暴起來！帶你扳回一成，獲得更多金幣！！',
+                  description_en: `“MELEER” is a multiplayer online party game that gathers friends and have fun
+                    together, overturning the rule of winning by the number of killed enemies. Instead,
+                    an exciting element of “throwing MELEE” scapegoat is added! It would rather
+                    override than kill the opponents. By this way, even if opponents have the advantage of
+                    more gold coins, you can still turn defeat into victory. Similarly, even if all the gold
+                    coins are lost, “turning into MELEE” can still make you manic again, turning the tide
+                    and gaining more gold coins!`,
                   authors: [
                     {
                       name: '陳建廷',
@@ -276,6 +301,33 @@ export default {
                       major: '多媒體設計系'
                     },
                   ],
+                  authors_en: [
+                    {
+                      name: 'Chien-Ting Chen',
+                      school: 'National Taichung University of Science and Technology',
+                      major: 'Department of Multimedia Design'
+                    },
+                    {
+                      name: 'Ching-Min Chen',
+                      school: 'National Taichung University of Science and Technology',
+                      major: 'Department of Multimedia Design'
+                    },
+                    {
+                      name: 'Meng-Chun Chien',
+                      school: 'National Taichung University of Science and Technology',
+                      major: 'Department of Multimedia Design'
+                    },
+                    {
+                      name: 'Hsiang-Chun Wang',
+                      school: 'National Taichung University of Science and Technology',
+                      major: 'Department of Multimedia Design'
+                    },
+                    {
+                      name: 'Shan-Jung Li',
+                      school: 'National Taichung University of Science and Technology',
+                      major: 'Department of Multimedia Design'
+                    },
+                  ],
                   pic: [
                     require('../../assets/KT15/game/meleer/meleer_01.png'),
                     require('../../assets/KT15/game/meleer/meleer_02.png'),
@@ -283,125 +335,19 @@ export default {
                     require('../../assets/KT15/game/meleer/meleer_04.png'),
                   ]
                 },
-                // {
-                //   title: '開拓者 Kyronus',
-                //   description: '《Kyronus 開拓者》是一款可以與真實世界產生連結的手機經營遊戲，透過在真實世界中移動來收集資源，建造各式各樣建築物，並且復刻出現實生活所存在的建築、特色地景等，在遊戲世界中打造屬於你自己獨一無二的星球！我們希望以遊戲化的方式，利用手機遊戲作為媒介，透過 GPS 定位功能，作為玩家開拓台灣的起點，並鼓勵玩家親自實地到訪文化建築或地景。透過遊玩的過程，讓更多玩家能看見更多台灣特色建築，再從建築背景衍伸帶出台灣文化價值。',
-                //   authors: [
-                //     {
-                //       name: '郭家銘',
-                //       school: '國立成功大學',
-                //       major: '工業設計所'
-                //     },
-                //     {
-                //       name: '楊閔安',
-                //       school: '國立成功大學',
-                //       major: '工業設計所'
-                //     },
-                //     {
-                //       name: '黃俊豪',
-                //       school: '國立成功大學',
-                //       major: '資訊工程學系'
-                //     },
-                //     {
-                //       name: '張祐禎',
-                //       school: '國立成功大學',
-                //       major: '資訊工程學系'
-                //     },
-                //     {
-                //       name: '趙啟峰',
-                //       school: '國立成功大學',
-                //       major: '都市計畫學系'
-                //     },
-                //     {
-                //       name: '黃奕齊',
-                //       school: '國立成功大學',
-                //       major: '都市計畫學系'
-                //     },
-                //   ],
-                //   pic: [
-                //     require('../../assets/KT15/game/kyronus/kyronus_01.png'),
-                //     require('../../assets/KT15/game/kyronus/kyronus_02.png'),
-                //     require('../../assets/KT15/game/kyronus/kyronus_03.png'),
-                //     require('../../assets/KT15/game/kyronus/kyronus_04.png'),
-                //   ]
-                // },
-                // {
-                //   title: '嗚啊嗚啊 WOO',
-                //   description: '《嗚啊嗚啊》為一款雙人對戰的角色扮演(Role Playing Game)遊戲，以動物求偶為主要特色，玩家將扮演會變身的小精靈，變身成為不同動物，進入動物的世界，感受他們獨有的有趣求偶行為。雙方共用一個螢幕展示遊戲畫面，各自拿取遊戲手把進行，透過身體動作操控動物們做出求偶的行為，此種特別的體驗，能激發人們對動物的想像，能比閱讀視聽獲得更深刻的動物知識。我們希望藉由此有趣且獨特的主題，讓大家在玩樂的同時輕鬆學習動物相關知識，達到寓教於樂的效果，遊戲使用強烈的影像吸引關注，以鮮明夢幻的色彩與圓潤的線條作為風格基礎，將動物風格設定為老少咸宜的可愛風，搭配誇張的Ｑ彈角色動畫，塑造出強烈的視覺對比感。',
-                //   authors: [
-                //     {
-                //       name: '曹彩妤',
-                //       school: '國立臺北科技大學',
-                //       major: '互動設計系'
-                //     },
-                //     {
-                //       name: '呂怡潔',
-                //       school: '國立臺北科技大學',
-                //       major: '互動設計系'
-                //     },
-                //     {
-                //       name: '江禕涵',
-                //       school: '國立臺北科技大學',
-                //       major: '互動設計系'
-                //     },
-                //     {
-                //       name: '曾怡萍',
-                //       school: '國立臺北科技大學',
-                //       major: '互動設計系'
-                //     },
-                //     {
-                //       name: '李宜襄',
-                //       school: '國立臺北科技大學',
-                //       major: '互動設計系'
-                //     },
-                //   ],
-                //   pic: [
-                //     require('../../assets/KT15/game/woo/woo_01.png'),
-                //     require('../../assets/KT15/game/woo/woo_02.png'),
-                //     require('../../assets/KT15/game/woo/woo_03.png'),
-                //     require('../../assets/KT15/game/woo/woo_04.png'),
-                //   ]
-                // },
-                // {
-                //   title: '蓋亞 GAIA',
-                //   description: '動作遊戲一定要拼命的無雙嗎？我們想用非主流的玩法，玩家需思考和地圖的關係，讓玩家體驗不同的打王經驗。不像主流遊戲有複雜的系統、技能，簡化遊戲系統，將一切的操作包圍在射箭瞬間移動，達到遊玩體驗。想起一次在關渡平原，見田園中到處攀著紅色的螺，那是外來種生物「福壽螺」，這些外來種侵蝕了原生種的居住地，滿地可見的外來種（大花咸豐草等），決定以我們『台灣』為背景，遊戲當中的BOSS設計成台灣未來種，讓玩家遊玩遊戲的時候，體驗擊殺怪物的快感外，也透過遊戲去思考環境和自身。在《Gaia》中我們表達出得生態議題是在外來物種怪物侵入的背景之下，環境迫害，玩家需擊敗這些怪物，拯救這個區域。',
-                //   authors: [
-                //     {
-                //       name: '許智傑',
-                //       school: '世新大學',
-                //       major: '數位多媒體設計系遊戲組'
-                //     },
-                //     {
-                //       name: '蔡昀臻',
-                //       school: '世新大學',
-                //       major: '數位多媒體設計系遊戲設計組'
-                //     },
-                //     {
-                //       name: '邱振華',
-                //       school: '世新大學',
-                //       major: '數位多媒體設計系遊戲組'
-                //     },
-                //     {
-                //       name: '滕子葳',
-                //       school: '世新大學',
-                //       major: '數位多媒體設計系遊戲組'
-                //     },
-                //     {
-                //       name: '林子勛',
-                //       school: '世新大學',
-                //       major: '數位多媒體設計系遊戲組'
-                //     },
-                //   ],
-                //   pic: [
-                //     require('../../assets/KT15/game/gaia/gaia_01.png'),
-                //     require('../../assets/KT15/game/gaia/gaia_02.png'),
-                //     require('../../assets/KT15/game/gaia/gaia_03.png'),
-                //     require('../../assets/KT15/game/gaia/gaia_04.png'),
-                //   ]
-                // },
                 {
                   title: '蔓不生長 Antivine',
                   description: '自古以來流傳了一種植物病，染上後曬到陽光，身上的植物會急遽生長，把生物變成植物，主角的妹妹就是染上了這種植物病，傳說只要能穿越遺跡抵達大陸的另外一端，就可以找到治癒的方法，於是，哥哥便帶上妹妹踏上了冒險之旅...關卡利用不同的季節來表示玩家已經經過許久的冒險，並且在途中遇到不同的體驗讓玩家置身其中，感受裡面的故事。經過重重的解謎難關，了解故事的始末，並且推動哥哥與妹妹未來的命運。',
+                  description_en: `A kind of plant disease has been spreading since ancient times. With the disease, the
+                    plant on the creature will rapidly grow after basking in the sun, turning creatures
+                    into plants. The leading role’s younger sister caught the plant disease. It is said that a
+                    cure can be found only if one passes through the historical remains to the other side
+                    of the land. As a result, the brother took his younger sister to a journey of adventure.
+                    The different seasons throughout the levels means that players have experienced
+                    many adventures. Players feel the stories by immersing themselves in different
+                    things occurring on the way. After experiencing difficult puzzles one by one and
+                    understanding the whole story, the brother and his younger sister’s fate in the future
+                    will be determined.`,
                   authors: [
                     {
                       name: '張凱閩',
@@ -437,6 +383,43 @@ export default {
                       name: '鄧依庭',
                       school: '南臺科技大學',
                       major: '多媒體與電腦娛樂科學系'
+                    },
+                  ],
+                  authors_en: [
+                    {
+                      name: 'Kai-Min Chang',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Tun-Sheng Hsu',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Meng-Ta Chung',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Che-Hsuan Chen',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Yi-Kai Kuo',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Chia-Hui Wu',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
+                    },
+                    {
+                      name: 'Yi-Ting Teng',
+                      school: 'Southern Taiwan University of Technology',
+                      major: 'Department of Multimedia and Entertainment Science'
                     },
                   ],
                   pic: [

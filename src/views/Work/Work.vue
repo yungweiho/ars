@@ -21,13 +21,13 @@
       .workText.en(v-if="work_item.description_en") {{ work_item.description_en }}
     .workAuthorBlock(v-for="au in work_item.authors")
       .workAuthorName {{ au.name }}
-      .workAuthorSchool {{ au.school }}
-      .workAuthorSchool {{ au.major }}
+      .workAuthorSchool(v-if="au.school") {{ au.school }}
+      .workAuthorSchool(v-if="au.major") {{ au.major }}
     br
     .workAuthorBlock(v-if="work_item.authors_en" v-for="au in work_item.authors_en")
       .workAuthorName {{ au.name }}
-      .workAuthorSchool \ {{ au.major }}
-      .workAuthorSchool \ {{ au.school }}
+      .workAuthorSchool(v-if="au.major") \ {{ au.major }}
+      .workAuthorSchool(v-if="au.school") \ {{ au.school }}
 </template>
 
 <script>
