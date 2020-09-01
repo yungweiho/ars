@@ -3,14 +3,18 @@
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
     .wlTitle {{ work_list_title }}
-  .wlBlock(v-if="$route.params.workid == 1 && $route.path == '/work_list/' + $route.params.workid")
-    .wlTabBlock group
-      .wlTab(v-for="item in KT_gorup_list" :key="item.title" :class="{select: $route.query.group === item.title}" @click="$router.push({query: {group: item.title}})") {{ item.title }}
-  .wlCardBlock(v-if="$route.path == '/work_list/' + $route.params.workid")
+  .wlBlock(v-if="$route.path == '/work_list/' + $route.params.workid")
+    .wlTabBlock {{ tab_title() }}
+      //-KT15 tab 
+      .wlTab(v-if="$route.params.workid == 1" v-for="item in KT_gorup_list" :key="item.title" :class="{select: $route.query.group === item.title}" @click="$router.push({query: {group: item.title}})") {{ item.title }}
+      //- KT14 tab
+      .wltab(v-if="$route.params.workid == 2" v-for="(item, i) in workList[1].works" @click="$router.push({query: {work: i+1}})" style="cursor: pointer") {{ item }}
+  .wlCardBlock(v-if="$route.path == '/work_list/' + $route.params.workid && $route.params.workid == 1")
     router-link.wlCard(v-for="(item, i) in show_works" :key="$route.query.group" :to="'/work_list/' + $route.params.workid + '/work/' + item.title" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
         .wlCardTitle {{ item.title }}
-        .wlCardSubtitle 
+        .wlCardSubtitle
+  KT14
   router-view(:work_list="workList" :key="$route.fullPath")
         
 </template>
@@ -48,8 +52,11 @@ function draw() {
 }
 
 `
-
+import KT14 from '@/views/Work/KT14';
 export default {
+  components: {
+    KT14
+  },
   data() {
     return {
       p5_file: code,
@@ -1112,6 +1119,18 @@ export default {
             },
           ]
         },
+        {
+          id: 2,
+          project: 'K. T. Creativity Award',
+          works: [
+            'Crazy Zero 2',
+            'Mingled Sensations in ConvNets'
+          ],
+        },
+        {
+          id: 3,
+          project: 'Flower Illuminating Forest'
+        }
       ]
     }
   },
@@ -1124,6 +1143,16 @@ export default {
       this.$router.push({query: {group: '數位遊戲組'}})
     }
   },
+  methods: {
+    //tab的標題
+    tab_title() {
+      if (this.$route.params.workid == 1) {
+        return 'group';
+      } else if (this.$route.params.workid == 2) {
+        return 'works';
+      }
+    }
+  },
   computed: {
     // KT的組別列表
     KT_gorup_list() {
@@ -1131,6 +1160,12 @@ export default {
       group_list = this.workList.find((item) => Number(item.id) === Number(this.$route.params.workid));
       return group_list.group;
     },
+    // // KT14的作品列表
+    // KT14_work_list() {
+    //   var work_list;
+    //   work_list = this.workList.find((item) => Number(item.id) === 2);
+    //   return work_list.works;
+    // },
     // 標題
     work_list_title() {
       var group_list;
@@ -1146,7 +1181,8 @@ export default {
       } else {
         return null
       }
-    }
+    },
+    
   }
 }
 </script>

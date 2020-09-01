@@ -51,19 +51,19 @@ export default {
           title: 'K. T. Creativity Award',
           subtitle: 'K.T.14 in Tsing Hua',
           pic: require('../assets/KT14/kt14.jpg'),
-          url: '/work_list',
+          url: '/work_list/2',
         },
         {
           title: 'Flower Illuminating Forest',
           subtitle: 'FBI Lab, HSCC Lab',
-          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-          url: '/work_list',
+          pic: require('../assets/flower/flower_01.png'),
+          url: '/work_list/3',
         },
         {
           title: 'School Scene',
           subtitle: 'National Tsing Hua University',
           pic: require('../assets/tsing_hua.jpg'),
-          url: '/work_list',
+          url: '/map',
         },
         {
           title: 'COVID Flower Behavioral Art Everywhere',
@@ -71,12 +71,12 @@ export default {
           pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
           url: '/work_list',
         },
-        {
-          title: '李國鼎（K.T.）科技與人文藝術創意競賽',
-          subtitle: '第15屆得獎作品',
-          pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
-          url: '/work_list',
-        },
+        // {
+        //   title: '李國鼎（K.T.）科技與人文藝術創意競賽',
+        //   subtitle: '第15屆得獎作品',
+        //   pic: 'https://images.unsplash.com/photo-1593642702909-dec73df255d7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
+        //   url: '/work_list',
+        // },
         
         
       ]

@@ -15,7 +15,7 @@
         .line3
         .line4
     .workSlideOtherPicBlock
-      .workSlideOtherPic(v-for="(item, i) in work_item.pic" :key="i" @click="p = i" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+      .workSlideOtherPic(v-for="(item, i) in work_item.pic" :key="i" @click="p = i" :class="{select: p === i}" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
     .workTextBlock
       .workText {{ work_item.description }}
       .workText.en(v-if="work_item.description_en") {{ work_item.description_en }}
@@ -23,6 +23,7 @@
       .workAuthorName {{ au.name }}
       .workAuthorSchool {{ au.school }}
       .workAuthorSchool {{ au.major }}
+    br
     .workAuthorBlock(v-if="work_item.authors_en" v-for="au in work_item.authors_en")
       .workAuthorName {{ au.name }}
       .workAuthorSchool \ {{ au.major }}
@@ -178,6 +179,8 @@ export default {
     +phone
       height: 10vw
       width: 15%
+    &.select
+      border: solid 5px gray
 .workTextBlock
   width: 100%
   margin-top: 30px
@@ -199,6 +202,7 @@ export default {
   width: 100%
   +flexrow
   margin-top: 10px
+  // margin-bottom: 10px
   letter-spacing: 1.5px
   color: #555
   flex-wrap: wrap
@@ -207,6 +211,7 @@ export default {
   .workAuthorSchool
     font-size: 18px
     margin-left: 10px
+    line-height: 30px
   
 
 </style>

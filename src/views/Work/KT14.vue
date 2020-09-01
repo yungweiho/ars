@@ -1,5 +1,8 @@
 <template lang="pug">
-  
+.kt14
+  .kt_block
+    .pic
+    
 </template>
 
 <script>
