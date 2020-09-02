@@ -7,7 +7,7 @@
           .slTextBlock(:key="i")
             .slTitle {{ item.title }}
             .slAuthor {{ item.author }}
-            .slContent {{ item.description.slice(0, 120) }} ...
+            .slContent {{ item.description.slice(0, 200) }} ...
             .slMore more + 
         .slDotBlock
           .slLeftButton(@click="s === 0 ? s = slideData.length-1 : s--")
@@ -30,7 +30,14 @@ export default {
       slideData: [
         {
           title: 'SOMNUS',
-          description: '《SOMNUS》為一款第一人稱射擊遊戲。本作在第一人稱射擊遊戲的基礎上，融合了動作遊戲常有的完美迴避，讓玩家在享受FPS的射擊感的同時，還能一併體驗到動作遊戲的高靈活度。玩家將扮演本作主角榮格，一名藉由潛入他人的意識，獵殺由潛意識幻化成的夢魘，來治療各種不治之症的密醫；這次，他將潛入一名因故而成為植物人的歌劇女星的意識中，透過找尋到的線索，一步步拼湊出使她甦醒的關鍵，與深藏在背後的陰謀…',
+          description: `“SOMNUS,” a first-person shooting game, combines with perfect avoidance usually
+                    seen in action games, allowing players to not only enjoy the sense of first person
+                    shooting but also experience the high flexibility of the action game at the same time.
+                    Players will play the leading role of Jung, a quacksalver treating all kinds of incurable
+                    diseases via killing nightmares transformed from subconsciousness by slipping into
+                    people’s consciousness. At this time, he will slip into the consciousness of a female
+                    opera singer, who became a vegetable for some reason, to step by step piece up the
+                    key to her recovery and the conspiracy deeply hidden behind via the found clues.`,
           pic: [
             require('../assets/KT15/game/somnus/somnus_01.png'),
             require('../assets/KT15/game/somnus/somnus_02.png'),
@@ -40,7 +47,7 @@ export default {
         },
         {
           title: 'VUVU',
-          description: '本遊戲是一款基於台灣特有種野生動物為主的探究式生物數位遊戲教具,遊戲內容主要圍繞在以雲豹居住的高海拔闊葉林、黑熊居住的中海拔鞍馬山霧林和石虎居住的低海拔稻 田為故事背景，學生可以在行動裝置上透過該生態模擬數位遊戲式教具去模擬台灣山區的生態,從而觀察環境與動物之間的相互影響關係,希望透過遊戲模擬情景的方式達到在科學課程中有效的 融入探究式學習,利用從「學習既有知識」為主的學習方式,轉為強調實作尋求解答「創造知識」的體驗學習。本生物課程數位遊戲教具系統不僅能提升學習能量、學習動機與互動性也能更加多元。',
+          description: 'Mainly based on Taiwanese distinctive wild animals, this game is a digital teaching aid for exploring creatures. The story of this game happens in a high-altitude broad-leaved forest where clouded leopards live in, a middle-altitude cloud forest in Anma Mountain where black bears live in, and a low-altitude rice field where leopard cats live in. Via the game-like digital teaching aid for ecological simulation on the mobile device, students can simulate the ecology of the mountain areas in Taiwan, observing the interactive relationship between the environment and animals. By simulating the circumstances in the game, explorative learning is expected to be effectively integrated into scientific courses, transforming the main learning method of “learning the existing knowledge” into the immersive learning of “creating knowledge” that emphasizes on practice and solution finding. This game-like digital teaching aid system for biology courses will increase learning capability, motive as well as diversity.',
           pic: [
             require('../assets/KT15/game/vuvu/vuvu_01.png'),
             require('../assets/KT15/game/vuvu/vuvu_02.png'),
@@ -53,8 +60,14 @@ export default {
           ]
         },
         {
-          title: '俠盜異聞錄',
-          description: '市面上許多遊戲的設計目的都是以遊戲性為主，因此也造成許多玩家在遊戲中不知道遊戲的目的及意義。因此我們希望製作一款有故事主線，並結合遊戲性的設計。藉由本科系熟悉的3D建模、程式設計等等，來完成這項作品。對於大家而言，羅賓漢作為英國民間傳說中的英雄人物，本身就有許多故事及迷團，豐富的素材加上人物本身的魅力，這也是我們小組選擇以羅賓漢作為遊戲主題的緣由。',
+          title: '俠盜異聞錄 | Robinhood',
+          description: `In the market, many games are designed mainly for gameplay, which hereby makes
+                    many players unable to realize the games’ purposes and meanings. Consequently,
+                    we expected to design a game with a story main line and gameplay. This creation
+                    was completed with 3D modeling and programming that our department students
+                    are familiar with. As a hero in the British popular legend, Robin Hood has many
+                    stories and mysteries. His rich materials and charisma are exactly the reasons why
+                    our team chose Robin Hood as the theme of the game.`,
           pic: [
             require('../assets/KT15/game/shadau/shadau_01.png'),
             require('../assets/KT15/game/shadau/shadau_02.png'),
@@ -64,7 +77,13 @@ export default {
         },
         {
           title: '迷謎餌 MELEER',
-          description: '《迷謎餌MELEER》是一款讓好友們開心遊玩的多人連線派對遊戲，翻轉以往的殺敵數獲勝規則，加入了緊張刺激的”丟迷謎”替死鬼要素！與其打死不如壓垮對手，即使對方擁有金幣數量優勢，你也可以藉由此玩法反敗為勝，同樣的，即便金幣全失， ”迷謎化” 也能讓你狂暴起來！帶你扳回一成，獲得更多金幣！！',
+          description: `“MELEER” is a multiplayer online party game that gathers friends and have fun
+                    together, overturning the rule of winning by the number of killed enemies. Instead,
+                    an exciting element of “throwing MELEE” scapegoat is added! It would rather
+                    override than kill the opponents. By this way, even if opponents have the advantage of
+                    more gold coins, you can still turn defeat into victory. Similarly, even if all the gold
+                    coins are lost, “turning into MELEE” can still make you manic again, turning the tide
+                    and gaining more gold coins!`,
           pic: [
             require('../assets/KT15/game/meleer/meleer_01.png'),
             require('../assets/KT15/game/meleer/meleer_02.png'),
