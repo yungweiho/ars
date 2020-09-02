@@ -40,7 +40,7 @@ export default {
   data() {
     return {
       banner: code,
-      introData: 'Buds about to Blossom Exhibition (含苞待放) This exhibition provides a stage for our younger artists, who are undergraduate students of the young “Tech-Art Department” (TnAD) established in 2017, under the scope of the National Tsing Hua University College of Arts.',
+      introData: 'Buds about to Blossom Exhibition (含苞待放)This exhibition provides a stage for our younger artists, who are master students in Technology and Art at International Intercollegiate Master Program established in 2017, under the scope of the National Tsing Hua University College of Arts.',
     }
   }
 }

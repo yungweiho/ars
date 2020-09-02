@@ -123,6 +123,9 @@ export default {
     +flexrow
     flex-wrap: wrap
     margin-top: 40px
+    +pad
+      width: 90%
+      max-width: initial
     .prCard
       position: relative
       width: 28.2%
@@ -135,6 +138,24 @@ export default {
       max-height: 320px
       cursor: pointer
       transition: 0.5s
+      box-sizing: border-box
+      +smallcom
+        width: 30%
+        max-width: none
+        max-height: none
+        margin-right: 1%
+        margin-left: 1%
+      +pad
+        width: 47%
+        height: 25vw
+        margin-right: 1.5%
+        margin-left: 1.5%
+        margin-bottom: 1.5%
+
+      +phone
+        width: 100%
+        height: 45vw
+        margin-bottom: 20px
 
       &:hover
         .prCardTextBlock
@@ -156,11 +177,18 @@ export default {
         transition: 0.5s
         border-radius: 6px
 
+        +smallcom
+          padding: 20px
+        +phone
+          padding: 10vw
+
         .prCardTitle
           color: white
           font-size: 20px
           letter-spacing: 1.5px
           text-align: center
+          +smallcom
+            font-size: 18px
         .prCardContent
           color: white
           font-size: 20px
@@ -170,6 +198,20 @@ export default {
           opacity: 0
           transform: translateY(50%)
           transition: 0.5s
+          box-sizing: border-box
+          +smallcom
+            transform: none
+            opacity: 1
+            font-size: 18px
+            overflow: hidden
+            text-overflow: ellipsis
+            white-space: nowrap
+          +pad
+            white-space: initial
+
+          
+
+
 
 @keyframes cardsplight
   0%, 100%

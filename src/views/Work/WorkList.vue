@@ -617,7 +617,7 @@ export default {
                   ]
                 },
                 {
-                  title: '浮標',
+                  title: '浮標 | Buoy',
                   description: '浮標，是一種簡易的標地物，隨著浮動，它所框出的不確定範圍被人們作為一種象徵性的空間代表，這讓我們對空間有了更多的解讀性。此故事中將以浮標的概念來揭示生活中的人與人之間的空間關係。主角是一名游泳選手，故事描述著主角在與人相處時，透過分類、預想他人行為，使自己能夠解讀社會上所發生的事情。但在片段的事件中卻產生了框架時而明確時而模糊的狀態，最後主角在理解框架的形式後，奮力地跳入泳池中…。以「水」為意象，象徵人與人相處因立場不同而產生時而明確，時而模糊的矛盾現象，我們使用3D的技術呈現現實與抽象的空間關係，更輔以2D的特色，帶出作品的溫度與深度，來呈現「框架」的核心概念！',
                   description_en: `Buoy is a kind of simple target; while floating, its framed uncertain area is regarded as a kind of symbolic space representative. It makes us interpret a space more differently. In this story, the concept of buoy is used to reveal the space relationships between people in life. The leading role is a swimming player. The story tells that when the leading role gets along with others, she anticipates people’s behaviors by categorization, which makes her be able to interpret what happens in the society. Nevertheless, in the fragments of events, the frames fall into the status sometimes clear and sometimes blurred. In the end, the leading role jumps hard into the swimming pool after understanding the form of frames… As the imagery, “water” symbolizes the contradictory phenomenon that people get along with each other by sometimes clear and sometimes blurred relationships due to different standpoints. We use 3D technology, assisted with 2D features, to present the space relationship between reality and abstraction, bringing out the creation’s sensibility and deepness, to show the core concept of “frame”!`,
                   authors: [
@@ -737,7 +737,7 @@ export default {
                   ]
                 },
                 {
-                  title: '綻放之種',
+                  title: '綻放之種 | Blüte',
                   description: '綻放之種(2020) 以女性的角度出發，記錄少女在初次經歷戀愛的過程中，愛情悄然進入心房的心境描寫。以植物作為女性符號象征的複合式媒材，種子代表生命的誕生與再生，植物透過種子把生命延續到未來，愛情的旅程也是如此。將愛情最原始的形態視覺化，試圖尋找一種情感關係中的心靈寄託，脫離東方社會傳統思潮的束縛，從種子蛻變為小芽茁壯成長。每個女人都有愛與被愛的權利，請為自己勇於追逐愛情感到驕傲吧！',
                   description_en: 'Blüte (2020) explores the perspective of a woman as she experiences the first tinge of love as it colors her teenage heart for the first time. Plants have been chosen the composite medium of choice to symbolize feminity. Seeds represents birth and rebirth. Plants extend life through seeds into the future, and so does the journey of love. Visualize the most primitive form of love, and try to find the spiritual core of a relationship. Break through traditional Eastern notions of love, and let the seeds grow valiantly into a budding plant. Every woman has the right to love and be loved, so please be proud of your courage to chase after love!',
                   authors: [
