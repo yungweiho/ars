@@ -1225,12 +1225,28 @@ export default {
       margin-top: 20px
       max-width: 1300px
       letter-spacing: 1.5px
+      +smallcom
+        width: 80vw
+        max-width: none
+      +pad
+        width: 90vw
+      +phone
+        +flexcolumn
+        margin-top: 0px
+        text-align: center
+        font-size: 25px
       .wlTab
         font-size: 20px
         margin-right: 20px
         letter-spacing: 1.5px
         cursor: pointer
         font-weight: normal
+        position: relative
+        +pad
+          font-size: 18px
+          margin-right: 0px
+        +phone
+          margin-top: 10px
         &:before
           position: absolute
           content: ''
@@ -1240,9 +1256,21 @@ export default {
           top: 10px
           background-color: black
           display: none
+          +phone
+            position: relative
+            left: initial
+            top: initial
+            margin-left: -20px
+            margin-right: 5px
+            // margin-top: -20px
+            top: -5px
+            
+            
         &.select
           &:before
             display: block
+            +phone
+              display: inline-block
   .wlCardBlock
     width: 61vw
     +flexrow
@@ -1251,6 +1279,10 @@ export default {
     box-sizing: border-box
     padding: 20px 0
     justify-content: space-between
+    +smallcom
+      width: 81vw
+    +pad
+      width: 91vw
     .wlCard
       width: 30%
       height: 12vw
@@ -1260,6 +1292,17 @@ export default {
       cursor: pointer
       border-radius: 6px
       transition: 0.5s
+      +smallcom
+        height: 15vw
+      +pad
+        width: 48%
+        height: 25vw
+        margin-bottom: 1.5vw
+      +phone
+        width: 100%
+        height: 50vw
+        margin-bottom: 15px
+
       &:hover
         .wlCardTextBlock
           .wlCardSubtitle
@@ -1268,6 +1311,8 @@ export default {
             transition: 0.5s
       &:last-child:nth-child(3n-1)
         margin-right: 35%
+        +phone
+          margin-right: 0
         
         
       .wlCardTextBlock
