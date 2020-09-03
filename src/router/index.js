@@ -8,6 +8,8 @@ import Intro from '@/components/Intro';
 import Sphere from '@/views/Sphere/Sphere';
 import Map from '@/views/Sphere/Map';
 import Whole_view from '@/views/Sphere/Whole_view';
+import Buds_about_to_Blossom_Exhibition from '@/views/Work/Buds_about_to_Blossom_Exhibition';
+import Flower from '@/views/Work/Flower';
 
 
 
@@ -56,6 +58,16 @@ export default new Router({
       path: '/panorama',
       name: 'Whole_view',
       component: Whole_view
+    },
+    {
+      path: '/Buds_about_to_Blossom_Exhibition',
+      name: 'Buds_about_to_Blossom_Exhibition',
+      component: Buds_about_to_Blossom_Exhibition
+    },
+    {
+      path: '/Flower_Illuminating_Forest',
+      name: 'Flower',
+      component: Flower
     },
     
   ]

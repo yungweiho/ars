@@ -48,16 +48,16 @@ export default {
           url: '/work_list/1',
         },
         {
-          title: 'K. T. Creativity Award',
+          title: 'Buds about to Blossom Exhibition',
           subtitle: 'K.T.14 in Tsing Hua',
           pic: require('../assets/KT14/kt14.jpg'),
-          url: '/work_list/2',
+          url: '/Buds_about_to_Blossom_Exhibition',
         },
         {
           title: 'Flower Illuminating Forest',
           subtitle: 'FBI Lab, HSCC Lab',
           pic: require('../assets/flower/flower_01.png'),
-          url: '/work_list/3',
+          url: '/Flower_Illuminating_Forest',
         },
         {
           title: 'School Scene',

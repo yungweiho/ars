@@ -5,16 +5,12 @@
     .wlTitle {{ work_list_title }}
   .wlBlock(v-if="$route.path == '/work_list/' + $route.params.workid")
     .wlTabBlock {{ tab_title() }}
-      //-KT15 tab 
-      .wlTab(v-if="$route.params.workid == 1" v-for="item in KT_gorup_list" :key="item.title" :class="{select: $route.query.group === item.title}" @click="$router.push({query: {group: item.title}})") {{ item.title }}
-      //- KT14 tab
-      .wltab(v-if="$route.params.workid == 2" v-for="(item, i) in workList[1].works" @click="$router.push({query: {work: i+1}})" style="cursor: pointer") {{ item }}
+      .wlTab(v-if="Number($route.params.workid) === 1", v-for="item in KT_gorup_list" :key="item.title" :class="{select: $route.query.group === item.title}" @click="$router.push({query: {group: item.title}})") {{ item.title }}
   .wlCardBlock(v-if="$route.path == '/work_list/' + $route.params.workid && $route.params.workid == 1")
     router-link.wlCard(v-for="(item, i) in show_works" :key="$route.query.group" :to="'/work_list/' + $route.params.workid + '/work/' + item.title" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
         .wlCardTitle {{ item.title }}
         .wlCardSubtitle
-  KT14
   router-view(:work_list="workList" :key="$route.fullPath")
         
 </template>
@@ -52,10 +48,10 @@ function draw() {
 }
 
 `
-import KT14 from '@/views/Work/KT14';
+// import KT14 from '@/views/Work/KT14';
 export default {
   components: {
-    KT14
+    
   },
   data() {
     return {
@@ -1124,6 +1120,8 @@ export default {
     // 如果是點KT就給第一組group
     if (this.$route.fullPath === '/work_list/1') {
       this.$router.push({query: {group: '數位遊戲組'}})
+    } else if (this.$route.fullPath === '/work_list/2') {
+      this.$router.push({query: {work: 1}})
     }
   },
   methods: {
@@ -1271,6 +1269,41 @@ export default {
             display: block
             +phone
               display: inline-block
+      
+      .wlTab2
+        font-size: 20px
+        margin-right: 20px
+        letter-spacing: 1.5px
+        cursor: pointer
+        font-weight: normal
+        position: relative
+        +pad
+          font-size: 18px
+          margin-right: 0px
+        +phone
+          margin-top: 10px
+        &:before
+          position: absolute
+          content: ''
+          width: 15px
+          height: 5px
+          left: -20px
+          top: 10px
+          background-color: black
+          display: block
+          +phone
+            position: relative
+            left: initial
+            top: initial
+            margin-left: -20px
+            margin-right: 5px
+            // margin-top: -20px
+            top: -5px
+        &.select
+          &:before
+            display: block
+            +phone
+              display: inline-block
   .wlCardBlock
     width: 61vw
     +flexrow
@@ -1337,7 +1370,6 @@ export default {
           opacity: 0
           transform: translateY(50%)
           transition: 0.5s
-
 
 
 </style>

@@ -1,6 +1,6 @@
 <template lang="pug">
 .wv
-  .wvBanner
+  //- .wvBanner
   .viewBlock
     .pic(v-html="pic[place_id]")
 </template>
