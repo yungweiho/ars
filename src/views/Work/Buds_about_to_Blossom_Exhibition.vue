@@ -9,7 +9,7 @@
   .workBlock
     .workSlideContainer
       transition(name="fade" mode="out-in")
-        .workSlideBlock(v-for="(item, i) in kt14_data.works[$route.query.work-1].pic.slice(p, p+1)" :key="$route.query.work && p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+        .workSlideBlock(v-for="(item, i) in kt14_data.works[$route.query.work-1].pic.slice(p, p+1)" :key="item"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .workSlidePrev(@click="p === 0? p = kt14_data.works[$route.query.work-1].pic.length-1 : p--")
         .line1
         .line2
@@ -80,7 +80,7 @@ export default {
             title: 'Crazy Zero 2',
             description: '〈Crazy Zero 2〉這作品乃使用「多視角成像之線條藝術演算法（Multi-View Wire Algorithm）」生成的線性雕塑，我們利用3D列印技術將生成的虛擬雕塑模型製作成實體裝置雕塑作品。我們選擇了愛因斯坦和瑪麗蓮夢露兩位歷史上的著名瘋狂人物的圖像，使這兩位天才在虛擬空間中交會，在真實空間中合體。而透過多重視角，不管是愛因斯坦或是瑪麗蓮夢露，你只有站在其所對應相當於「O (zero)」點的座標位置，才能看清他們的容貌，+1度或-1度的位置都無法看的最清楚。真相往往只是在某個時刻才能看到，這個特定時刻就如同虛擬空間中的一組特定數據只能代表一個特定的點那樣，處在零點才能看到正確的畫面。 〈Crazy Zero 2〉讓兩個著名瘋狂人物在在真實空間中合體，在zero點的座標位置上讓瘋狂得以呈現。',
             description_en: 'Crazy Zero 2 is a wire sculpture generated with the system of “Multi-View Wire Algorithm”, and we use 3D line printing technology to turn virtual model into tangible object. We choose the images of Einstein and Marilyn Monroe, who are both famous crazy icon in history, to let these two geniuses “meet” in the virtual space while they are combined in one in reality. From multiple angles of view, audience can only see the complete face of Einstein or Marilyn Monroe when they are standing at the zero-degree angle of a particular side, the slightest deviation (even -1 or +1 degree of angle) will affect the clearness of images. Usually, truth cannot be seen until a particular moment, this very moment is like the fact that a particular data can only represent a particular point in virtual world, we can only see the right image while standing at the zero point. Crazy Zero 2 shows the combination of two crazy celebrities in real space, and the zero point presents such craziness.',
-            authors: [
+            authors_en: [
               {
                 name: 'Jiaxing Sun',
                 major: 'International Intercollegiate MS Program',
@@ -107,7 +107,7 @@ export default {
                 school: 'National Tsing Hua University',
               }
             ],
-            authors_en: [
+            authors: [
               {
                 name: '孫佳興',
                 school: '國立清華大學',

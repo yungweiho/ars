@@ -3,6 +3,7 @@
   //- .wvBanner
   .viewBlock
     .pic(v-html="pic[place_id]")
+  .des_icon
 </template>
 
 <script>
