@@ -74,7 +74,7 @@ export default {
           {
             title: '花光照林 | Flower Illuminating Forest',
             description: '',
-            description_en: 'This IoT installation art combines the the climate data gathered by the smart street lamp and screening data in Tsing Hua campus.   It will have different light pattern based on the data of wind, rain, temperature, light.',
+            description_en: 'This IoT installation art combines the the climate data gathered by the smart street lamp and screening data in Tsing Hua campus. It will have different light pattern based on the data of wind, rain, temperature, light.',
             authors: [
               {
                 name: '',
