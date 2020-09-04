@@ -35,7 +35,7 @@ export default {
           url: '/introduction',
         },
         {
-          title: 'SCHOOL SCENE',
+          title: 'GARDEN SCENE',
           url: '/map',
         },
         {

@@ -92,7 +92,7 @@ export default {
               }
             ],
             pic: [
-              require('../../assets/flower/flower_01.png'),
+              require('../../../assets/flower/flower_01.png'),
             ]
           },
         
