@@ -7,7 +7,7 @@
     .wlTabBlock {{ tab_title() }}
       .wlTab(v-if="Number($route.params.workid) === 1", v-for="item in KT_gorup_list" :key="item.title" :class="{select: $route.query.group === item.title}" @click="$router.push({query: {group: item.title}})") {{ item.title }}
   .wlCardBlock(v-if="$route.path == '/work_list/' + $route.params.workid && $route.params.workid == 1")
-    router-link.wlCard(v-for="(item, i) in show_works" :key="$route.query.group" :to="'/work_list/' + $route.params.workid + '/work/' + item.title" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+    router-link.wlCard(v-for="(item, i) in show_works" :key="$route.query.group" :to="'/work/' + item.title" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
         .wlCardTitle {{ item.title }}
         .wlCardSubtitle
@@ -94,7 +94,7 @@ export default {
                       major: '多媒體與電腦娛樂科學系'
                     },
                     {
-                      name: '林正耘',
+                      name: '郭秉澄',
                       school: '南臺科技大學',
                       major: '多媒體與電腦娛樂科學系'
                     },
@@ -116,7 +116,7 @@ export default {
                       major: 'Department of Multimedia and Entertainment Science'
                     },
                     {
-                      name: 'Wei-Hsiang Lin',
+                      name: 'Yi-Chen Lin',
                       school: 'Southern Taiwan University of Technology',
                       major: 'Department of Multimedia and Entertainment Science'
                     },
@@ -210,7 +210,7 @@ export default {
                   ]
                 },
                 {
-                  title: '俠盜異聞錄',
+                  title: '俠盜異聞錄 | Robinhood',
                   description: '市面上許多遊戲的設計目的都是以遊戲性為主，因此也造成許多玩家在遊戲中不知道遊戲的目的及意義。因此我們希望製作一款有故事主線，並結合遊戲性的設計。藉由本科系熟悉的3D建模、程式設計等等，來完成這項作品。對於大家而言，羅賓漢作為英國民間傳說中的英雄人物，本身就有許多故事及迷團，豐富的素材加上人物本身的魅力，這也是我們小組選擇以羅賓漢作為遊戲主題的緣由。',
                   description_en: `In the market, many games are designed mainly for gameplay, which hereby makes
                     many players unable to realize the games’ purposes and meanings. Consequently,
@@ -261,7 +261,7 @@ export default {
                   ]
                 },
                 {
-                  title: '迷謎餌 MELEER',
+                  title: '迷謎餌 | MELEER',
                   description: '《迷謎餌MELEER》是一款讓好友們開心遊玩的多人連線派對遊戲，翻轉以往的殺敵數獲勝規則，加入了緊張刺激的”丟迷謎”替死鬼要素！與其打死不如壓垮對手，即使對方擁有金幣數量優勢，你也可以藉由此玩法反敗為勝，同樣的，即便金幣全失， ”迷謎化” 也能讓你狂暴起來！帶你扳回一成，獲得更多金幣！！',
                   description_en: `“MELEER” is a multiplayer online party game that gathers friends and have fun
                     together, overturning the rule of winning by the number of killed enemies. Instead,
@@ -282,7 +282,7 @@ export default {
                       major: '多媒體設計系'
                     },
                     {
-                      name: '陳敬旻',
+                      name: '簡盟峻',
                       school: '國立臺中科技大學',
                       major: '多媒體設計系'
                     },
@@ -332,7 +332,7 @@ export default {
                   ]
                 },
                 {
-                  title: '蔓不生長 Antivine',
+                  title: '蔓不生長 | Antivine',
                   description: '自古以來流傳了一種植物病，染上後曬到陽光，身上的植物會急遽生長，把生物變成植物，主角的妹妹就是染上了這種植物病，傳說只要能穿越遺跡抵達大陸的另外一端，就可以找到治癒的方法，於是，哥哥便帶上妹妹踏上了冒險之旅...關卡利用不同的季節來表示玩家已經經過許久的冒險，並且在途中遇到不同的體驗讓玩家置身其中，感受裡面的故事。經過重重的解謎難關，了解故事的始末，並且推動哥哥與妹妹未來的命運。',
                   description_en: `A kind of plant disease has been spreading since ancient times. With the disease, the
                     plant on the creature will rapidly grow after basking in the sun, turning creatures
@@ -431,7 +431,7 @@ export default {
               title: '數位動畫組',
               works: [
                 {
-                  title: '化羽',
+                  title: '化羽 | The Empress',
                   description: '隨著民主潮流的推波，女權運動近年來蓬勃發展，全球各地女性自主意識提升，許多女性權益看似逐漸改善，但即便是在二十一世紀今日，仍有許多國家及地區的傳統習俗或宗教文化，對女性平權的議題設下重重枷鎖，甚至視為異端禁止討論參與。藉由本次的動畫短片創作「化羽」，希望透過故事中父權至上的封建社會背景，傳達出女性自主意識的覺醒，期盼觀眾能瞭解爭取自由與權益的女性們，我們應給更多的尊重同理與包容。在製作及畫面技術上，小組三人發揮長才，使用PS、AI等繪圖軟體設計出人物以及場景；也使用了Cilp來繪製出逐格動畫，將所有繪製好的場景、角色、動態逐格結合進AE，使用合成及特效來呈現出完整的作品。',
                   description_en: `Following the trend of democracy, feminist movement flourished in recent years. All over the world, women’s awareness of autonomy has risen, and many women’s rights also seemed to have gradually improved. However, even today of the 21st century, the issues of women's equality are still chained by traditional customs or religious cultures in many regions and countries, and even been regarded as heterodox and banned on discussion and participation. By this short animation “The Empress,” the awakening of women’s awareness of autonomy is conveyed via the feudal society background of the patriarchalism reigning supreme in the story, expecting that the audience can understand the women striving for freedom and rights and that we should provide more respect, empathy and tolerance. On the production and graphic technology, our three team members used specialized drawing software, such as Photoshop and Illustrator, to design roles and scenes. Clip Studio Paint was also used to produce frame-by-frame animations, combining with the drawn scenes, roles and motions into After Effects frame by frame. The completed creation was presented by synthetization and special effects.`,
                   authors: [
@@ -478,7 +478,7 @@ export default {
                   ]
                 },
                 {
-                  title: '沉沒',
+                  title: '沉沒 | Sinking',
                   description: '故事描述一名女高中生被班上的同學利用、冷落的日常生活。在這樣的生活狀況之下主角逐漸感到絕望，並因壓力提升而開始產生了與深海有關的幻象。',
                   description_en: `The story describes a high school girl’s everyday life, being used and cold-shouldered by her classmates. Under such living conditions, the leading role feels desperate bit by bit, and due to increased pressure, starts to feel an illusion about deep seas.`,
                   authors: [
@@ -552,7 +552,7 @@ export default {
                   ]
                 },
                 {
-                  title: '妳只在乎妳在乎的',
+                  title: '妳只在乎妳在乎的 | Mother Figure',
                   description: '本作以導演好友的生命經驗， 發現他對於母愛總是充滿渴望，可是當他真正面對母親時，卻又無法拉近彼此的距離，隨著時光飛逝， 兩者都錯過挽回的機會， 留下無奈。透過回憶了解母親從未給予小孩真正想要的、運用孩童視角劃分現實與過去的時間軸與情緒氛圍， 將理性和感性連同環境比例區隔開、把影片溫度與童趣感用手繪筆觸加上紙質疊加出來、盡可能將手繪動畫質感還原到電腦動畫媒材上。',
                   description_en: `This animation is based on the director’s life experience. He found that he always eagers for mother’s love, but when really facing his mother, he failed to bring them closer. While time passed, they both missed the opportunity to retrieve the situation, only leaving helplessness. By recalling that mother never gave her child what he really wanted, a child’s angle of view was adopted to differentiate the timeline and emotional atmosphere of the present and the past, dividing rationality, sensibility and environment proportion. The animation sensibility and childlike sense were overlaid by hand-drawing strokes and paper textures; the textures of hand-drawing animation were tried to be recovered to the materials of computer animation.`,
                   authors: [
@@ -578,7 +578,7 @@ export default {
                   ]
                 },
                 {
-                  title: '苒冉',
+                  title: '苒冉 | TURN BACK THE CLOCK',
                   description: '西元2048年，在經歷過第三次世界大戰和人類對地球造成不可逆汙染的未來，風雲變色，失序的世界中使得大部分土地失去生機，徒留受到核汙染基因變異的生物和極少數散落各地的倖存者人類。身為其中一人的主角獨自生活在末日後的世界，從小就對機械有興趣，擅長東拼西湊組裝各種零件的他，在那裡為了實現自己的心願四處奔走搜集零件，完成一件可以讓意識回到過去的機器，接著由過去記憶中的場景交代主角的身世背景，並藉此響應環保議題。動畫為3D與2D混合使用的風格，場景為3D建模而角色則為2D繪製，藉由風格差異區隔兩者，突顯出主角與末日後的世界格格不入。',
                   description_en: `In 2048, the future experiencing the third world war and the irreversible pollution on the earth made by humans, everything has changed. In this disorderly world, most lands lost their vitality, only leaving the creatures with genetic mutation from nuclear pollution and very few human survivors scattered in different places. The leading role, one of those humans, living alone in the world after the doom, has always been interested in machinery since he was young. He is good at assembling different kinds of parts. In order to make his dream come true, he tries hard to gather parts from different places to create a machine which can bring consciousness back to the past. And then, the leading role’s family background is disclosed from the scenes in the past memories, and thereby responding to environmental protection issues. In the animation, combined with 3D and 2D styles, the scenes are modeled by 3D, and the roles are drawn by 2D. Differentiating two settings by style, it more clearly shows that the leading role is incompatible with the world after the doom.`,
                   authors: [
@@ -658,7 +658,7 @@ export default {
                   ]
                 },
                 {
-                  title: '森生',
+                  title: '森生 | Born for forest',
                   description: '發想與動機:PM2.5是一種空氣污染，而當人們處在霧霾環境中呼吸,那些過小的顆粒無法被口罩抑制或是人體產生的防禦機制給阻擋在外,他將導致呼吸困難和增加肺部疾病的風險。主旨:人們的呼吸是需要森林予以的淨化,眾多樹苗才能成林,可綠植卻隨著發展的過程而漸失,在這個世代裡,如何取得平衡並使人反思人與自然之間的關係是件相當重要的議題。理念:影片中透過實體化霧霾以有趣的互動呈現出主角、植物及霧霾三方,相互制衡的關係,來讓人省思和探討自然與發展之間可否取得平衡,並讓每個人透過小小的舉動來改善及預防空氣汙染,愛護森林及減少砍后,讓我們在未來能有個可以好好深呼吸的地方。',
                   description_en: `Motive: PM2.5 is a kind of air pollution. When we breathe in the hazy environment with small particles unable to be blocked out by masks or human defense mechanisms, our risks of breathing difficulties and lung diseases will increase. Purpose: Our breathing needs to be purified by forests. A forest can only be formed by numerous saplings, but on the contrary planting gradually disappears in the process of development. In this generation, how to reach the balance and make people think over the relationship between humans and nature is a very important issue. Idea: In the film, hazes are materialized, and the mutually balanced relationships among the leading role, plants and hazes are presented by interesting interactions, so as to make people reflect over and discuss whether nature and development can achieve their balance. Small actions are also taken by each one to improve and prevent air pollution, protect forests and decrease logging, leaving a place we can well breathe deeply in the future.`,
                   authors: [
@@ -683,7 +683,7 @@ export default {
                       major: '視覺傳達設計系動畫組'
                     },
                     {
-                      name: '江家均',
+                      name: '王馨慧',
                       school: '南臺科技大學',
                       major: '視覺傳達設計系動畫組'
                     },
@@ -746,6 +746,16 @@ export default {
                       school: '國立臺灣藝術大學',
                     },
                   ],
+                  authors_en: [
+                    {
+                      name: 'YAN-SI PAN',
+                      school: 'National Taiwan University of Arts',
+                    },
+                    {
+                      name: 'JING-YI LIU',
+                      school: 'National Taiwan University of Arts',
+                    },
+                  ],
                   pic: [
                     require('../../assets/KT15/animate/zhan/zhan_01.png'),
                     require('../../assets/KT15/animate/zhan/zhan_02.png'),
@@ -754,7 +764,7 @@ export default {
                   ]
                 },
                 {
-                  title: '餘溫',
+                  title: '餘溫 | Everlasting Touch',
                   description: '「大體老師」，是指捐贈自己的遺體，供醫學院學生在解剖課上使用的亡者，是學生的第一位手術患者兼重要的老師。藉由作品中大體老師和學生間的特殊感情，破除大眾對大體解剖課的偏見和不安，傳達遺體捐贈的真正意義。',
                   description_en: `“Cadaver,” the dead human body donated by oneself, providing medical students for anatomy classes, is students’ first patient undergoing surgery and important teacher. By the special emotions between cadaver and students, people’s prejudice and unease towards anatomy classes are eliminated, and the true meaning of body donation is conveyed.`,
                   authors: [
@@ -810,7 +820,7 @@ export default {
                   ]
                 },
                 {
-                  title: '願',
+                  title: '願 | Hope',
                   description: '天燈自古以來有著傳遞訊息、祈福許願的作用，在台灣並列為「北天燈，南蜂炮，東寒單」三大民俗之一的美名，成為百年歷史的在地習俗。而這些天燈都承載著我們親手寫下的祝福與希望，作為心靈上的寄託，向天祈禱著希望心中所想的願望能成真。主要在敘述在每個人心中都曾有過可能是天馬行空又或是不可能實現的願望，正因為如此，讓我們對於未來的目標更加明確，在過程中可能失敗，卻還是勇往直前，『願』你我都能朝著自己的願望前進。我們也希望透過本片讓世界各地的人了解天燈除了能許下人們心中的願望，並且能知道放天燈的傳統文化，傳承了中華文化裡美好的習俗。',
                   description_en: `Sky lantern, used for passing messages, praying for blessings and making wishes    since ancient times, has a good name of top three folk activities in Taiwan “sky lanterns in the North; beehive fireworks in the South; and Handan in the East.” It became a local custom lasting one hundred years. These sky lanterns carry our blessings and wishes written with our own hands, as spiritual sustenance, praying to God for dreams coming true. It mainly describes that everyone had either imaginative or unachievable wishes in mind. Just because of that, our goals in the future will be more specific. It may fail in the process, but we still advance bravely towards our own wishes. Through this film, we hope that the people around the world can understand that people can make wishes via sky lanterns, and understand the traditional culture of releasing sky lanterns, passing on this wonderful custom in the Chinese culture.`,
                   authors: [
@@ -880,7 +890,7 @@ export default {
               title: '互動科技藝術組',
               works: [
                 {
-                  title: '尪',
+                  title: '尪 | GOD',
                   description: '尪在閩南話意指偶像、戲偶，也有神仙之意，發想來自陣頭的七爺八爺，此裝置為賽博龐克風格的七爺戲偶重製，試圖將對科技未來的想像融合台灣傳統廟會文化。如遊行的七爺一般此裝置手臂手掌皆可動卻不依靠電力，而是採用液壓系統驅動結構運作，使用者可配戴此裝置並在裝置體內進行操作。本作品採用複合媒材，技術方面使用雷射切割以及3D列印。',
                   description_en: `In Southern Min, Ang means idol, puppet or celestial, originating from the Seventh Lord and the Eighth Lord in the Parade Formation. This installation is a reproduction of the Seventh Lord puppet with cyberpunk style, trying to combine the picture of future technology with the traditional temple fair culture in Taiwan. As the Seventh Lord in the parade, all the arms and palms of this installation can move without electricity. A hydraulic system is used to operate the structures. Users can wear this installation and operate it inside. This creation is made by mixed media with technologies such as laser cutting and 3D printing.`,
                   authors: [
@@ -905,7 +915,7 @@ export default {
                   ]
                 },
                 {
-                  title: '身體的延伸 Extension of Body',
+                  title: '身體的延伸 | Extension of Body',
                   description: 'Extension of Body是一個結合跳舞，並且可以即時互動的作品。這個作品再探討如何將身體延伸,利用感測器,偵測舞者各項動作的數據,並將這些動作數據透過程式及時轉化為影像,再將影像投影到紗幕上,配合舞者的現場演出。並且因為紗幕的特性,觀者得以在看到影像的同時,看到舞者的表演,使其超越身體的維度，讓舞蹈與影像的融合度可以更高，藉此加強舞蹈表現的力道。雖然是以與舞蹈結合為出發點，但一般觀眾也可以利用移動或簡單的肢體動作(如張開雙手)，輕鬆與投影內容互動。技術上利用realsence深度攝影機感測舞者的動作範圍與位置，和mpu6050陀螺儀讀取舞者的動作與旋轉，再將感測到的數值轉換為畫面。',
                   description_en: `Extension of Body is a creation that combines with dance and real-time interaction. With sensors, it detects dancers’ motion data while stretching their bodies, immediately transforms these data into images by programs, and then projects images onto veils, with dancers’ performance on the spot. Because of the characteristic of veils, the audience can watch dancers’ performance with the sight of images. It allows dancers to reach beyond where their bodies could, making the dance and images blend better and strengthening the power of the dance. Although it is on the basis of dance, the audience can still simply move their limbs (e.g. opening arms) to interact with the projected images. Technically, the depth and tracking camera RealSense is used to sense dancers’ motion ranges and positions, and the gyroscope MPU-6050 is used to retrieve dancers’ motions and spins. The sensed values will be transformed into images.`,
                   authors: [
@@ -930,7 +940,7 @@ export default {
                   ]
                 },
                 {
-                  title: '花繡',
+                  title: '花繡 | Hua-Shiou',
                   description: '「找回刺繡時手心的溫度，女性溫柔的力量」刺繡是一項流傳千年、如作畫一般細膩的技藝，在過去的歷史中更是家庭婦女不可或缺的一項技能，回顧過往的傳統家庭，婦女們無不拾起繡針，一針一線為家庭拈針織起衣裳，使身上的衣著不僅變得堅固亮麗，更留存了手繡的溫度。然而近代由於電繡的出現，傳統刺繡逐漸被機器所取代，這項技能也從家事轉變為傳統技藝。因此希望能夠藉由浮空投影的繡架裝置，更結合了傳統閨房的窗花設計，使互動過程有更多層次的體驗。讓觀眾能夠體驗穿針繡花的過程之外，更能發現刺繡有趣的地方。',
                   description_en: `“Retrieving the temperature in the palm while embroidering, female’s tender power.” Embroidery is a skill spreading through a thousand years as delicate as painting, which was an indispensable ability of housewives in history. Looking back at the traditional families in the past, women always knitted clothes needle by needle and thread by thread for their family members, which not only made clothes solider and prettier but also left the temperature of hand-embroidering. However, in modern times, the emergence of machine embroidery made traditional embroidery gradually be replaced by machines, and this ability also turned into traditional skill from housework. Therefore, via an embroidery hoop device projected in the air, combined with traditional room design of window paper-cuts, the audience is expected to experience more in the interactive process, not only experiencing the embroidering process with a needle but also discovering where embroidery is really interesting.`,
                   authors: [
@@ -995,7 +1005,7 @@ export default {
                   ]
                 },
                 {
-                  title: '魚之呼吸',
+                  title: '魚之呼吸 | The breath of the fish',
                   description: '海洋是人類仰賴最豐富的資源之一，因此保護海洋資源，是我們重要的任務。隨著時代的進步，垃圾也隨之增加，漸漸的大量垃圾排放到海洋，使其逐漸被汙染。本作品表達出，於慢慢地被人類的垃圾侵蝕，演化成不同的物種，提醒人類要珍惜海洋資源，注重環境保育。媒材採用Arduino程式、可口可樂鋁罐及回收物。將鋁罐串成魚的造型，以回收物做支撐，使用程式驅動作品，希望能介媒材來表現主題，使大家關懷海洋。作品取名「魚之呼吸」，呼吸是生物維持生命的必要元素，水管讓可樂流經魚的身軀，象徵傳輸養分，即是呼吸。程式不斷循環，可樂持續寄附在魚身，也是代表不斷前進的時間帶著工業、科技等人類文明逐漸影響海洋環境。',
                   description_en: `Arduino software, Coca-Cola aluminum cans and recycled materials are used as the media. Aluminum cans are strung as fish, supported by recycled materials and driven by software, expecting to make people care about the ocean through the theme presented by the media. The creation is titled “Fish’s Breathing.” Breathing is an essential element for creatures to maintain their lives. Water pipes allow Coke to flow through fish’s body, which symbolizes nutrition transportation, i.e. breathing. This creation conveys that fish have gradually been corroded by man-made trash, evolving into different species, which is to remind humans to cherish ocean resources and pay attention to environmental protection.`,
                   authors: [
@@ -1011,11 +1021,6 @@ export default {
                     },
                     {
                       name: '蘇育琪',
-                      school: '國立臺北教育大學',
-                      major: '藝術與造型設計學系'
-                    },
-                    {
-                      name: '黃政閎',
                       school: '國立臺北教育大學',
                       major: '藝術與造型設計學系'
                     },
@@ -1036,11 +1041,6 @@ export default {
                       school: 'National Taipei University of Education',
                       major: 'Department of Arts and Design'
                     },
-                    {
-                      name: 'Cheng-Hung Huang',
-                      school: 'National Taipei University of Education',
-                      major: 'Department of Arts and Design'
-                    },
                   ],
                   pic: [
                     require('../../assets/KT15/techart/fish/fish_01.png'),
@@ -1049,7 +1049,7 @@ export default {
                   ]
                 },
                 {
-                  title: '虛擬天氣視覺系統',
+                  title: '虛擬天氣視覺系統 | Virtual Weather Visual System',
                   description: '該作品『虛擬天氣視覺系統』透過虛擬實境，結合天氣資訊與資料視覺化的技法，運動電腦模擬畫面及虛擬實境，讓體驗者體驗位於在各地的城市天氣，並揭露體驗者與虛擬世界的互動過程，藉此對體驗者來說，在虛擬世界的圖像此時此刻所見的天氣就是那個城市的天氣狀況，讓他們相信眼前所見的現實說服體驗者們。',
                   description_en: `Via virtual reality, the creation “Virtual Weather Visual System" combines weather information and data visualization with computer simulated pictures and virtual reality, allowing the audience to experience the weather in local cities and disclose the interactive process between the audience and virtual world. To the audience, the weather seen at the moment in the virtual world is exactly the city’s weather condition. The reality seen before the eyes will well convince the audience.`,
                   authors: [
@@ -1071,7 +1071,7 @@ export default {
                   ]
                 },
                 {
-                  title: '微觀世界',
+                  title: '微觀世界 | The Micro World',
                   description: '人類創造的那些繁華看似五彩繽紛，實則縹緲虛無，自認為是世界的主宰，而遺忘了世界的本質。「水」孕育一切生命，低調而神聖，人將其操控，將其佔有，彷彿掌控了一切，實際上為人所操控的僅僅是這個世界的一小部分，而在這一小部分的積累到達環境物理極限之後，還原的過程甚至比當初更加繁複，更加勞民傷財，甚至會造成對人及環境雙方的危害。透過 Processing 編成軟體接收鍵盤的 MIDI 訊號，再藉由 Firmata 通道傳送至 Arduino，接著在 Arduino 內編入程式控制電磁閥達到控制媒材進出的目的。',
                   description_en: `The prosperity humans created seems to be colorful but actually empty. Humans consider ourselves the dominant of the world and forget the nature of the world. “Water” nourishes every life, which is low-keyed and holy. But humans manipulate and occupy it as if we have controlled everything. Actually, what is manipulated by humans is merely a small part of this world. After this small part accumulates and reaches the physical limit of the environment, the recovery process will be more complicated than that in the beginning. It will waste money and manpower and even endanger both humans and the environment. In this creation, keyboard MIDI signals are received from Processing and then sent to Arduino via Firmata channels; programs are also coded in Arduino to control solenoid valves so as to control the media’s passing in and out.`,
                   authors: [

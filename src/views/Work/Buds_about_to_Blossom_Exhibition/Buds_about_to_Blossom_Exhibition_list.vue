@@ -128,11 +128,6 @@ export default {
                 school: '國立清華大學',
                 major: '資訊工程系'
               },
-              {
-                name: '孫佳興',
-                school: '國立清華大學',
-                major: '藝術學院'
-              },
             ],
             pic: [
               require('../../assets/KT14/crazy/crazy_01.jpeg'),

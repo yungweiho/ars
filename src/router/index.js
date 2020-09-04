@@ -10,6 +10,12 @@ import Map from '@/views/Sphere/Map';
 import Whole_view from '@/views/Sphere/Whole_view';
 import Buds_about_to_Blossom_Exhibition from '@/views/Work/Buds_about_to_Blossom_Exhibition';
 import Flower from '@/views/Work/Flower';
+import Animate_list from '@/views/Work/Animate/Animate_list';
+import Animate from '@/views/Work/Animate/Animate';
+import Game_list from '@/views/Work/Game/Game_list';
+import Game from '@/views/Work/Game/Game';
+import Techart_list from '@/views/Work/Techart/Techart_list';
+import Techart from '@/views/Work/Techart/Techart';
 
 
 
@@ -26,13 +32,11 @@ export default new Router({
       path: '/work_list/:workid',
       name: 'WorkList',
       component: WorkList,
-      children: [
-        {
-          path: 'work/:workname',
-          name: 'Work',
-          component: Work
-        }
-      ]
+    },
+    {
+      path: '/work/:workname',
+      name: 'work',
+      component: Work
     },
     {
       path: '/introduction',
@@ -68,6 +72,42 @@ export default new Router({
       path: '/Flower_Illuminating_Forest',
       name: 'Flower',
       component: Flower
+    },
+    {
+      path: '/Digital_Animation',
+      name: 'Animate_list',
+      component: Animate_list,
+      children: [
+        {
+          path: 'work/:workid',
+          name: 'Animate',
+          component: Animate
+        }
+      ]
+    },
+    {
+      path: '/Digital_Game',
+      name: 'Game_list',
+      component: Game_list,
+      children: [
+        {
+          path: 'work/:workid',
+          name: 'Game',
+          component: Game
+        }
+      ]
+    },
+    {
+      path: '/Interactive_Technology_Art',
+      name: 'Techart_list',
+      component: Techart_list,
+      children: [
+        {
+          path: 'work/:workid',
+          name: 'Techart',
+          component: Techart
+        }
+      ]
     },
     
   ]

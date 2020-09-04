@@ -42,10 +42,22 @@ export default {
       banner: code,
       projectData: [
         {
-          title: 'K. T. Creativity Award',
+          title: 'Digital Animation',
           subtitle: 'K.T.15',
           pic: require('../assets/KT15/kt15.jpg'),
-          url: '/work_list/1',
+          url: '/Digital_Animation',
+        },
+        {
+          title: 'Digital Game',
+          subtitle: 'K.T.15',
+          pic: require('../assets/KT15/kt15.jpg'),
+          url: '/Digital_Game',
+        },
+        {
+          title: 'Interactive Technology Art',
+          subtitle: 'K.T.15',
+          pic: require('../assets/KT15/kt15.jpg'),
+          url: '/Interactive_Technology_Art',
         },
         {
           title: 'Buds about to Blossom Exhibition',
@@ -58,12 +70,6 @@ export default {
           subtitle: 'FBI Lab, HSCC Lab',
           pic: require('../assets/flower/flower_01.png'),
           url: '/Flower_Illuminating_Forest',
-        },
-        {
-          title: 'School Scene',
-          subtitle: 'National Tsing Hua University',
-          pic: require('../assets/tsing_hua.jpg'),
-          url: '/map',
         },
         {
           title: 'COVID Flower Behavioral Art Everywhere',

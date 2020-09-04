@@ -3,6 +3,10 @@
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
     .wlTitle {{ flower_data.project }}
+  .workNameBlock  
+    .line_top
+    .workName {{ flower_data.works.title }}
+    .line_top
   .workBlock
     .workSlideContainer
       transition(name="fade" mode="out-in")
@@ -316,5 +320,25 @@ export default {
     margin-left: 10px
     line-height: 30px
 
-
+.workNameBlock
+  width: 100%
+  +flexrow
+  margin-top: 30px
+  justify-content: center
+  .workName
+    font-size: 30px
+    letter-spacing: 1.5px
+    font-weight: bold
+    text-align: center
+    margin-bottom: 0px
+    position: relative
+    margin-left: 20px
+    margin-right: 20px
+    // margin-top: 20px
+  .line_top
+    width: 100px
+    height: 20px
+    // background-color: black
+    border-bottom: solid 1px black
+    // margin-top: 10px
 </style>
