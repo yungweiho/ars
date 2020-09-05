@@ -2,7 +2,7 @@
 .pr
   .prBanner
     p5-vue-mirror(v-model="banner" :hidecode="true" :enableMotion="true")
-  .prTitle Projects
+  .prTitle Artworks
   .prContainer
     router-link.prCard(v-for="item in projectData" :to="item.url" :key="item.title" :style="{background: 'url(' + item.pic + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .prCardTextBlock  
@@ -44,25 +44,25 @@ export default {
         {
           title: 'Digital Animation',
           subtitle: 'K.T.15',
-          pic: require('../assets/KT15/kt15.jpg'),
+          pic: require('../assets/KT15/animate/chen/chen_03.png'),
           url: '/Digital_Animation',
         },
         {
           title: 'Digital Game',
           subtitle: 'K.T.15',
-          pic: require('../assets/KT15/kt15.jpg'),
+          pic: require('../assets/KT15/game/meleer/meleer_01.png'),
           url: '/Digital_Game',
         },
         {
           title: 'Interactive Technology Art',
           subtitle: 'K.T.15',
-          pic: require('../assets/KT15/kt15.jpg'),
+          pic: require('../assets/KT15/techart/body/body_04.png'),
           url: '/Interactive_Technology_Art',
         },
         {
           title: 'Buds about to Blossom Exhibition',
           subtitle: 'K.T.14 in Tsing Hua',
-          pic: require('../assets/KT14/kt14.jpg'),
+          pic: require('../assets/KT14/crazy/crazy_01.jpeg'),
           url: '/Buds_about_to_Blossom_Exhibition',
         },
         {
@@ -176,7 +176,7 @@ export default {
       .prCardTextBlock
         width: 100%
         height: 100%
-        background-color: rgba(#333, 0.7)
+        // background-color: rgba(#333, 0.7)
         box-sizing: border-box
         padding: 25% 10px
         // animation: cardsplight 2s ease infinite
@@ -193,6 +193,8 @@ export default {
           font-size: 20px
           letter-spacing: 1.5px
           text-align: center
+          background-color: rgba(#333, 0.7)
+          text-shadow: 1px 1px 7px rgba(#333, 0.8)
           +smallcom
             font-size: 18px
         .prCardContent
@@ -205,6 +207,8 @@ export default {
           transform: translateY(50%)
           transition: 0.5s
           box-sizing: border-box
+          background-color: rgba(#333, 0.7)
+          text-shadow: 1px 1px 7px rgba(#333, 0.8)
           +smallcom
             transform: none
             opacity: 1

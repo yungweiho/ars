@@ -10,6 +10,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.10.4",
     "core-js": "^3.6.5",
+    "element": "^0.1.4",
     "element-ui": "^2.13.2",
     "node-sass": "^4.14.1",
     "p5-vue-mirror": "^1.0.6",
@@ -20,6 +21,7 @@
     "regenerator-runtime": "^0.13.7",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.2",
+    "ui": "^0.2.4",
     "vue": "^2.6.11",
     "vue-router": "^3.4.2"
   },

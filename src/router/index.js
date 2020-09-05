@@ -8,7 +8,8 @@ import Intro from '@/components/Intro';
 import Sphere from '@/views/Sphere/Sphere';
 import Map from '@/views/Sphere/Map';
 import Whole_view from '@/views/Sphere/Whole_view';
-import Buds_about_to_Blossom_Exhibition from '@/views/Work/Buds_about_to_Blossom_Exhibition/Buds_about_to_Blossom_Exhibition';
+import KT14_list from '@/views/Work/KT14/KT14_list';
+import KT14 from '@/views/Work/KT14/KT14';
 import Flower from '@/views/Work/Flower/Flower';
 import Animate_list from '@/views/Work/Animate/Animate_list';
 import Animate from '@/views/Work/Animate/Animate';
@@ -65,8 +66,15 @@ export default new Router({
     },
     {
       path: '/Buds_about_to_Blossom_Exhibition',
-      name: 'Buds_about_to_Blossom_Exhibition',
-      component: Buds_about_to_Blossom_Exhibition
+      name: 'KT14_list',
+      component: KT14_list,
+      children: [
+        {
+          path: 'work/:workid',
+          name: 'KT14',
+          component: KT14
+        }
+      ]
     },
     {
       path: '/Flower_Illuminating_Forest',

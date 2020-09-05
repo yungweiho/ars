@@ -1,39 +1,40 @@
 <template lang="pug">
-.te
+.kt
   .workBlock
     .workNameBlock  
       .line_top
-      .workName {{ techart_data.works[Math.ceil($route.params.workid-1)].title }}
+      .workName {{ kt14_data.works[Math.ceil($route.params.workid-1)].title }}
       .line_top
     .workSlideContainer
       transition(name="fade" mode="out-in")
-        .workSlideBlock(v-for="(item, i) in techart_data.works[Math.ceil($route.params.workid-1)].pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
-      .workSlidePrev(@click="p === 0? p = techart_data.works[Math.ceil($route.params.workid-1)].pic.length-1 : p--")
+        .workSlideBlock(v-for="(item, i) in kt14_data.works[Math.ceil($route.params.workid-1)].pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+      .workSlidePrev(@click="p === 0? p = kt14_data.works[Math.ceil($route.params.workid-1)].pic.length-1 : p--")
         .line1
         .line2
-      .workSlideNext(@click="p === techart_data.works[Math.ceil($route.params.workid-1)].pic.length-1? p = 0: p++")
+      .workSlideNext(@click="p === kt14_data.works[Math.ceil($route.params.workid-1)].pic.length-1? p = 0: p++")
         .line3
         .line4
     .workSlideOtherPicBlock
-      .workSlideOtherPic(v-for="(item, i) in techart_data.works[Math.ceil($route.params.workid-1)].pic" :key="i" @click="p = i" :class="{select: p === i}" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+      .workSlideOtherPic(v-for="(item, i) in kt14_data.works[Math.ceil($route.params.workid-1)].pic" :key="i" @click="p = i" :class="{select: p === i}" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
     .workTextBlock
-      .workText {{ techart_data.works[Math.ceil($route.params.workid-1)].description }}
-      .workText.en(v-if="techart_data.works[Math.ceil($route.params.workid-1)].description_en") {{ techart_data.works[Math.ceil($route.params.workid-1)].description_en }}
-    .workAuthorBlock(v-for="au in techart_data.works[Math.ceil($route.params.workid-1)].authors")
+      .workText {{ kt14_data.works[Math.ceil($route.params.workid-1)].description }}
+      .workText.en(v-if="kt14_data.works[Math.ceil($route.params.workid-1)].description_en") {{ kt14_data.works[Math.ceil($route.params.workid-1)].description_en }}
+    .workAuthorBlock(v-for="au in kt14_data.works[Math.ceil($route.params.workid-1)].authors")
       .workAuthorName {{ au.name }}
       .workAuthorSchool(v-if="au.school") {{ au.school }}
       .workAuthorSchool(v-if="au.major") {{ au.major }}
     br
-    .workAuthorBlock(v-if="techart_data.works[Math.ceil($route.params.workid-1)].authors_en" v-for="au in techart_data.works[Math.ceil($route.params.workid-1)].authors_en")
+    .workAuthorBlock(v-if="kt14_data.works[Math.ceil($route.params.workid-1)].authors_en" v-for="au in kt14_data.works[Math.ceil($route.params.workid-1)].authors_en")
       .workAuthorName {{ au.name }}
       .workAuthorSchool(v-if="au.major") \ {{ au.major }}
       .workAuthorSchool(v-if="au.school") \ {{ au.school }}
+
 </template>
 
 <script>
 export default {
   props: {
-    techart_data: {
+    kt14_data: {
       type: Object
     }
   },
@@ -48,7 +49,7 @@ export default {
 <style lang="sass" scoped>
 @import '@/assets/mixin.sass'
 
-.te
+.kt
   width: 100%
   +flexcolumn
   align-items: center
@@ -192,4 +193,5 @@ export default {
     font-size: 18px
     margin-left: 10px
     line-height: 30px
+  
 </style>

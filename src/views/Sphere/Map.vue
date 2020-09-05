@@ -10,9 +10,9 @@
       .mobile_small_ball
   //- 移動版地圖
   el-image(:src="url" :preview-src-list="srcList").ma_map_mobile
-  .maBigTitle
+  //- .maBigTitle
   .maBlock
-    Map_sketch
+    //- Map_sketch
     //- ball_icon
     //- 北門
     .light_core.north_door A

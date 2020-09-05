@@ -39,7 +39,7 @@ export default {
           url: '/map',
         },
         {
-          title: 'PROJECTS',
+          title: 'ARTWORKS',
           url: '/projects',
         },
       ]

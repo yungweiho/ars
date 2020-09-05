@@ -2,34 +2,13 @@
 .kt14
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
-    .wlTitle {{ kt14_data.project }}
-  .wlBlock
-    .wlTabBlock work
-      .wlTab(v-for="(item,i) in kt14_data.works" :key="item.title" :class="{select: $route.query.work === i+1}" @click="$router.push({query: {work: i+1}})") {{ item.title }}
-  .workBlock
-    .workSlideContainer
-      transition(name="fade" mode="out-in")
-        .workSlideBlock(v-for="(item, i) in kt14_data.works[$route.query.work-1].pic.slice(p, p+1)" :key="item"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
-      .workSlidePrev(@click="p === 0? p = kt14_data.works[$route.query.work-1].pic.length-1 : p--")
-        .line1
-        .line2
-      .workSlideNext(@click="p === kt14_data.works[$route.query.work-1].pic.length-1? p = 0: p++")
-        .line3
-        .line4
-    .workSlideOtherPicBlock
-      .workSlideOtherPic(v-for="(item, j) in kt14_data.works[$route.query.work-1].pic" :key="item" @click="p = j" :class="{select: p === j}" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
-    .workTextBlock
-      .workText {{ work_item.description }}
-      .workText.en(v-if="work_item.description_en") {{ work_item.description_en }}
-    .workAuthorBlock(v-for="au in work_item.authors")
-      .workAuthorName {{ au.name }}
-      .workAuthorSchool(v-if="au.school") {{ au.school }}
-      .workAuthorSchool(v-if="au.major") {{ au.major }}
-    br
-    .workAuthorBlock(v-if="work_item.authors_en" v-for="au in work_item.authors_en")
-      .workAuthorName {{ au.name }}
-      .workAuthorSchool(v-if="au.major") \ {{ au.major }}
-      .workAuthorSchool(v-if="au.school") \ {{ au.school }}
+    .wlTitle Interactive Technology Art
+  .wlCardBlock(v-if="$route.params.workid == undefined")
+    router-link.wlCard(v-for="(item, i) in kt14_data.works" :to="'/Buds_about_to_Blossom_Exhibition/work/' + Math.ceil(i+1)" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+      .wlCardTextBlock
+        .wlCardTitle {{ item.title }}
+        .wlCardSubtitle
+  router-view(:kt14_data="kt14_data")
 </template>
 
 <script>
@@ -130,9 +109,9 @@ export default {
               },
             ],
             pic: [
-              require('../../assets/KT14/crazy/crazy_01.jpeg'),
-              require('../../assets/KT14/crazy/crazy_02.jpeg'),
-              require('../../assets/KT14/crazy/crazy_03.jpeg'),
+              require('../../../assets/KT14/crazy/crazy_01.jpeg'),
+              require('../../../assets/KT14/crazy/crazy_02.jpeg'),
+              require('../../../assets/KT14/crazy/crazy_03.jpeg'),
             ]
           },
           {
@@ -185,22 +164,18 @@ export default {
               },
             ],
             pic: [
-              require('../../assets/KT14/ming/ming_01.jpg'),
-              require('../../assets/KT14/ming/ming_02.jpg'),
-              require('../../assets/KT14/ming/ming_03.jpg'),
+              require('../../../assets/KT14/ming/ming_01.jpg'),
+              require('../../../assets/KT14/ming/ming_02.jpg'),
+              require('../../../assets/KT14/ming/ming_03.jpg'),
             ]
           }
         ]
       }
     }
   },
-  watch: {
-    '$route.query.work'() {
-      this.p = 0;
-    }
-  },
+  
   created() {
-    this.$router.push({query: {work: 1}})
+    // this.$router.push({query: {work: 1}})
     // this.w = this.$route.query.work
   },
   computed: {
@@ -263,175 +238,78 @@ export default {
       width: 95%
     +phone5
       width: 100%
-
-.workSlideContainer
-  width: 100%
-  position: relative
-
-.workSlideBlock
-  position: absolute
-  width: 100%
-  height: 42vw
-  position: relative
-  +smallcom
-    height: 45vw
-  +pad
-    height: 50vw
-  +phone
-    height: 55vw
-.workSlidePrev
-  position: absolute
-  top: 50%
-  left: 2%
-  cursor: pointer
-  +phone
-    left: 5%
-  .line1
-    border-radius: 30%
-    width: 3px
-    height: 20px
-    background-color: #fff
-    transform: rotate(45deg)
-    box-shadow: 1px 1px 6px 3px rgba(#333, 0.7)
-  .line2
-    border-radius: 30%
-    width: 3px
-    height: 20px
-    background-color: #fff
-    transform: rotate(-45deg)
-    margin-top: -8px
-    box-shadow: -1px 3px 6px 3px rgba(#333, 0.7)
-.workSlideNext
-  position: absolute
-  top: 50%
-  right: 2%
-  cursor: pointer
-  +phone
-    right: 5%
-  .line3
-    border-radius: 30%
-    width: 3px
-    height: 20px
-    background-color: #fff
-    transform: rotate(-45deg)
-    box-shadow: 1px 1px 6px 3px rgba(#333, 0.7)
-  .line4
-    border-radius: 30%
-    width: 3px
-    height: 20px
-    background-color: #fff
-    transform: rotate(45deg)
-    margin-top: -8px
-    box-shadow: -1px 3px 6px 3px rgba(#333, 0.7)
-.workSlideOtherPicBlock
-  width: 100%
+.wlCardBlock
+  width: 61vw
   +flexrow
-  margin-top: 10px
-  .workSlideOtherPic
-    width: 12%
-    height: 5.5vw
-    margin-right: 10px
-    cursor: pointer
-    +smallcom
-      height: 6vw
-    +pad
-      height: 7vw
-    +phone
-      height: 10vw
-      width: 15%
-    &.select
-      border: solid 5px gray
-.wlBlock
-  width: 100%
-  +flexcolumn
-  align-items: center
-  .wlTabBlock
-    width: 60vw
-    border-bottom: solid 1px black
-    font-size: 20px
-    font-weight: bold
-    +flexrow
-    justify-content: space-around
-    padding: 10px
-    margin-top: 20px
-    max-width: 1300px
-    letter-spacing: 1.5px
-    +smallcom
-      width: 80vw
-      max-width: none
-    +pad
-      width: 90vw
-    +phone
-      +flexcolumn
-      margin-top: 0px
-      text-align: center
-      font-size: 25px
-    .wlTab
-      font-size: 20px
-      margin-right: 20px
-      letter-spacing: 1.5px
-      cursor: pointer
-      font-weight: normal
-      position: relative
-      +pad
-        font-size: 18px
-        margin-right: 0px
-      +phone
-        margin-top: 10px
-      &:before
-        position: absolute
-        content: ''
-        width: 15px
-        height: 5px
-        left: -20px
-        top: 10px
-        background-color: black
-        display: none
-        +phone
-          position: relative
-          left: initial
-          top: initial
-          margin-left: -20px
-          margin-right: 5px
-          // margin-top: -20px
-          top: -5px
-          
-          
-      &.select
-        &:before
-          display: block
-          +phone
-            display: inline-block
-.workTextBlock
-  width: 100%
-  margin-top: 30px
-  margin-bottom: 30px
-  border-bottom: solid 1px #555
-  box-sizing: border-box
-  padding: 0 0 20px 0
-  +phone
-    padding: 0 10px 20px 10px
-  .workText
-    font-size: 18px
-    letter-spacing: 1.5px
-    line-height: 35px
-    margin-top: 20px
-  .en
-    letter-spacing: 1px
-    text-align: justify
-.workAuthorBlock
-  width: 100%
-  +flexrow
-  margin-top: 10px
-  // margin-bottom: 10px
-  letter-spacing: 1.5px
-  color: #555
+  // +bb
   flex-wrap: wrap
-  .workAuthorName
-    font-size: 18px
-  .workAuthorSchool
-    font-size: 18px
-    margin-left: 10px
-    line-height: 30px
+  box-sizing: border-box
+  padding: 20px 0
+  justify-content: space-between
+  margin-top: 30px
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
+  .wlCard
+    width: 30%
+    height: 12vw
+    margin-bottom: 1vw
+    max-width: 390.38px
+    max-height: 255.99px
+    cursor: pointer
+    border-radius: 6px
+    transition: 0.5s
+    +smallcom
+      height: 15vw
+    +pad
+      width: 48%
+      height: 25vw
+      margin-bottom: 1.5vw
+    +phone
+      width: 100%
+      height: 50vw
+      margin-bottom: 15px
+
+    &:hover
+      .wlCardTextBlock
+        .wlCardSubtitle
+          opacity: 1
+          transform: translateY(0%)
+          transition: 0.5s
+    &:last-child:nth-child(3n-1)
+      margin-right: 35%
+      .wlCardTextBlock
+        padding: 15% 0
+
+      +phone
+        margin-right: 0
+
+      
+      
+    .wlCardTextBlock
+      width: 100%
+      height: 100%
+      background-color: rgba(#333, 0.5)
+      box-sizing: border-box
+      padding: 25% 0
+      transition: 0.5s
+      border-radius: 6px
+      
+        
+      .wlCardTitle
+        color: white
+        font-size: 20px
+        letter-spacing: 1.5px
+        text-align: center
+      .wlCardSubtitle
+        color: white
+        font-size: 20px
+        letter-spacing: 1.5px
+        text-align: center
+        margin-top: 5%
+        opacity: 0
+        transform: translateY(50%)
+        transition: 0.5s
   
 </style>

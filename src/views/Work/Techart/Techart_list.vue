@@ -3,7 +3,7 @@
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
     .wlTitle {{ techart_data.title }}
-  .wlCardBlock
+  .wlCardBlock(v-if="$route.params.workid == undefined")
     router-link.wlCard(v-for="(item, i) in techart_data.works" :to="'/Interactive_Technology_Art/work/' + Math.ceil(i+1)" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
         .wlCardTitle {{ item.title }}

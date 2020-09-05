@@ -2,8 +2,8 @@
 .ge
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
-    .wlTitle {{ game_data.title }}
-  .wlCardBlock
+    .wlTitle Digital Game
+  .wlCardBlock(v-if="$route.params.workid == undefined")
     router-link.wlCard(v-for="(item, i) in game_data.works" :to="'/Digital_Game/work/' + Math.ceil(i+1)" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
         .wlCardTitle {{ item.title }}
@@ -413,6 +413,9 @@ export default {
         ]
       }
     }
+  },
+  created() {
+    // console.log(this.game_data);
   }
 }
 </script>
