@@ -2,12 +2,15 @@
 .kt14
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
-    .wlTitle Interactive Technology Art
+    .wlTitle Buds about to Blossom Exhibition (含苞待放)
+  .kt15_intro_block(v-if="$route.params.workid == undefined")
+    .kt15_intro {{ intro }}
+  .progTitle(v-if="$route.params.workid == undefined") Artworks
   .wlCardBlock(v-if="$route.params.workid == undefined")
     router-link.wlCard(v-for="(item, i) in kt14_data.works" :to="'/Buds_about_to_Blossom_Exhibition/work/' + Math.ceil(i+1)" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
         .wlCardTitle {{ item.title }}
-        .wlCardSubtitle
+        //- .wlCardSubtitle
   router-view(:kt14_data="kt14_data")
 </template>
 
@@ -47,6 +50,7 @@ function draw() {
 export default {
   data() {
     return {
+      intro: 'This exhibition provides a stage for the younger artists in NTHU. Tsing Hua established College of Arts in 2017, and at the same time promote Technology and Arts. It is like buds about to blossom. There are four artworks: Crazy Zero 2, Mingled Sensations in ConvNets, Flower Illuminating Forest and COVID Flower Behavioral Art Everywhere.',
       p5_file: code,
       w: 0,
       p: 0,
@@ -168,6 +172,42 @@ export default {
               require('../../../assets/KT14/ming/ming_02.jpg'),
               require('../../../assets/KT14/ming/ming_03.jpg'),
             ]
+          },
+          {
+            id: 3,
+            title: '花光照林 | Flower Illuminating Forest',
+            description: '「花光照林」是藉由智慧型路燈收集清華大學校園內的氣候數據進行記錄，並結合物聯網技術與造型藝術裝置整合的科技藝術作品，作品本身具備溫度、濕度、風速的感測數據透過光線變化呈現。',
+            description_en: 'This IoT installation art combines the the climate data gathered by the smart street lamp and screening data in Tsing Hua campus. It will have different light pattern based on the data of wind, rain, temperature, light.',
+            authors: [
+              {
+                name: 'FBI Lab(Ching-Shun Chang ,Shih-Ta Liu, Su-Chu Hsu)',
+              },
+              {
+                name: 'HSCC Lab (Jang-Ping Sheu,  Yung-Ching Kuo)',
+              },
+            ],
+            pic: [
+              require('../../../assets/flower/flower_01.png'),
+            ]
+          },
+          {
+            id: 4,
+            title: '肺花遍野 | COVID Flower Behavioral Art Everywhere',
+            description_en: 'After the epidemic wore off, people began to relax or even forget the changes brought about by the epidemic. So we will create Facebook Board to let people post their experiences through COVID-19. We also will carry out an action to let students lie quietly in Yuehan Pavilion and recall the impact of COVID-19 on our life through the audio/video art projected in the ceiling of pavilion.',
+            authors_en: [
+              {
+                name: 'Irene Li',
+              },
+              {
+                name: 'Xhei-Chi Liu',
+              },
+              {
+                name: 'Xiaoniu Hsu',
+              },
+            ],
+            pic: [
+              require('../../../assets/KT14/lung/lung.png'),
+            ]
           }
         ]
       }
@@ -279,8 +319,7 @@ export default {
           transition: 0.5s
     &:last-child:nth-child(3n-1)
       margin-right: 35%
-      .wlCardTextBlock
-        padding: 15% 0
+   
 
       +phone
         margin-right: 0
@@ -290,11 +329,13 @@ export default {
     .wlCardTextBlock
       width: 100%
       height: 100%
-      background-color: rgba(#333, 0.5)
       box-sizing: border-box
-      padding: 25% 0
+      // padding: 25% 0
       transition: 0.5s
       border-radius: 6px
+      +flexcolumn
+      +flexCenter
+
       
         
       .wlCardTitle
@@ -302,6 +343,8 @@ export default {
         font-size: 20px
         letter-spacing: 1.5px
         text-align: center
+        background-color: rgba(#333, 0.5)
+
       .wlCardSubtitle
         color: white
         font-size: 20px
@@ -311,5 +354,33 @@ export default {
         opacity: 0
         transform: translateY(50%)
         transition: 0.5s
-  
+        background-color: rgba(#333, 0.5)
+.kt15_intro_block
+  width: 61vw
+  padding: 20px 0
+  box-sizing: border-box
+  margin-top: 30px 
+  border: 
+    top: solid 1px black
+    bottom: solid 1px black
+
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
+  .kt15_intro
+    font-size: 20px
+    letter-spacing: 1.5px
+.progTitle
+  width: 61vw
+  text-align: center
+  font-size: 20px
+  font-weight: bold
+  letter-spacing: 1px
+  // border-bottom: solid 1px black
+  margin-top: 30px
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
 </style>

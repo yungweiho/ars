@@ -1098,18 +1098,6 @@ export default {
             },
           ]
         },
-        {
-          id: 2,
-          project: 'K. T. Creativity Award',
-          works: [
-            'Crazy Zero 2',
-            'Mingled Sensations in ConvNets'
-          ],
-        },
-        {
-          id: 3,
-          project: 'Flower Illuminating Forest'
-        }
       ]
     }
   },

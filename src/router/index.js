@@ -9,6 +9,7 @@ import Sphere from '@/views/Sphere/Sphere';
 import Map from '@/views/Sphere/Map';
 import Whole_view from '@/views/Sphere/Whole_view';
 import KT14_list from '@/views/Work/KT14/KT14_list';
+import KT15_list from '@/views/Work/KT15/KT15_list';
 import KT14 from '@/views/Work/KT14/KT14';
 import Flower from '@/views/Work/Flower/Flower';
 import Animate_list from '@/views/Work/Animate/Animate_list';
@@ -17,6 +18,7 @@ import Game_list from '@/views/Work/Game/Game_list';
 import Game from '@/views/Work/Game/Game';
 import Techart_list from '@/views/Work/Techart/Techart_list';
 import Techart from '@/views/Work/Techart/Techart';
+
 
 
 
@@ -63,6 +65,11 @@ export default new Router({
       path: '/panorama',
       name: 'Whole_view',
       component: Whole_view
+    },
+    {
+      path: '/Bitter_Spring_and_Fruity_Fall_Exhibition',
+      name: 'KT15_list',
+      component: KT15_list
     },
     {
       path: '/Buds_about_to_Blossom_Exhibition',
@@ -117,6 +124,7 @@ export default new Router({
         }
       ]
     },
+    
     
   ]
 })

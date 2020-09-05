@@ -16,6 +16,11 @@
         .line4
     .workSlideOtherPicBlock
       .workSlideOtherPic(v-for="(item, i) in game_data.works[Math.ceil($route.params.workid-1)].pic" :key="i" @click="p = i" :class="{select: p === i}" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+    .more_info_block
+      .mobile_light
+        .mobile_light_circle
+        .mobile_small_ball
+      .video_icon
     .workTextBlock
       .workText {{ game_data.works[Math.ceil($route.params.workid-1)].description }}
       .workText.en(v-if="game_data.works[Math.ceil($route.params.workid-1)].description_en") {{ game_data.works[Math.ceil($route.params.workid-1)].description_en }}
@@ -196,4 +201,42 @@ export default {
     font-size: 18px
     margin-left: 10px
     line-height: 30px
+
+.more_info_block
+  width: 100%
+  margin-top: 30px
+  .mobile_light
+    position: relative
+    width: 8px
+    height: 8px
+    background: #000
+    border-radius: 100%
+    margin-left: 20px
+    margin-top: 5px
+    // margin-right: 10px
+    animation: rote 5s linear infinite
+    .mobile_light_circle
+      position: absolute
+      width: 20px
+      height: 20px
+      border: solid 0.5px #000
+      border-radius: 100%
+      top: -7px
+      left: -7px
+    .mobile_small_ball
+      position: absolute
+      width: 5px
+      height: 5px
+      border-radius: 100%
+      background-color: #000
+      top: -8.7px
+
+  .video_icon
+
+@keyframes rote 
+  0%
+    // transform-origin: -100px
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
 </style>

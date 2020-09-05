@@ -188,9 +188,9 @@ export default {
   data() {
     return {
       abc: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
-      url: require('../../assets/map/map.png'),
+      url: require('../../assets/map/map_mobile_nthu.png'),
         srcList: [
-          require('../../assets/map/map.png')
+          require('../../assets/map/map_mobile_nthu.png')
         ],
       visible: false,
       school_scene: [
@@ -317,6 +317,8 @@ span
   padding: 0 50px 100px 50px
   background-color: rgba(#DEDEDE, 0.5)
   z-index: 1
+  +flexcolumn
+  align-items: center
   +smallcom
     padding: 0 10px 100px 10px
     z-index: initial
@@ -370,81 +372,81 @@ span
 
 .north_door
   position: absolute
-  top: 850px
-  left: 540px
+  top: 560px
+  left: 210px
 
 .south_door
   position: absolute
-  top: 40px
-  left: 1300px
+  top: 210px
+  left: 670px
 
 .famous_entry
   position: absolute
-  top: 570px
-  left: 1050px
+  top: 430px
+  left: 520px
 
 .famous_1f
   position: absolute
-  top: 570px
-  left: 1085px
+  top: 430px
+  left: 555px
 
 .success_bridge
   position: absolute
-  top: 520px
-  left: 650px
+  top: 440px
+  left: 330px
 
 .success_lake
   position: absolute
-  top: 520px
-  left: 700px
+  top: 430px
+  left: 370px
 .moon
   position: absolute
-  top: 400px
-  left: 1450px
+  top: 350px
+  left: 700px
 
 .mei
   position: absolute
-  top: 430px
-  left: 1500px
+  top: 370px
+  left: 720px
 
 .mei_2
   position: absolute
-  top: 450px
-  left: 1450px
+  top: 390px
+  left: 690px
 
 .yi_out
   position: absolute
-  top: 150px
-  left: 1200px
+  top: 260px
+  left: 570px
 
 .yi_in
   position: absolute
-  top: 150px
-  left: 1165px
+  top: 260px
+  left: 550px
 
 .thinking
   position: absolute
-  top: 710px
-  left: 800px
+  top: 500px
+  left: 400px
 .no_talk
   position: absolute
-  top: 180px
-  left: 1080px
+  top: 320px
+  left: 630px
 
 .leaf
   position: absolute
-  top: 145px
-  left: 1450px
+  top: 250px
+  left: 690px
 
 .atom
   position: absolute
-  top: 250px
-  left: 1040px
+  top: 300px
+  left: 500px
 
 .radiation
   position: absolute
-  top: 278px
-  left: 1060px
+  top: 308px
+  left: 520px
 
 .point_pic
   width: 100%
@@ -458,9 +460,12 @@ span
   letter-spacing: 1px
 
 .maBlock
-  width: 100%
+  width: 1000px
+  height: 670px
+  background: url('../../assets/map/map_nthu.png')
+  +bgcon
   border: double 5px rgba(#999, 0.5)
-  overflow: auto
+  overflow: hidden
   border-radius: 6px
   box-sizing: border-box
   padding: 20px
@@ -478,7 +483,7 @@ span
   width: 100%
   height: 50vw
   // margin-left: 2.5%
-  background: url('../../assets/map/map.png')
+  // background: url('../../assets/map/map_mobile_nthu.png')
   +bgcon
   display: none
 

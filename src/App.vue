@@ -35,12 +35,16 @@ export default {
           url: '/introduction',
         },
         {
-          title: 'GARDEN SCENE',
-          url: '/map',
+          title: 'Exhibition-Ａ',
+          url: '/Bitter_Spring_and_Fruity_Fall_Exhibition',
         },
         {
-          title: 'ARTWORKS',
-          url: '/projects',
+          title: 'Exhibition-Ｂ',
+          url: '/Buds_about_to_Blossom_Exhibition',
+        },
+        {
+          title: '360° GARDEN VIEW',
+          url: '/map',
         },
       ]
     }

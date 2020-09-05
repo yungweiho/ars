@@ -17,7 +17,7 @@
 export default {
   data() {
     return {
-      open: false,
+      open: true,
       open_scroll: false,
       // place_id: null,
       pic: [
