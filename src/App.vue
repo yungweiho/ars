@@ -13,7 +13,7 @@
       router-view(:key="$route.path")
   footer
     .Foot
-      .FootText 國立清華大學
+      .FootText 國立清華大學 | National Tsing Hua University
 </template>
 
 <script>
@@ -32,7 +32,7 @@ export default {
         },
         {
           title: 'ABOUT',
-          url: '/introduction',
+          url: '/about',
         },
         {
           title: 'Exhibition-Ａ',

@@ -2,7 +2,10 @@
 .te
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
-    .wlTitle {{ techart_data.title }}
+    .wlTitle Interactive Technology Art
+  .bread_block(v-if="$route.params.workid == undefined")
+    router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
+  .progTitle(v-if="$route.params.workid == undefined") Artworks
   .wlCardBlock(v-if="$route.params.workid == undefined")
     router-link.wlCard(v-for="(item, i) in techart_data.works" :to="'/Interactive_Technology_Art/work/' + Math.ceil(i+1)" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
@@ -47,6 +50,20 @@ function draw() {
 export default {
   data() {
     return {
+      bread_data: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'Bitter Spring and Fruity Fall Exhibition',
+          url: '/Bitter_Spring_and_Fruity_Fall_Exhibition',
+        },
+        {
+          title: 'Interactive Technology Art',
+          url: '/Interactive_Technology_Art',
+        }
+      ],
       p5_file: code,
       techart_data: {
         title: '互動科技藝術組',
@@ -70,11 +87,12 @@ export default {
               }
             ],
             pic: [
-              require('../../../assets/KT15/techart/eun/eun_01.png'),
-              require('../../../assets/KT15/techart/eun/eun_02.png'),
-              require('../../../assets/KT15/techart/eun/eun_03.png'),
-              require('../../../assets/KT15/techart/eun/eun_04.png'),
-            ]
+              require('../../../assets/KT15/techart/eun/eun_01.jpg'),
+              require('../../../assets/KT15/techart/eun/eun_02.jpg'),
+              require('../../../assets/KT15/techart/eun/eun_03.jpg'),
+              require('../../../assets/KT15/techart/eun/eun_04.jpg'),
+            ],
+            video: 'https://streamable.com/d9wmdo'
           },
           {
             title: '身體的延伸 | Extension of Body',
@@ -95,11 +113,12 @@ export default {
               }
             ],
             pic: [
-              require('../../../assets/KT15/techart/body/body_01.png'),
-              require('../../../assets/KT15/techart/body/body_02.png'),
-              require('../../../assets/KT15/techart/body/body_03.png'),
-              require('../../../assets/KT15/techart/body/body_04.png'),
-            ]
+              require('../../../assets/KT15/techart/body/body_01.jpg'),
+              require('../../../assets/KT15/techart/body/body_02.jpg'),
+              require('../../../assets/KT15/techart/body/body_03.jpg'),
+              require('../../../assets/KT15/techart/body/body_04.jpg'),
+            ],
+            video: 'https://youtu.be/Co_yVVdvsPQ'
           },
           {
             title: '花繡 | Hua-Shiou',
@@ -160,11 +179,12 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/techart/flower/flower_01.png'),
-              require('../../../assets/KT15/techart/flower/flower_02.png'),
-              require('../../../assets/KT15/techart/flower/flower_03.png'),
-              require('../../../assets/KT15/techart/flower/flower_04.png'),
-            ]
+              require('../../../assets/KT15/techart/flower/flower_01.jpg'),
+              require('../../../assets/KT15/techart/flower/flower_02.jpg'),
+              require('../../../assets/KT15/techart/flower/flower_03.jpg'),
+              require('../../../assets/KT15/techart/flower/flower_04.jpg'),
+            ],
+            video: 'https://youtu.be/7h5UNT9QpGk'
           },
           {
             title: '魚之呼吸 | The breath of the fish',
@@ -186,6 +206,11 @@ export default {
                 school: '國立臺北教育大學',
                 major: '藝術與造型設計學系'
               },
+              {
+                name: '黃政閎',
+                school: '國立臺北教育大學',
+                major: '藝術與造型設計學系'
+              },
             ],
             authors_en: [
               {
@@ -203,12 +228,18 @@ export default {
                 school: 'National Taipei University of Education',
                 major: 'Department of Arts and Design'
               },
+              {
+                name: 'Cheng-Hung Huang',
+                school: 'National Taipei University of Education',
+                major: 'Department of Arts and Design'
+              },
             ],
             pic: [
-              require('../../../assets/KT15/techart/fish/fish_01.png'),
-              require('../../../assets/KT15/techart/fish/fish_02.png'),
-              require('../../../assets/KT15/techart/fish/fish_03.png'),
-            ]
+              require('../../../assets/KT15/techart/fish/fish_01.jpg'),
+              require('../../../assets/KT15/techart/fish/fish_02.jpg'),
+              require('../../../assets/KT15/techart/fish/fish_03.jpg'),
+            ],
+            video: 'https://youtu.be/KIyOln8W894'
           },
           {
             title: '虛擬天氣視覺系統 | Virtual Weather Visual System',
@@ -227,10 +258,11 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/techart/weather/weather_01.png'),
-              require('../../../assets/KT15/techart/weather/weather_02.png'),
-              require('../../../assets/KT15/techart/weather/weather_03.png'),
-            ]
+              require('../../../assets/KT15/techart/weather/weather_01.jpg'),
+              require('../../../assets/KT15/techart/weather/weather_02.jpg'),
+              require('../../../assets/KT15/techart/weather/weather_03.jpg'),
+            ],
+            video: 'https://youtu.be/dVpQnionPKc'
           },
           {
             title: '微觀世界 | The Micro World',
@@ -251,10 +283,11 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/techart/tiny/tiny_01.png'),
-              require('../../../assets/KT15/techart/tiny/tiny_02.png'),
-              require('../../../assets/KT15/techart/tiny/tiny_03.png'),
-            ]
+              require('../../../assets/KT15/techart/tiny/tiny_01.jpg'),
+              require('../../../assets/KT15/techart/tiny/tiny_02.jpg'),
+              require('../../../assets/KT15/techart/tiny/tiny_03.jpg'),
+            ],
+            video: 'https://www.youtube.com/watch?v=ZkHaD7KUogU'
           },
         ]
             
@@ -310,6 +343,7 @@ export default {
     box-sizing: border-box
     padding: 20px 0
     justify-content: space-between
+    max-width: 1186px
     +smallcom
       width: 81vw
     +pad
@@ -349,7 +383,6 @@ export default {
       .wlCardTextBlock
         width: 100%
         height: 100%
-        background-color: rgba(#333, 0.5)
         box-sizing: border-box
         padding: 25% 0
         transition: 0.5s
@@ -358,6 +391,7 @@ export default {
           color: white
           font-size: 20px
           letter-spacing: 1.5px
+          background-color: rgba(#333, 0.5)
           text-align: center
         .wlCardSubtitle
           color: white
@@ -368,7 +402,43 @@ export default {
           opacity: 0
           transform: translateY(50%)
           transition: 0.5s
-
-
+.progTitle
+  width: 61vw
+  text-align: center
+  font-size: 20px
+  font-weight: bold
+  letter-spacing: 1px
+  // border-bottom: solid 1px black
+  margin-top: 30px
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
+.bread_block
+  width: 61vw
+  background-color: rgba(#333, 0.2)
+  margin-top: 10px
+  padding: 5px
+  +flexrow
+  flex-wrap: wrap
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
+  +phone
+    margin-top: 30px
+  .bread
+    font-size: 18px
+    margin-right: 10px
+    letter-spacing: 1px
+    color: #555
+    &:last-child
+      &:after
+        content: ''
+    &:after
+      content: '>'
+      margin-left: 10px
+    &.now
+      color: black
 
 </style>

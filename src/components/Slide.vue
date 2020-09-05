@@ -47,10 +47,10 @@ export default {
             }
           ],
           pic: [
-            require('../assets/KT15/techart/eun/eun_01.png'),
-            require('../assets/KT15/techart/eun/eun_02.png'),
-            require('../assets/KT15/techart/eun/eun_03.png'),
-            require('../assets/KT15/techart/eun/eun_04.png'),
+            require('../assets/KT15/techart/eun/eun_01.jpg'),
+            require('../assets/KT15/techart/eun/eun_02.jpg'),
+            require('../assets/KT15/techart/eun/eun_03.jpg'),
+            require('../assets/KT15/techart/eun/eun_04.jpg'),
           ]
         },
         {
@@ -72,10 +72,10 @@ export default {
             }
           ],
           pic: [
-            require('../assets/KT15/techart/body/body_01.png'),
-            require('../assets/KT15/techart/body/body_02.png'),
-            require('../assets/KT15/techart/body/body_03.png'),
-            require('../assets/KT15/techart/body/body_04.png'),
+            require('../assets/KT15/techart/body/body_01.jpg'),
+            require('../assets/KT15/techart/body/body_02.jpg'),
+            require('../assets/KT15/techart/body/body_03.jpg'),
+            require('../assets/KT15/techart/body/body_04.jpg'),
           ]
         },
         {
@@ -137,10 +137,10 @@ export default {
             },
           ],
           pic: [
-            require('../assets/KT15/techart/flower/flower_01.png'),
-            require('../assets/KT15/techart/flower/flower_02.png'),
-            require('../assets/KT15/techart/flower/flower_03.png'),
-            require('../assets/KT15/techart/flower/flower_04.png'),
+            require('../assets/KT15/techart/flower/flower_01.jpg'),
+            require('../assets/KT15/techart/flower/flower_02.jpg'),
+            require('../assets/KT15/techart/flower/flower_03.jpg'),
+            require('../assets/KT15/techart/flower/flower_04.jpg'),
           ]
         },
         {
@@ -182,9 +182,9 @@ export default {
             },
           ],
           pic: [
-            require('../assets/KT15/techart/fish/fish_01.png'),
-            require('../assets/KT15/techart/fish/fish_02.png'),
-            require('../assets/KT15/techart/fish/fish_03.png'),
+            require('../assets/KT15/techart/fish/fish_01.jpg'),
+            require('../assets/KT15/techart/fish/fish_02.jpg'),
+            require('../assets/KT15/techart/fish/fish_03.jpg'),
           ]
         },
         {
@@ -204,9 +204,9 @@ export default {
             },
           ],
           pic: [
-            require('../assets/KT15/techart/weather/weather_01.png'),
-            require('../assets/KT15/techart/weather/weather_02.png'),
-            require('../assets/KT15/techart/weather/weather_03.png'),
+            require('../assets/KT15/techart/weather/weather_01.jpg'),
+            require('../assets/KT15/techart/weather/weather_02.jpg'),
+            require('../assets/KT15/techart/weather/weather_03.jpg'),
           ]
         },
         {
@@ -228,9 +228,9 @@ export default {
             },
           ],
           pic: [
-            require('../assets/KT15/techart/tiny/tiny_01.png'),
-            require('../assets/KT15/techart/tiny/tiny_02.png'),
-            require('../assets/KT15/techart/tiny/tiny_03.png'),
+            require('../assets/KT15/techart/tiny/tiny_01.jpg'),
+            require('../assets/KT15/techart/tiny/tiny_02.jpg'),
+            require('../assets/KT15/techart/tiny/tiny_03.jpg'),
           ]
         },
       ],

@@ -3,6 +3,9 @@
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
     .wlTitle Digital Game
+  .bread_block(v-if="$route.params.workid == undefined")
+    router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
+  .progTitle(v-if="$route.params.workid == undefined") Artworks
   .wlCardBlock(v-if="$route.params.workid == undefined")
     router-link.wlCard(v-for="(item, i) in game_data.works" :to="'/Digital_Game/work/' + Math.ceil(i+1)" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
@@ -47,6 +50,20 @@ function draw() {
 export default {
   data() {
     return {
+      bread_data: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'Bitter Spring and Fruity Fall Exhibition',
+          url: '/Bitter_Spring_and_Fruity_Fall_Exhibition',
+        },
+        {
+          title: 'Digital Game',
+          url: '/Digital_Game',
+        }
+      ],
       p5_file: code,
       game_data: {
         title: '數位遊戲組',
@@ -127,11 +144,12 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/game/somnus/somnus_01.png'),
-              require('../../../assets/KT15/game/somnus/somnus_02.png'),
-              require('../../../assets/KT15/game/somnus/somnus_03.png'),
-              require('../../../assets/KT15/game/somnus/somnus_04.png'),
-            ]
+              require('../../../assets/KT15/game/somnus/somnus_01.jpg'),
+              require('../../../assets/KT15/game/somnus/somnus_02.jpg'),
+              require('../../../assets/KT15/game/somnus/somnus_03.jpg'),
+              require('../../../assets/KT15/game/somnus/somnus_04.jpg'),
+            ],
+            video: 'https://youtu.be/iyjFVcfWW1A'
           },
           {
             title: 'VUVU',
@@ -184,15 +202,16 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/game/vuvu/vuvu_01.png'),
-              require('../../../assets/KT15/game/vuvu/vuvu_02.png'),
-              require('../../../assets/KT15/game/vuvu/vuvu_03.png'),
-              require('../../../assets/KT15/game/vuvu/vuvu_04.png'),
-              require('../../../assets/KT15/game/vuvu/vuvu_05.png'),
-              require('../../../assets/KT15/game/vuvu/vuvu_06.png'),
-              require('../../../assets/KT15/game/vuvu/vuvu_07.png'),
-              require('../../../assets/KT15/game/vuvu/vuvu_08.png'),
-            ]
+              require('../../../assets/KT15/game/vuvu/vuvu_01.jpg'),
+              require('../../../assets/KT15/game/vuvu/vuvu_02.jpg'),
+              require('../../../assets/KT15/game/vuvu/vuvu_03.jpg'),
+              require('../../../assets/KT15/game/vuvu/vuvu_04.jpg'),
+              require('../../../assets/KT15/game/vuvu/vuvu_05.jpg'),
+              require('../../../assets/KT15/game/vuvu/vuvu_06.jpg'),
+              require('../../../assets/KT15/game/vuvu/vuvu_07.jpg'),
+              require('../../../assets/KT15/game/vuvu/vuvu_08.jpg'),
+            ],
+            video: 'https://youtu.be/ew4xpLH9Eek'
           },
           {
             title: '俠盜異聞錄 | Robinhood',
@@ -239,11 +258,12 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/game/shadau/shadau_01.png'),
-              require('../../../assets/KT15/game/shadau/shadau_02.png'),
-              require('../../../assets/KT15/game/shadau/shadau_03.png'),
-              require('../../../assets/KT15/game/shadau/shadau_04.png'),
-            ]
+              require('../../../assets/KT15/game/shadau/shadau_01.jpg'),
+              require('../../../assets/KT15/game/shadau/shadau_02.jpg'),
+              require('../../../assets/KT15/game/shadau/shadau_03.jpg'),
+              require('../../../assets/KT15/game/shadau/shadau_04.jpg'),
+            ],
+            video: 'https://www.youtube.com/watch?v=hHBEmgDpFSs&feature=youtu.be'
           },
           {
             title: '迷謎餌 | MELEER',
@@ -310,11 +330,12 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/game/meleer/meleer_01.png'),
-              require('../../../assets/KT15/game/meleer/meleer_02.png'),
-              require('../../../assets/KT15/game/meleer/meleer_03.png'),
-              require('../../../assets/KT15/game/meleer/meleer_04.png'),
-            ]
+              require('../../../assets/KT15/game/meleer/meleer_01.jpg'),
+              require('../../../assets/KT15/game/meleer/meleer_02.jpg'),
+              require('../../../assets/KT15/game/meleer/meleer_03.jpg'),
+              require('../../../assets/KT15/game/meleer/meleer_04.jpg'),
+            ],
+            video: 'https://youtu.be/ezD52uquFC8'
           },
           {
             title: '蔓不生長 | Antivine',
@@ -404,11 +425,12 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/game/antivine/antivine_01.png'),
-              require('../../../assets/KT15/game/antivine/antivine_02.png'),
-              require('../../../assets/KT15/game/antivine/antivine_03.png'),
-              require('../../../assets/KT15/game/antivine/antivine_04.png'),
-            ]
+              require('../../../assets/KT15/game/antivine/antivine_01.jpg'),
+              require('../../../assets/KT15/game/antivine/antivine_02.jpg'),
+              require('../../../assets/KT15/game/antivine/antivine_03.jpg'),
+              require('../../../assets/KT15/game/antivine/antivine_04.jpg'),
+            ],
+            video: 'https://youtu.be/X76SmZrGdeY'
           },
         ]
       }
@@ -466,6 +488,8 @@ export default {
     box-sizing: border-box
     padding: 20px 0
     justify-content: space-between
+    max-width: 1186px
+
     +smallcom
       width: 81vw
     +pad
@@ -505,7 +529,6 @@ export default {
       .wlCardTextBlock
         width: 100%
         height: 100%
-        background-color: rgba(#333, 0.5)
         box-sizing: border-box
         padding: 25% 0
         transition: 0.5s
@@ -514,6 +537,7 @@ export default {
           color: white
           font-size: 20px
           letter-spacing: 1.5px
+          background-color: rgba(#333, 0.5)
           text-align: center
         .wlCardSubtitle
           color: white
@@ -525,5 +549,43 @@ export default {
           transform: translateY(50%)
           transition: 0.5s
 
+.progTitle
+  width: 61vw
+  text-align: center
+  font-size: 20px
+  font-weight: bold
+  letter-spacing: 1px
+  // border-bottom: solid 1px black
+  margin-top: 30px
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
 
+.bread_block
+  width: 61vw
+  background-color: rgba(#333, 0.2)
+  margin-top: 10px
+  padding: 5px
+  +flexrow
+  flex-wrap: wrap
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
+  +phone
+    margin-top: 30px
+  .bread
+    font-size: 18px
+    margin-right: 10px
+    letter-spacing: 1px
+    color: #555
+    &:last-child
+      &:after
+        content: ''
+    &:after
+      content: '>'
+      margin-left: 10px
+    &.now
+      color: black
 </style>

@@ -1,5 +1,7 @@
 <template lang="pug">
 .kt
+  .bread_block
+    router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
   .workBlock
     .workNameBlock  
       .line_top
@@ -7,7 +9,7 @@
       .line_top
     .workSlideContainer
       transition(name="fade" mode="out-in")
-        .workSlideBlock(v-for="(item, i) in kt14_data.works[Math.ceil($route.params.workid-1)].pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+        .workSlideBlock(v-for="(item, i) in kt14_data.works[Math.ceil($route.params.workid-1)].pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}" :class="{lung: Number($route.params.workid) === 4}")
       .workSlidePrev(@click="p === 0? p = kt14_data.works[Math.ceil($route.params.workid-1)].pic.length-1 : p--")
         .line1
         .line2
@@ -16,6 +18,9 @@
         .line4
     .workSlideOtherPicBlock
       .workSlideOtherPic(v-for="(item, i) in kt14_data.works[Math.ceil($route.params.workid-1)].pic" :key="i" @click="p = i" :class="{select: p === i}" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+    .link_block
+      a(:href="kt14_data.works[Math.ceil($route.params.workid-1)].video" targety="_blank" v-if="kt14_data.works[Math.ceil($route.params.workid-1)].video")
+        .video_icon
     .workTextBlock
       .workText {{ kt14_data.works[Math.ceil($route.params.workid-1)].description }}
       .workText.en(v-if="kt14_data.works[Math.ceil($route.params.workid-1)].description_en") {{ kt14_data.works[Math.ceil($route.params.workid-1)].description_en }}
@@ -29,6 +34,14 @@
       .workAuthorSchool(v-if="au.major") \ {{ au.major }}
       .workAuthorSchool(v-if="au.school") \ {{ au.school }}
 
+    //- 花光照林
+    .flower_tab_block(v-if="$route.path === '/Buds_about_to_Blossom_Exhibition/work/3'")
+      .tab(v-for="(item, i) in flower_tab_data" @click="flower_id = i" :class="{select: flower_id === i}") {{ item.tab_title }}
+    .flower_content_block(v-if="$route.path === '/Buds_about_to_Blossom_Exhibition/work/3'" v-for="item in flower_tab_data.slice(flower_id, Math.ceil(flower_id+1))" :key="item.tab_title")
+      .flower_pic(:style="{background: 'url(' + item.pic + ')', backgroundSize: 'contain', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+      .flower_text(v-html="item.text")
+
+
 </template>
 
 <script>
@@ -40,6 +53,38 @@ export default {
   },
   data() {
     return {
+      flower_id: 0,
+      flower_tab_data: [
+        {
+          tab_title: 'PM模式',
+          pic: require('../../../assets/flower/flower_pm.jpg'),
+          text: '<ul><li>PM2.5超標（&gt;55.5)：所有燈棒閃爍不停，警告超標。</li><li>PM2.5不超標(&lt;55.4):所有燈棒緩慢從暗到亮。</li></ul>'
+        },
+        {
+          tab_title: '風力模式',
+          pic: require('../../../assets/flower/flower_wind.jpg'),
+          text: '<p>一旦智慧燈偵測到有大風吹過（&gt;10.8)，所有燈棒會出現像強風吹過燈棒從最亮到暗的「漣漪式」的光亮出現。</p>'
+        },
+        {
+          tab_title: '雨水模式',
+          pic: require('../../../assets/flower/flower_rain.jpg'),
+          text: '<p>一旦智慧燈偵測到有下雨，所有燈棒會出現隨機出現不同位置的隨機暗亮，像雨打般的滴滴答答，直到雨停。</p>'
+        },
+      ],
+      bread_data: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'Buds about to Blossom Exhibition',
+          url: '/Buds_about_to_Blossom_Exhibition',
+        },
+        {
+          title: this.kt14_data.works[Math.ceil(this.$route.params.workid-1)].title,
+          url: this.$route.fullPath,
+        },
+      ],
       p: 0
     }
   }
@@ -100,6 +145,13 @@ export default {
     height: 50vw
   +phone
     height: 55vw
+  &.lung
+    height: 80vw
+    +pad
+      height: 80vw
+    +phone
+      height: 120vw
+    
 .workSlidePrev
   position: absolute
   top: 50%
@@ -193,5 +245,70 @@ export default {
     font-size: 18px
     margin-left: 10px
     line-height: 30px
-  
+.bread_block
+  width: 70%
+  background-color: rgba(#333, 0.2)
+  margin-top: 10px
+  padding: 5px
+  +flexrow
+  flex-wrap: wrap
+  +smallcom
+    width: 80%
+  +pad
+    width: 90%
+  +phone
+    width: 95%
+    margin-top: 10px
+  +phone5
+    width: 100%
+  .bread
+    font-size: 18px
+    margin-right: 10px
+    letter-spacing: 1px
+    color: #555
+    &:last-child
+      &:after
+        content: ''
+    &:after
+      content: '>'
+      margin-left: 10px
+    &.now
+      color: black
+.link_block
+  width: 100%
+  margin-top: 20px
+  .video_icon
+    width: 50px
+    height: 50px
+    background: url(../../../assets/video.png)
+    +bgcon
+    cursor: pointer
+.flower_tab_block
+  width: 100%
+  border-top: solid 1px black
+  padding: 50px 0 0 0
+  +flexrow
+  .tab
+    font-size: 20px
+    margin-right: 10px
+    letter-spacing: 1.5px
+    border-right: solid 1px black
+    padding: 0 10px 0 0
+    cursor: pointer
+    &.select
+      color: red
+    &:last-child
+      border: 0
+.flower_content_block
+  width: 100%
+  .flower_pic
+    width: 100%
+    height: 20vw
+    background-repeat: no-repeat !important
+    margin-top: 50px
+    // +bb
+  .flower_text
+    font-size: 20px
+    letter-spacing: 1.5px
+    line-height: 35px
 </style>

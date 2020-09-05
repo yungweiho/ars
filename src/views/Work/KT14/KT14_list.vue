@@ -3,6 +3,8 @@
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
     .wlTitle Buds about to Blossom Exhibition (含苞待放)
+  .bread_block(v-if="$route.params.workid == undefined")
+    router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
   .kt15_intro_block(v-if="$route.params.workid == undefined")
     .kt15_intro {{ intro }}
   .progTitle(v-if="$route.params.workid == undefined") Artworks
@@ -50,6 +52,16 @@ function draw() {
 export default {
   data() {
     return {
+      bread_data: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'Buds about to Blossom Exhibition',
+          url: '/Buds_about_to_Blossom_Exhibition',
+        },
+      ],
       intro: 'This exhibition provides a stage for the younger artists in NTHU. Tsing Hua established College of Arts in 2017, and at the same time promote Technology and Arts. It is like buds about to blossom. There are four artworks: Crazy Zero 2, Mingled Sensations in ConvNets, Flower Illuminating Forest and COVID Flower Behavioral Art Everywhere.',
       p5_file: code,
       w: 0,
@@ -116,7 +128,8 @@ export default {
               require('../../../assets/KT14/crazy/crazy_01.jpeg'),
               require('../../../assets/KT14/crazy/crazy_02.jpeg'),
               require('../../../assets/KT14/crazy/crazy_03.jpeg'),
-            ]
+            ],
+            video: 'https://youtu.be/FMJerfgvvS8'
           },
           {
             id: 2,
@@ -176,8 +189,8 @@ export default {
           {
             id: 3,
             title: '花光照林 | Flower Illuminating Forest',
-            description: '「花光照林」是藉由智慧型路燈收集清華大學校園內的氣候數據進行記錄，並結合物聯網技術與造型藝術裝置整合的科技藝術作品，作品本身具備溫度、濕度、風速的感測數據透過光線變化呈現。',
-            description_en: 'This IoT installation art combines the the climate data gathered by the smart street lamp and screening data in Tsing Hua campus. It will have different light pattern based on the data of wind, rain, temperature, light.',
+            description: '這是件物聯網裝置藝術，結合智慧燈收集的氣候數據，不但可觀視燈棒的數據意義與詩意。',
+            description_en: 'This IoT installation art combines the climate data gathered by the smart streetlamp and COVID-19 screening data in Tsing Hua campus.',
             authors: [
               {
                 name: 'FBI Lab(Ching-Shun Chang ,Shih-Ta Liu, Su-Chu Hsu)',
@@ -187,7 +200,8 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/flower/flower_01.png'),
+              require('../../../assets/flower/flower_01.jpg'),
+              require('../../../assets/flower/flower_02.jpg'),
             ]
           },
           {
@@ -206,7 +220,7 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT14/lung/lung.png'),
+              require('../../../assets/KT14/lung/lung.jpg'),
             ]
           }
         ]
@@ -287,6 +301,8 @@ export default {
   padding: 20px 0
   justify-content: space-between
   margin-top: 30px
+    max-width: 1186px
+
   +smallcom
     width: 81vw
   +pad
@@ -383,4 +399,31 @@ export default {
     width: 81vw
   +pad
     width: 91vw
+
+.bread_block
+  width: 61vw
+  background-color: rgba(#333, 0.2)
+  margin-top: 10px
+  padding: 5px
+  +flexrow
+  flex-wrap: wrap
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
+  +phone
+    margin-top: 30px
+  .bread
+    font-size: 18px
+    margin-right: 10px
+    letter-spacing: 1px
+    color: #555
+    &:last-child
+      &:after
+        content: ''
+    &:after
+      content: '>'
+      margin-left: 10px
+    &.now
+      color: black
 </style>

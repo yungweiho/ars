@@ -2,6 +2,8 @@
 .in
   .inBanner
     p5-vue-mirror(v-model="banner" :hidecode="true" :enableMotion="true")
+  .bread_block
+    router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
   .inBlock
     .inTitle {{ title }}
     .inSubTitle {{ subTitle }}
@@ -40,6 +42,16 @@ function draw() {
 export default {
   data() {
     return {
+      bread_data: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'About',
+          url: '/about',
+        },
+      ],
       banner: code,
       title: 'Tsing Hua Garden',
       subTitle: 'National Tsing Hua University (TW)',
@@ -84,6 +96,29 @@ export default {
   width: 100%
   height: 15vw
   position: relative
+.bread_block
+  width: 80%
+  background-color: #fff
+  margin-top: 10px
+  padding: 5px
+  +flexrow
+  +phone
+    margin-top: 30px
+  .bread
+    font-size: 18px
+    margin-right: 10px
+    letter-spacing: 1px
+    color: #555
+    &:last-child
+      &:after
+        content: ''
+    &:after
+      content: '>'
+      margin-left: 10px
+    &.now
+      color: black
+
+
 .inBlock
   width: 80%
   box-sizing: border-box

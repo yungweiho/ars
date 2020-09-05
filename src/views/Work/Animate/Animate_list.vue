@@ -3,6 +3,9 @@
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
     .wlTitle Digital Animation
+  .bread_block(v-if="$route.params.workid == undefined")
+    router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
+  .progTitle(v-if="$route.params.workid == undefined") Artworks
   .wlCardBlock(v-if="$route.params.workid == undefined")
     router-link.wlCard(v-for="(item, i) in animate_data.works" :to="'/Digital_Animation/work/' + Math.ceil(i+1)" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
@@ -47,6 +50,20 @@ function draw() {
 export default {
   data() {
     return {
+      bread_data: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'Bitter Spring and Fruity Fall Exhibition',
+          url: '/Bitter_Spring_and_Fruity_Fall_Exhibition',
+        },
+        {
+          title: 'Digital Animation',
+          url: '/Digital_Animation',
+        }
+      ],
       p5_file: code,
       animate_data: {
         title: '數位動畫組',
@@ -90,13 +107,14 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/animate/hua/hua_01.png'),
-              require('../../../assets/KT15/animate/hua/hua_02.png'),
-              require('../../../assets/KT15/animate/hua/hua_03.png'),
-              require('../../../assets/KT15/animate/hua/hua_04.png'),
-              require('../../../assets/KT15/animate/hua/hua_05.png'),
-              require('../../../assets/KT15/animate/hua/hua_06.png'),
-            ]
+              require('../../../assets/KT15/animate/hua/hua_01.jpg'),
+              require('../../../assets/KT15/animate/hua/hua_02.jpg'),
+              require('../../../assets/KT15/animate/hua/hua_03.jpg'),
+              require('../../../assets/KT15/animate/hua/hua_04.jpg'),
+              require('../../../assets/KT15/animate/hua/hua_05.jpg'),
+              require('../../../assets/KT15/animate/hua/hua_06.jpg'),
+            ],
+            video: 'https://youtu.be/bddgV2_dNT0'
           },
           {
             title: '沉沒 | Sinking',
@@ -167,10 +185,11 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/animate/chen/chen_01.png'),
-              require('../../../assets/KT15/animate/chen/chen_02.png'),
-              require('../../../assets/KT15/animate/chen/chen_03.png'),
-            ]
+              require('../../../assets/KT15/animate/chen/chen_01.jpg'),
+              require('../../../assets/KT15/animate/chen/chen_02.jpg'),
+              require('../../../assets/KT15/animate/chen/chen_03.jpg'),
+            ],
+            video: 'https://youtu.be/2HweJrVDY1g'
           },
           {
             title: '妳只在乎妳在乎的 | Mother Figure',
@@ -191,12 +210,13 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/animate/mother/mother_01.png'),
-              require('../../../assets/KT15/animate/mother/mother_02.png'),
-              require('../../../assets/KT15/animate/mother/mother_03.png'),
-              require('../../../assets/KT15/animate/mother/mother_04.png'),
-              require('../../../assets/KT15/animate/mother/mother_05.png'),
-            ]
+              require('../../../assets/KT15/animate/mother/mother_01.jpg'),
+              require('../../../assets/KT15/animate/mother/mother_02.jpg'),
+              require('../../../assets/KT15/animate/mother/mother_03.jpg'),
+              require('../../../assets/KT15/animate/mother/mother_04.jpg'),
+              require('../../../assets/KT15/animate/mother/mother_05.jpg'),
+            ],
+            video: 'https://youtu.be/our28vFKUdc'
           },
           {
             title: '苒冉 | TURN BACK THE CLOCK',
@@ -227,11 +247,12 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/animate/zan/zan_01.png'),
-              require('../../../assets/KT15/animate/zan/zan_02.png'),
-              require('../../../assets/KT15/animate/zan/zan_03.png'),
-              require('../../../assets/KT15/animate/zan/zan_04.png'),
-            ]
+              require('../../../assets/KT15/animate/zan/zan_01.jpg'),
+              require('../../../assets/KT15/animate/zan/zan_02.jpg'),
+              require('../../../assets/KT15/animate/zan/zan_03.jpg'),
+              require('../../../assets/KT15/animate/zan/zan_04.jpg'),
+            ],
+            video: 'https://youtu.be/5oVyjf82LAI'
           },
           {
             title: '浮標 | Buoy',
@@ -272,11 +293,12 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/animate/phoo/phoo_01.png'),
-              require('../../../assets/KT15/animate/phoo/phoo_02.png'),
-              require('../../../assets/KT15/animate/phoo/phoo_03.png'),
-              require('../../../assets/KT15/animate/phoo/phoo_04.png'),
-            ]
+              require('../../../assets/KT15/animate/phoo/phoo_01.jpg'),
+              require('../../../assets/KT15/animate/phoo/phoo_02.jpg'),
+              require('../../../assets/KT15/animate/phoo/phoo_03.jpg'),
+              require('../../../assets/KT15/animate/phoo/phoo_04.jpg'),
+            ],
+            video: 'https://youtu.be/Pu1JpaIx8z8'
           },
           {
             title: '森生 | Born for forest',
@@ -347,11 +369,12 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/animate/san/san_01.png'),
-              require('../../../assets/KT15/animate/san/san_02.png'),
-              require('../../../assets/KT15/animate/san/san_03.png'),
-              require('../../../assets/KT15/animate/san/san_04.png'),
-            ]
+              require('../../../assets/KT15/animate/san/san_01.jpg'),
+              require('../../../assets/KT15/animate/san/san_02.jpg'),
+              require('../../../assets/KT15/animate/san/san_03.jpg'),
+              require('../../../assets/KT15/animate/san/san_04.jpg'),
+            ],
+            video: 'https://youtu.be/K1wUJg0tPjI'
           },
           {
             title: '綻放之種 | Blüte',
@@ -378,11 +401,12 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/animate/zhan/zhan_01.png'),
-              require('../../../assets/KT15/animate/zhan/zhan_02.png'),
-              require('../../../assets/KT15/animate/zhan/zhan_03.png'),
-              require('../../../assets/KT15/animate/zhan/zhan_04.png'),
-            ]
+              require('../../../assets/KT15/animate/zhan/zhan_01.jpg'),
+              require('../../../assets/KT15/animate/zhan/zhan_02.jpg'),
+              require('../../../assets/KT15/animate/zhan/zhan_03.jpg'),
+              require('../../../assets/KT15/animate/zhan/zhan_04.jpg'),
+            ],
+            video: 'https://youtu.be/BmMeOp1ORdI'
           },
           {
             title: '餘溫 | Everlasting Touch',
@@ -433,12 +457,13 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/animate/yui/yui_01.png'),
-              require('../../../assets/KT15/animate/yui/yui_02.png'),
-              require('../../../assets/KT15/animate/yui/yui_03.png'),
-              require('../../../assets/KT15/animate/yui/yui_04.png'),
-              require('../../../assets/KT15/animate/yui/yui_05.png'),
-            ]
+              require('../../../assets/KT15/animate/yui/yui_01.jpg'),
+              require('../../../assets/KT15/animate/yui/yui_02.jpg'),
+              require('../../../assets/KT15/animate/yui/yui_03.jpg'),
+              require('../../../assets/KT15/animate/yui/yui_04.jpg'),
+              require('../../../assets/KT15/animate/yui/yui_05.jpg'),
+            ],
+            video: 'https://youtu.be/iyAKZhcvWCY'
           },
           {
             title: '願 | Hope',
@@ -499,11 +524,12 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT15/animate/yuang/yuang_01.png'),
-              require('../../../assets/KT15/animate/yuang/yuang_02.png'),
-              require('../../../assets/KT15/animate/yuang/yuang_03.png'),
-              require('../../../assets/KT15/animate/yuang/yuang_04.png'),
-            ]
+              require('../../../assets/KT15/animate/yuang/yuang_01.jpg'),
+              require('../../../assets/KT15/animate/yuang/yuang_02.jpg'),
+              require('../../../assets/KT15/animate/yuang/yuang_03.jpg'),
+              require('../../../assets/KT15/animate/yuang/yuang_04.jpg'),
+            ],
+            video: 'https://youtu.be/jYXFGzPUeYI'
           },
         ]
       }
@@ -558,6 +584,8 @@ export default {
     padding: 20px 0
     justify-content: space-between
     margin-top: 30px
+    max-width: 1186px
+
     +smallcom
       width: 81vw
     +pad
@@ -597,7 +625,6 @@ export default {
       .wlCardTextBlock
         width: 100%
         height: 100%
-        background-color: rgba(#333, 0.5)
         box-sizing: border-box
         padding: 25% 0
         transition: 0.5s
@@ -606,6 +633,7 @@ export default {
           color: white
           font-size: 20px
           letter-spacing: 1.5px
+          background-color: rgba(#333, 0.5)
           text-align: center
         .wlCardSubtitle
           color: white
@@ -616,5 +644,42 @@ export default {
           opacity: 0
           transform: translateY(50%)
           transition: 0.5s
-
+.progTitle
+  width: 61vw
+  text-align: center
+  font-size: 20px
+  font-weight: bold
+  letter-spacing: 1px
+  // border-bottom: solid 1px black
+  margin-top: 30px
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
+.bread_block
+  width: 61vw
+  background-color: rgba(#333, 0.2)
+  margin-top: 10px
+  padding: 5px
+  +flexrow
+  flex-wrap: wrap
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
+  +phone
+    margin-top: 30px
+  .bread
+    font-size: 18px
+    margin-right: 10px
+    letter-spacing: 1px
+    color: #555
+    &:last-child
+      &:after
+        content: ''
+    &:after
+      content: '>'
+      margin-left: 10px
+    &.now
+      color: black
 </style>

@@ -1,5 +1,7 @@
 <template lang="pug">
 .an
+  .bread_block
+    router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
   .workBlock
     .workNameBlock  
       .line_top
@@ -16,6 +18,9 @@
         .line4
     .workSlideOtherPicBlock
       .workSlideOtherPic(v-for="(item, i) in animate_data.works[Math.ceil($route.params.workid-1)].pic" :key="i" @click="p = i" :class="{select: p === i}" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+    .link_block
+      a(:href="animate_data.works[Math.ceil($route.params.workid-1)].video" target="_blank" v-if="animate_data.works[Math.ceil($route.params.workid-1)].video")
+        .video_icon
     .workTextBlock
       .workText {{ animate_data.works[Math.ceil($route.params.workid-1)].description }}
       .workText.en(v-if="animate_data.works[Math.ceil($route.params.workid-1)].description_en") {{ animate_data.works[Math.ceil($route.params.workid-1)].description_en }}
@@ -39,6 +44,24 @@ export default {
   },
   data() {
     return {
+      bread_data: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'Bitter Spring and Fruity Fall Exhibition',
+          url: '/Bitter_Spring_and_Fruity_Fall_Exhibition',
+        },
+        {
+          title: 'Digital Animation',
+          url: '/Digital_Animation',
+        },
+        {
+          title: this.animate_data.works[Math.ceil(this.$route.params.workid-1)].title,
+          url: this.$route.path,
+        },
+      ],
       p: 0
     }
   }
@@ -192,5 +215,42 @@ export default {
     margin-left: 10px
     line-height: 30px
 
-
+.bread_block
+  width: 70%
+  background-color: rgba(#333, 0.2)
+  margin-top: 10px
+  padding: 5px
+  +flexrow
+  flex-wrap: wrap
+  +smallcom
+    width: 80%
+  +pad
+    width: 90%
+  +phone
+    width: 95%
+    margin-top: 10px
+  +phone5
+    width: 100%
+  .bread
+    font-size: 18px
+    margin-right: 10px
+    letter-spacing: 1px
+    color: #555
+    &:last-child
+      &:after
+        content: ''
+    &:after
+      content: '>'
+      margin-left: 10px
+    &.now
+      color: black
+.link_block
+  width: 100%
+  margin-top: 20px
+  .video_icon
+    width: 50px
+    height: 50px
+    background: url(../../../assets/video.png)
+    +bgcon
+    cursor: pointer
 </style>

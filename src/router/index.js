@@ -1,9 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from '@/views/Home/Home';
-import WorkList from '@/views/Work/WorkList';
-import Work from '@/views/Work/Work';
-import Projects from '@/components/Projects';
+// import Projects from '@/components/Projects';
 import Intro from '@/components/Intro';
 import Sphere from '@/views/Sphere/Sphere';
 import Map from '@/views/Sphere/Map';
@@ -11,7 +9,7 @@ import Whole_view from '@/views/Sphere/Whole_view';
 import KT14_list from '@/views/Work/KT14/KT14_list';
 import KT15_list from '@/views/Work/KT15/KT15_list';
 import KT14 from '@/views/Work/KT14/KT14';
-import Flower from '@/views/Work/Flower/Flower';
+// import Flower from '@/views/Work/Flower/Flower';
 import Animate_list from '@/views/Work/Animate/Animate_list';
 import Animate from '@/views/Work/Animate/Animate';
 import Game_list from '@/views/Work/Game/Game_list';
@@ -32,24 +30,9 @@ export default new Router({
       component: Home
     },
     {
-      path: '/work_list/:workid',
-      name: 'WorkList',
-      component: WorkList,
-    },
-    {
-      path: '/work/:workname',
-      name: 'work',
-      component: Work
-    },
-    {
-      path: '/introduction',
+      path: '/about',
       name: 'Intro',
       component: Intro
-    },
-    {
-      path: '/projects',
-      name: 'Projects',
-      component: Projects
     },
     {
       path: '/sphere',
@@ -82,11 +65,6 @@ export default new Router({
           component: KT14
         }
       ]
-    },
-    {
-      path: '/Flower_Illuminating_Forest',
-      name: 'Flower',
-      component: Flower
     },
     {
       path: '/Digital_Animation',

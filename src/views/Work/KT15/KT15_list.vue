@@ -3,6 +3,8 @@
   .wlBanner
     p5-vue-mirror(v-model="p5_file" :hidecode="true" :enableMotion="true").p5
     .wlTitle Bitter Spring and Fruity Fall Exhibition (春苦秋實)
+  .bread_block(v-if="$route.params.workid == undefined")
+    router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
   .kt15_intro_block
     .kt15_intro {{ intro }}
   .progTitle Program
@@ -43,25 +45,35 @@ function draw() {
 export default {
   data() {
     return {
+      bread_data: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'Bitter Spring and Fruity Fall Exhibition',
+          url: '/Bitter_Spring_and_Fruity_Fall_Exhibition',
+        },
+      ],
       intro: 'It is curated by Ho-Lin Lo & K.T. Li Foundation for Development of Science and Technology. It is an exhibition of the 15th KT Award for Technology Art, the most prestigious award for college students in digital arts in Taiwan. There are three kinds of awards: interactive art, digital animation, and digital game.',
       p5_file: code,
       kt15_data: [
         {
           title: 'Digital Animation',
           subtitle: 'K.T.15',
-          pic: require('../../../assets/KT15/animate/chen/chen_03.png'),
+          pic: require('../../../assets/KT15/animate/chen/chen_03.jpg'),
           url: '/Digital_Animation',
         },
         {
           title: 'Digital Game',
           subtitle: 'K.T.15',
-          pic: require('../../../assets/KT15/game/meleer/meleer_01.png'),
+          pic: require('../../../assets/KT15/game/meleer/meleer_01.jpg'),
           url: '/Digital_Game',
         },
         {
           title: 'Interactive Technology Art',
           subtitle: 'K.T.15',
-          pic: require('../../../assets/KT15/techart/flower/flower_03.png'),
+          pic: require('../../../assets/KT15/techart/flower/flower_03.jpg'),
           url: '/Interactive_Technology_Art',
         },
       ]
@@ -131,6 +143,8 @@ export default {
     box-sizing: border-box
     padding: 20px 0
     justify-content: space-between
+    max-width: 1186px
+
     +smallcom
       width: 81vw
     +pad
@@ -206,4 +220,30 @@ export default {
     width: 81vw
   +pad
     width: 91vw
+.bread_block
+  width: 61vw
+  background-color: rgba(#333, 0.2)
+  margin-top: 10px
+  padding: 5px
+  +flexrow
+  flex-wrap: wrap
+  +smallcom
+    width: 81vw
+  +pad
+    width: 91vw
+  +phone
+    margin-top: 30px
+  .bread
+    font-size: 18px
+    margin-right: 10px
+    letter-spacing: 1px
+    color: #555
+    &:last-child
+      &:after
+        content: ''
+    &:after
+      content: '>'
+      margin-left: 10px
+    &.now
+      color: black
 </style>

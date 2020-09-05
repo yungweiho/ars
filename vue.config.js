@@ -5,4 +5,5 @@ module.exports = {
       port: 8080
     },
     transpileDependencies: process.env.NODE_ENV === "development" ? ["*"] : [],
+    productionSourceMap: false,
   }
