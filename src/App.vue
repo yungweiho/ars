@@ -49,6 +49,11 @@ export default {
       ]
     }
   },
+  watch: {
+    '$route.path'() {
+      this.small_menu = false;
+    }
+  },
   mounted() {
     window.addEventListener('scroll', this.scroll);
   },
@@ -173,7 +178,7 @@ html
       transition: 0.3s
 .SmallMenuBlock
   position: fixed
-  width: 200px
+  width: 300px
   height: 1000px
   background-color: rgba(#fff, 1)
   top: 100px
@@ -181,7 +186,7 @@ html
   +flexcolumn
   align-items: center
   box-sizing: border-box
-  padding: 50px 0
+  padding: 50px 50px
   transform: translateX(100%)
   transition: 0.3s
   display: none

@@ -61,6 +61,16 @@ export default {
           text: '<ul><li>PM2.5超標（&gt;55.5)：所有燈棒閃爍不停，警告超標。</li><li>PM2.5不超標(&lt;55.4):所有燈棒緩慢從暗到亮。</li></ul>'
         },
         {
+          tab_title: '電流模式',
+          pic: require('../../../assets/flower/flower_electric.png'),
+          text: '<ul><li>燈棒分為三個時間區域： 01~05AM 、 06AM~16PM 、17~24PM 。</li><li>每個區域，會用該區對應的電流使用度平均值，做不同的亮度fade-in亮起。</li><li>區域越亮代表電流使用越高</li></ul>'
+        },
+        {
+          tab_title: '溫度模式',
+          pic: require('../../../assets/flower/flower_temperature.png'),
+          text: '<ul><li>燈棒分為兩圈發亮顯示第一圈代表白天（ 07AM~18PM ）平均溫度，另一圈代表晚上（19PM~06AM）平均溫度。</li><li>亮度等級，如下。越亮代表溫度越高。<br />平均溫度&gt;=32，該區燈棒亮1級<br />32&gt;平均溫度&gt;=28，該區燈棒亮2級<br />28&gt;平均溫度&gt;=21，該區燈棒亮3級<br />21&gt;平均溫度，該區燈棒亮4級</li></ul>'
+        },
+        {
           tab_title: '風力模式',
           pic: require('../../../assets/flower/flower_wind.jpg'),
           text: '<p>一旦智慧燈偵測到有大風吹過（&gt;10.8)，所有燈棒會出現像強風吹過燈棒從最亮到暗的「漣漪式」的光亮出現。</p>'

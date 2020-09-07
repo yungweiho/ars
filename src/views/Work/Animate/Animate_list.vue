@@ -7,7 +7,7 @@
     router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
   .progTitle(v-if="$route.params.workid == undefined") Artworks
   .wlCardBlock(v-if="$route.params.workid == undefined")
-    router-link.wlCard(v-for="(item, i) in animate_data.works" :to="'/Digital_Animation/work/' + Math.ceil(i+1)" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+    router-link.wlCard(v-for="(item, i) in animate_data.works" :to="'/Digital_Animation/work/' + Math.ceil(i+1)" :style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: '0 0', backgroundRepeat: 'no-repeat'}")
       .wlCardTextBlock
         .wlCardTitle {{ item.title }}
         .wlCardSubtitle
@@ -585,6 +585,7 @@ export default {
     justify-content: space-between
     margin-top: 30px
     max-width: 1186px
+    background-position: 0 0 !important
 
     +smallcom
       width: 81vw

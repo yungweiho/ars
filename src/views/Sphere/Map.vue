@@ -10,10 +10,14 @@
       .mobile_small_ball
   //- 移動版地圖
   el-image(:src="url" :preview-src-list="srcList").ma_map_mobile
-  //- .maBigTitle
   .maBlock
-    //- Map_sketch
-    //- ball_icon
+    //- 地圖
+    .map_big
+    //- 展覽的圖示
+    .exh_light.warn
+    .exh_light.tai
+    //- 表演的圖示
+    .per_light
     //- 北門
     .light_core.north_door A
       .light
@@ -115,7 +119,17 @@
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(9)") panorama photo
         el-button(slot="reference").hover_button
     //- 奕亭_內
-    .light_core.yi_in K
+    //- .light_core.yi_in K
+    //-   .light
+    //-   el-popover(placement="top-start"
+    //-     width="200"
+    //-     trigger="hover")
+    //-     .point_pic(:style="{background: 'url(' + school_scene[10].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+    //-     .maTitle {{ school_scene[10].title }}
+    //-     el-button.btn.btn-primary(type='info' plain @click="to_sphere(10)") panorama photo
+    //-     el-button(slot="reference").hover_button
+    //- 沉思者
+    .light_core.thinking K
       .light
       el-popover(placement="top-start"
         width="200"
@@ -124,8 +138,8 @@
         .maTitle {{ school_scene[10].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(10)") panorama photo
         el-button(slot="reference").hover_button
-    //- 沉思者
-    .light_core.thinking L
+    //- 無聲的對話
+    .light_core.no_talk L
       .light
       el-popover(placement="top-start"
         width="200"
@@ -134,8 +148,8 @@
         .maTitle {{ school_scene[11].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(11)") panorama photo
         el-button(slot="reference").hover_button
-    //- 無聲的對話
-    .light_core.no_talk M
+    //- 葉子
+    .light_core.leaf M
       .light
       el-popover(placement="top-start"
         width="200"
@@ -144,8 +158,8 @@
         .maTitle {{ school_scene[12].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(12)") panorama photo
         el-button(slot="reference").hover_button
-    //- 葉子
-    .light_core.leaf N
+    //- 原子爐
+    .light_core.atom N
       .light
       el-popover(placement="top-start"
         width="200"
@@ -154,8 +168,8 @@
         .maTitle {{ school_scene[13].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(13)") panorama photo
         el-button(slot="reference").hover_button
-    //- 原子爐
-    .light_core.atom O
+    //- 放射治療室
+    .light_core.radiation O
       .light
       el-popover(placement="top-start"
         width="200"
@@ -163,16 +177,6 @@
         .point_pic(:style="{background: 'url(' + school_scene[14].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
         .maTitle {{ school_scene[14].title }}
         el-button.btn.btn-primary(type='info' plain @click="to_sphere(14)") panorama photo
-        el-button(slot="reference").hover_button
-    //- 放射治療室
-    .light_core.radiation P
-      .light
-      el-popover(placement="top-start"
-        width="200"
-        trigger="hover")
-        .point_pic(:style="{background: 'url(' + school_scene[15].cover + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
-        .maTitle {{ school_scene[15].title }}
-        el-button.btn.btn-primary(type='info' plain @click="to_sphere(15)") panorama photo
         el-button(slot="reference").hover_button
 
 </template>
@@ -187,7 +191,7 @@ export default {
   },
   data() {
     return {
-      abc: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
+      abc: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
       url: require('../../assets/map/map_mobile_nthu.png'),
         srcList: [
           require('../../assets/map/map_mobile_nthu.png')
@@ -195,82 +199,77 @@ export default {
       visible: false,
       school_scene: [
         {
-          title: 'North Gate',
+          title: 'Northern Entrance (北校門)',
           description: '',
           cover: require('../../assets/sphere/north_gate.png'),
         },
         {
-          title: 'South Gate',
+          title: 'Southern Entrance (南校門)',
           description: '',
           cover: require('../../assets/sphere/south_gate.png'),
         },
         {
-          title: 'Tsing Hua Hall of Frame (entry)',
+          title: 'Hall of Fame: Entrance (名人堂－入口)',
           description: '',
           cover: require('../../assets/sphere/famous_outside.png'),
         },
         {
-          title: 'Tsing Hua Hall of Frame (1F)',
+          title: 'Hall of Fame: Interior (名人堂－內部)',
           description: '',
           cover: require('../../assets/sphere/famous_inside.png'),
         },
         {
-          title: 'Cheng Kung Lake (bridge)',
+          title: 'Cheng Kung Lake: Kegong Bridge & Mid-Lake Pavilion (成功湖－克恭橋與湖心亭)',
           description: '',
           cover: require('../../assets/sphere/bridge.png'),
         },
         {
-          title: 'Cheng Kung Lake (lakeside)',
+          title: 'Cheng Kung Lake: Lakeside (成功湖－湖畔)',
           description: '',
           cover: require('../../assets/sphere/chengkunglake.png'),
         },
         {
-          title: 'Yue Han Pavilion ',
+          title: 'Yue Han Pavilion (月涵亭)',
           description: '',
           cover: require('../../assets/sphere/moon.png'),
         },
         {
-          title: 'Dr. Mei Memorial Tomb',
+          title: 'Dr. Mei Memorial Garden (梅園)',
           description: '',
           cover: require('../../assets/sphere/mei.png'),
         },
         {
-          title: 'Dr. Mei Memorial Pavilion',
+          title: 'Mei Pavilion (梅亭)',
           description: '',
           cover: require('../../assets/sphere/mei02.png'),
         },
         {
-          title: 'Go Pavilion (outside)',
+          title: 'Go Garden (奕園)',
           description: '',
           cover: require('../../assets/sphere/go_outside.png'),
         },
         {
-          title: 'Go Pavilion (inside)',
-          description: '',
-          cover: require('../../assets/sphere/go_inside.png'),
-        },
-        {
-          title: 'The Thinker',
+          title: 'Le Penseur (沉思者)',
           description: '',
           cover: require('../../assets/sphere/thinker.png'),
         },
         {
-          title: 'Dialogue in Silence',
+          title: 'Silent Conversation - Public Art (無聲的對話)',
           description: '',
           cover: require('../../assets/sphere/no_dialogue.png'),
         },
         {
-          title: 'Leaf',
+          title: 'LEAF - Public Art (葉子)',
           description: '',
           cover: require('../../assets/sphere/leaf.png'),
         },
         {
-          title: 'Nuclear Reactor Building',
+          title: 'Nuclear Reactor (原子爐)',
           description: '',
           cover: require('../../assets/sphere/nuclear.png'),
         },
         {
-          title: 'Radiotherapy room',
+          title: 'Nuclear Reactor Building: Radiotherapy Ward (放射治療室)',
           description: '',
           cover: require('../../assets/sphere/radiation.png'),
         },
@@ -372,81 +371,81 @@ span
 
 .north_door
   position: absolute
-  top: 560px
-  left: 210px
+  top: 1050px
+  left: 400px
 
 .south_door
   position: absolute
-  top: 210px
-  left: 670px
+  top: 420px
+  left: 1230px
 
 .famous_entry
   position: absolute
-  top: 430px
-  left: 520px
+  top: 800px
+  left: 980px
 
 .famous_1f
   position: absolute
-  top: 430px
-  left: 555px
+  top: 800px
+  left: 1010px
 
 .success_bridge
   position: absolute
-  top: 440px
-  left: 330px
+  top: 820px
+  left: 630px
 
 .success_lake
   position: absolute
-  top: 430px
-  left: 370px
+  top: 790px
+  left: 700px
 .moon
   position: absolute
-  top: 350px
-  left: 700px
+  top: 660px
+  left: 1290px
 
 .mei
   position: absolute
-  top: 370px
-  left: 720px
+  top: 690px
+  left: 1320px
 
 .mei_2
   position: absolute
-  top: 390px
-  left: 690px
+  top: 700px
+  left: 1290px
 
 .yi_out
   position: absolute
-  top: 260px
-  left: 570px
+  top: 480px
+  left: 1060px
 
-.yi_in
-  position: absolute
-  top: 260px
-  left: 550px
+// .yi_in
+//   position: absolute
+//   top: 260px
+//   left: 550px
 
 .thinking
   position: absolute
-  top: 500px
-  left: 400px
+  top: 910px
+  left: 750px
 .no_talk
   position: absolute
-  top: 320px
-  left: 630px
+  top: 590px
+  left: 1160px
 
 .leaf
   position: absolute
-  top: 250px
-  left: 690px
+  top: 470px
+  left: 1280px
 
 .atom
   position: absolute
-  top: 300px
-  left: 500px
+  top: 580px
+  left: 950px
 
 .radiation
   position: absolute
-  top: 308px
-  left: 520px
+  top: 580px
+  left: 980px
 
 .point_pic
   width: 100%
@@ -460,18 +459,33 @@ span
   letter-spacing: 1px
 
 .maBlock
-  width: 1000px
-  height: 670px
-  background: url('../../assets/map/map_nthu.png')
-  +bgcon
+  position: relative
+  width: 100%
+  height: 50vw
   border: double 5px rgba(#999, 0.5)
-  overflow: hidden
+  overflow: scroll
   border-radius: 6px
   box-sizing: border-box
-  padding: 20px
+  // padding: 20px
   box-shadow: 0px 0px 100px 1px rgba(#333, 0.2)
   +smallcom
     display: none
+  .map_big
+    position: absolute
+    width: 1820px
+    height: 1210px
+    top: 0
+    background: url('../../assets/map/map_nthu.png')
+    +bgcon
+    background-position: 0 0
+    // border: double 5px rgba(#999, 0.5)
+    // overflow: hidden
+    // border-radius: 6px
+    // box-sizing: border-box
+    // padding: 20px
+    // box-shadow: 0px 0px 100px 1px rgba(#333, 0.2)
+    +smallcom
+      // display: none
 
 .hover_button
   position: absolute
@@ -481,9 +495,7 @@ span
   opacity: 0
 .ma_map_mobile
   width: 100%
-  height: 50vw
-  // margin-left: 2.5%
-  // background: url('../../assets/map/map_mobile_nthu.png')
+  height: 65vw
   +bgcon
   display: none
 
@@ -495,6 +507,8 @@ span
   position: relative
   // +bb
   +flexrow
+  // flex-wrap: wrap
+  margin-top: 10px
   display: none
   +smallcom
     display: flex
@@ -506,19 +520,24 @@ span
     background-color: #000
     text-align: center
     margin-right: 10px
+
+    // word-break: break-all
   .ma_mobile_place
     margin-bottom: 20px
     letter-spacing: 1px
+    +phone
+      width: 80%
 .mobile_light
   position: relative
   width: 8px
   height: 8px
   background: #000
   border-radius: 100%
-  margin-left: 20px
+  margin-left: 10px
   margin-top: 5px
   // margin-right: 10px
   animation: rote 5s linear infinite
+
   .mobile_light_circle
     position: absolute
     width: 20px
@@ -534,6 +553,41 @@ span
     border-radius: 100%
     background-color: #000
     top: -9px
+
+.exh_light
+  width: 150px
+  height: 40px
+  background: url('../../assets/map/ex.png')
+  +bgcon
+  animation: ex_up_down 1s ease infinite
+  +smallcom
+    display: none
+.warn
+  position: absolute
+  top: 900px
+  left: 790px
+.tai
+  position: absolute
+  top: 900px
+  left: 1100px
+.per_light
+  position: absolute
+  top: 610px
+  left: 1290px
+  width: 150px
+  height: 40px
+  background: url('../../assets/map/pe.png')
+  +bgcon
+  animation: ex_up_down 1s ease infinite
+  +smallcom
+    display: none
+
+@keyframes ex_up_down
+  0%, 100%
+    transform: translateY(-10%)
+  50%
+    transform: translateY(0)
+
 @keyframes light_big
   0%
     transform: scale(0)

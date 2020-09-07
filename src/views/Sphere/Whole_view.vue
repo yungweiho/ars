@@ -9,7 +9,7 @@
       .title {{ intro[$route.query.place_id].title }}
         .open_icon(@click="open_scroll = !open_scroll") >
         .selectBlock(:class="{opened_scroll: open_scroll === true}")
-          .optionTitle(v-for="(item, i) in intro" @click="$router.push({query: {place_id: Math.ceil(i+1)}})") {{ item.title }}
+          .optionTitle(v-for="(item, i) in intro" @click="$router.push({query: {place_id: Math.ceil(i)}})") {{ item.title }}
       .description {{ intro[$route.query.place_id].description }}
 </template>
 
@@ -31,7 +31,6 @@ export default {
         '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_8.jpg&title=08%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E6%A0%A1%E9%95%B7%E9%99%B5%E5%A2%93&author=ARTOGO&autoLoad=true"></iframe>',
         '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_9.jpg&title=09%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E6%A2%85%E4%BA%AD&author=ARTOGO&autoLoad=true"></iframe>',
         '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_13.jpg&title=13%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E5%A5%95%E5%9C%92%28%E4%BA%AD%E5%A4%96%29&author=ARTOGO&autoLoad=true"></iframe>',
-        '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_14.jpg&title=14%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E5%A5%95%E5%9C%92%28%E4%BA%AD%E5%85%A7%29&author=ARTOGO&autoLoad=true"></iframe>',
         '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_1.jpg&title=01%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E6%B2%89%E6%80%9D%E8%80%85&author=ARTOGO&autoLoad=true"></iframe>',
         '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_17.jpg&title=17%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E4%BA%BA%E7%A4%BE%E9%99%A2%E2%94%80%E7%84%A1%E8%81%B2%E7%9A%84%E5%B0%8D%E8%A9%B1&author=ARTOGO&autoLoad=true"></iframe>',
         '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_16.jpg&title=16%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E8%91%89%E5%AD%90%E8%A3%9D%E7%BD%AE%E8%97%9D%E8%A1%93&author=ARTOGO&autoLoad=true"></iframe>',
@@ -64,12 +63,6 @@ export default {
           "description": "The 1F Venue is designed to host various events.  These figurines were 3 iconic people of different periods related to our university.  The first one is Dr. Shih Hu, a Chinese philosopher, essayist and diplomat. Chen-Ning Yang and Yuan-Tseh Lee were former professor and student of our university, and both of them were awarded nobel prizes."
         },
         {
-          "title": "Cheng Kung Lake: Lakeside (成功湖－湖畔)",
-          "tag": "success_lake",
-          "if_url": "",
-          "description": "Cheng Kung Lake is the largest lake in our campuses."
-        },
-        {
           "title": "Cheng Kung Lake: Kegong Bridge & Mid-Lake Pavilion (成功湖－克恭橋與湖心亭)",
           "tag": "success_bridge",
           "if_url": "",
@@ -77,17 +70,23 @@ export default {
           "The Kegong Bridge links the lakeside and Mid-Lake Pavilion in Cheng Kung Lake."
         },
         {
-          "title": "Dr. Mei Memorial Garden (梅園)",
-          "tag": "mei",
+          "title": "Cheng Kung Lake: Lakeside (成功湖－湖畔)",
+          "tag": "success_lake",
           "if_url": "",
-          "description":
-          "Dr. Mei Memorial Garden is an iconic viewpoint of our school.  It is a pleasant garden planting lots of Chinese plum (Prunus mume) trees, since the species is also called ”Mei” in Chinese."
+          "description": "Cheng Kung Lake is the largest lake in our campuses."
         },
         {
           "title": "Yue Han Pavilion (月涵亭)",
           "tag": "moon",
           "if_url": "",
           "description": "Yue Han Pavilion was built in 1978, and named after the courtesy name of former president Yi-Qi Mei.  The special design of its ceiling structure enhances the echo effect in the pavilion."
+        },
+        {
+          "title": "Dr. Mei Memorial Garden (梅園)",
+          "tag": "mei",
+          "if_url": "",
+          "description":
+          "Dr. Mei Memorial Garden is an iconic viewpoint of our school.  It is a pleasant garden planting lots of Chinese plum (Prunus mume) trees, since the species is also called ”Mei” in Chinese."
         },
         {
           "title": "Mei Pavilion (梅亭)",
@@ -102,31 +101,25 @@ export default {
           "description": "NTHU Go Garden, or Yi Yuan, is located in the southern area of the campus.  It displays monuments authored by several Go masters: Qingyuan Wu, Minoru Kitani, Rin Kaiho, Zude Chen, Hunhyun Cho and Weiping Nie.  The plaque with the inscription of Yi Yuan is written by Dr. Yong Jin, a famous writer and an NTHU Honorary Doctorate."
         },
         {
-          "title": "Go Garden: Yi Pavilion (奕亭)",
-          "tag": "yi_in",
-          "if_url": "",
-          "description": "Yi Pavilion is quaint pavilion in Go garden, providing a pleasant place to play Go and contemplate."
-        },
-        {
           "title": "Le Penseur (沉思者)",
           "tag": "thinking",
           "if_url": "",
           "description": "Le Penseur is a bronze sculpture by Auguste Rodin.  This sculptures is one of the official casts in 1998 numbered 25/25."
         },
         {
-          "title": "Silent Conversation (無聲的對話)",
+          "title": "Silent Conversation - Public Art (無聲的對話)",
           "tag": "no_talk",
           "if_url": "",
           "description": "Silent Conversation is a kinetic sculpture made by Susumu Shingu in 2007.  Its various forms visualize the natural information, and reflect the windy city."
         },
         {
-          "title": "LEAF (葉子)",
+          "title": "LEAF - Public Art (葉子)",
         "tag": "leaf",
         "if_url": "",
         "description": "LEAF is a sculpture in steel made by Juanjo Novella in 2017.  The leaf shape of the sculpture is inspired by cercis chinensis, which is one of the symbolic plants of the university."
         },
         {
-          "title": "Nuclear Reactor Building (原子爐)",
+          "title": "Nuclear Reactor (原子爐)",
           "tag": "atom",
           "if_url": "",
           "description": "We are one of the few universities that owns a Nuclear Reactor on campus.  The nuclear reactor not only constructs experimental environments for nuclear research, it also provides necessary resources for certain radiation therapies."
@@ -145,7 +138,7 @@ export default {
   },
   watch: {
     '$route.query.place_id'() {
-      this.open = false;
+      this.open = true;
       this.open_scroll = false;
     }
   },

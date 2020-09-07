@@ -200,8 +200,8 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/flower/flower_01.jpg'),
               require('../../../assets/flower/flower_02.jpg'),
+              require('../../../assets/flower/flower_01.jpg'),
             ]
           },
           {
@@ -301,23 +301,25 @@ export default {
   padding: 20px 0
   justify-content: space-between
   margin-top: 30px
-    max-width: 1186px
+  max-width: 1186px
 
   +smallcom
     width: 81vw
   +pad
     width: 91vw
   .wlCard
-    width: 30%
-    height: 12vw
+    width: 48%
+    height: 18vw
     margin-bottom: 1vw
-    max-width: 390.38px
-    max-height: 255.99px
+    max-width: 562.16px
+    max-height: 345.59px
     cursor: pointer
     border-radius: 6px
     transition: 0.5s
+    box-sizing: border-box
+    padding: 5px
     +smallcom
-      height: 15vw
+      height: 25vw
     +pad
       width: 48%
       height: 25vw
@@ -333,12 +335,7 @@ export default {
           opacity: 1
           transform: translateY(0%)
           transition: 0.5s
-    &:last-child:nth-child(3n-1)
-      margin-right: 35%
-   
 
-      +phone
-        margin-right: 0
 
       
       

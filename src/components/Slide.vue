@@ -3,12 +3,12 @@
   .slContainer
     transition-group(name="fade", mode="in-out")
       .slBlock(v-for="(item, i) in slideData.slice(s, s+1)" :key="s")
-        .slPic(:style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+        .slPic(:style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: '0 0', backgroundRepeat: 'no-repeat'}" :class="{eun: s == 4}")
           .slTextBlock(:key="i")
             .slTitle {{ item.title }}
-            .slAuthor {{ item.author }}
-            .slContent {{ item.description_en.slice(0, 180) }} ...
-            .slMore more + 
+            //- .slAuthor {{ item.author }}
+            .slContent(v-if="item.description_en") {{ item.description_en.slice(0, 180) }} ...
+            //- .slMore more + 
         .slDotBlock
           .slLeftButton(@click="s === 0 ? s = slideData.length-1 : s--")
             .line1
@@ -29,28 +29,10 @@ export default {
       slidemove: null,
       slideData: [
         {
-          title: '尪 | GOD',
-          description: '尪在閩南話意指偶像、戲偶，也有神仙之意，發想來自陣頭的七爺八爺，此裝置為賽博龐克風格的七爺戲偶重製，試圖將對科技未來的想像融合台灣傳統廟會文化。如遊行的七爺一般此裝置手臂手掌皆可動卻不依靠電力，而是採用液壓系統驅動結構運作，使用者可配戴此裝置並在裝置體內進行操作。本作品採用複合媒材，技術方面使用雷射切割以及3D列印。',
-          description_en: `In Southern Min, Ang means idol, puppet or celestial, originating from the Seventh Lord and the Eighth Lord in the Parade Formation. This installation is a reproduction of the Seventh Lord puppet with cyberpunk style, trying to combine the picture of future technology with the traditional temple fair culture in Taiwan. As the Seventh Lord in the parade, all the arms and palms of this installation can move without electricity. A hydraulic system is used to operate the structures. Users can wear this installation and operate it inside. This creation is made by mixed media with technologies such as laser cutting and 3D printing.`,
-          authors: [
-            {
-              name: '游清心',
-              school: '實踐大學',
-              major: '媒體傳達設計學系'
-            }
-          ],
-          authors_en: [
-            {
-              name: 'Ching-Hsin Yu',
-              school: 'Shih Chien University',
-              major: 'Department of Communications Design'
-            }
-          ],
+          title: 'Tsing Hua Garden | 清華園',
+          description_en: 'The internationally renowned Electronic Arts Festival (ARS Electronica) in Linz, Austrian has been 41 years old. Due to the severe global epidemic of COVID-19 this year, ARS Electronica specially make “Local Exhibition and Global Connection” to hold the festival. There are more than 100 different cities on the five continents of the world are recruited online to exhibit simultaneously. The theme of this year is “GARDEN”. We can see the different styles and specialties in different cities online.',
           pic: [
-            require('../assets/KT15/techart/eun/eun_01.jpg'),
-            require('../assets/KT15/techart/eun/eun_02.jpg'),
-            require('../assets/KT15/techart/eun/eun_03.jpg'),
-            require('../assets/KT15/techart/eun/eun_04.jpg'),
+            require('../assets/slide_pic/ts.png')
           ]
         },
         {
@@ -76,6 +58,50 @@ export default {
             require('../assets/KT15/techart/body/body_02.jpg'),
             require('../assets/KT15/techart/body/body_03.jpg'),
             require('../assets/KT15/techart/body/body_04.jpg'),
+          ]
+        },
+        {
+          title: '魚之呼吸 | The breath of the fish',
+          description: '海洋是人類仰賴最豐富的資源之一，因此保護海洋資源，是我們重要的任務。隨著時代的進步，垃圾也隨之增加，漸漸的大量垃圾排放到海洋，使其逐漸被汙染。本作品表達出，於慢慢地被人類的垃圾侵蝕，演化成不同的物種，提醒人類要珍惜海洋資源，注重環境保育。媒材採用Arduino程式、可口可樂鋁罐及回收物。將鋁罐串成魚的造型，以回收物做支撐，使用程式驅動作品，希望能介媒材來表現主題，使大家關懷海洋。作品取名「魚之呼吸」，呼吸是生物維持生命的必要元素，水管讓可樂流經魚的身軀，象徵傳輸養分，即是呼吸。程式不斷循環，可樂持續寄附在魚身，也是代表不斷前進的時間帶著工業、科技等人類文明逐漸影響海洋環境。',
+          description_en: `Arduino software, Coca-Cola aluminum cans and recycled materials are used as the media. Aluminum cans are strung as fish, supported by recycled materials and driven by software, expecting to make people care about the ocean through the theme presented by the media. The creation is titled “Fish’s Breathing.” Breathing is an essential element for creatures to maintain their lives. Water pipes allow Coke to flow through fish’s body, which symbolizes nutrition transportation, i.e. breathing. This creation conveys that fish have gradually been corroded by man-made trash, evolving into different species, which is to remind humans to cherish ocean resources and pay attention to environmental protection.`,
+          authors: [
+            {
+              name: '楊淳琹',
+              school: '國立臺北教育大學',
+              major: '藝術與造型設計學系'
+            },
+            {
+              name: '蘇湘婷',
+              school: '輔仁大學',
+              major: '中國文學系'
+            },
+            {
+              name: '蘇育琪',
+              school: '國立臺北教育大學',
+              major: '藝術與造型設計學系'
+            },
+          ],
+          authors_en: [
+            {
+              name: 'Chun-Chin Yang',
+              school: 'National Taipei University of Education',
+              major: 'Department of Arts and Design'
+            },
+            {
+              name: 'Hsiang-Ting Su',
+              school: 'Fu Jen Catholic University',
+              major: 'Department of Chinese Literature'
+            },
+            {
+              name: 'Yu-Chi Su',
+              school: 'National Taipei University of Education',
+              major: 'Department of Arts and Design'
+            },
+          ],
+          pic: [
+            require('../assets/KT15/techart/fish/fish_01.jpg'),
+            require('../assets/KT15/techart/fish/fish_02.jpg'),
+            require('../assets/KT15/techart/fish/fish_03.jpg'),
           ]
         },
         {
@@ -137,54 +163,32 @@ export default {
             },
           ],
           pic: [
-            require('../assets/KT15/techart/flower/flower_01.jpg'),
-            require('../assets/KT15/techart/flower/flower_02.jpg'),
             require('../assets/KT15/techart/flower/flower_03.jpg'),
-            require('../assets/KT15/techart/flower/flower_04.jpg'),
           ]
         },
         {
-          title: '魚之呼吸 | The breath of the fish',
-          description: '海洋是人類仰賴最豐富的資源之一，因此保護海洋資源，是我們重要的任務。隨著時代的進步，垃圾也隨之增加，漸漸的大量垃圾排放到海洋，使其逐漸被汙染。本作品表達出，於慢慢地被人類的垃圾侵蝕，演化成不同的物種，提醒人類要珍惜海洋資源，注重環境保育。媒材採用Arduino程式、可口可樂鋁罐及回收物。將鋁罐串成魚的造型，以回收物做支撐，使用程式驅動作品，希望能介媒材來表現主題，使大家關懷海洋。作品取名「魚之呼吸」，呼吸是生物維持生命的必要元素，水管讓可樂流經魚的身軀，象徵傳輸養分，即是呼吸。程式不斷循環，可樂持續寄附在魚身，也是代表不斷前進的時間帶著工業、科技等人類文明逐漸影響海洋環境。',
-          description_en: `Arduino software, Coca-Cola aluminum cans and recycled materials are used as the media. Aluminum cans are strung as fish, supported by recycled materials and driven by software, expecting to make people care about the ocean through the theme presented by the media. The creation is titled “Fish’s Breathing.” Breathing is an essential element for creatures to maintain their lives. Water pipes allow Coke to flow through fish’s body, which symbolizes nutrition transportation, i.e. breathing. This creation conveys that fish have gradually been corroded by man-made trash, evolving into different species, which is to remind humans to cherish ocean resources and pay attention to environmental protection.`,
+          title: '尪 | GOD',
+          description: '尪在閩南話意指偶像、戲偶，也有神仙之意，發想來自陣頭的七爺八爺，此裝置為賽博龐克風格的七爺戲偶重製，試圖將對科技未來的想像融合台灣傳統廟會文化。如遊行的七爺一般此裝置手臂手掌皆可動卻不依靠電力，而是採用液壓系統驅動結構運作，使用者可配戴此裝置並在裝置體內進行操作。本作品採用複合媒材，技術方面使用雷射切割以及3D列印。',
+          description_en: `In Southern Min, Ang means idol, puppet or celestial, originating from the Seventh Lord and the Eighth Lord in the Parade Formation. This installation is a reproduction of the Seventh Lord puppet with cyberpunk style, trying to combine the picture of future technology with the traditional temple fair culture in Taiwan. As the Seventh Lord in the parade, all the arms and palms of this installation can move without electricity. A hydraulic system is used to operate the structures. Users can wear this installation and operate it inside. This creation is made by mixed media with technologies such as laser cutting and 3D printing.`,
           authors: [
             {
-              name: '楊淳琹',
-              school: '國立臺北教育大學',
-              major: '藝術與造型設計學系'
-            },
-            {
-              name: '蘇湘婷',
-              school: '輔仁大學',
-              major: '中國文學系'
-            },
-            {
-              name: '蘇育琪',
-              school: '國立臺北教育大學',
-              major: '藝術與造型設計學系'
-            },
+              name: '游清心',
+              school: '實踐大學',
+              major: '媒體傳達設計學系'
+            }
           ],
           authors_en: [
             {
-              name: 'Chun-Chin Yang',
-              school: 'National Taipei University of Education',
-              major: 'Department of Arts and Design'
-            },
-            {
-              name: 'Hsiang-Ting Su',
-              school: 'Fu Jen Catholic University',
-              major: 'Department of Chinese Literature'
-            },
-            {
-              name: 'Yu-Chi Su',
-              school: 'National Taipei University of Education',
-              major: 'Department of Arts and Design'
-            },
+              name: 'Ching-Hsin Yu',
+              school: 'Shih Chien University',
+              major: 'Department of Communications Design'
+            }
           ],
           pic: [
-            require('../assets/KT15/techart/fish/fish_01.jpg'),
-            require('../assets/KT15/techart/fish/fish_02.jpg'),
-            require('../assets/KT15/techart/fish/fish_03.jpg'),
+            require('../assets/KT15/techart/eun/eun_01.jpg'),
+            require('../assets/KT15/techart/eun/eun_02.jpg'),
+            require('../assets/KT15/techart/eun/eun_03.jpg'),
+            require('../assets/KT15/techart/eun/eun_04.jpg'),
           ]
         },
         {
@@ -280,6 +284,8 @@ export default {
         width: 100vw
         height: 100vh
         // +bb
+        &.eun
+          background-position: center !important
         .slTextBlock
           padding: 30px
           box-sizing: border-box

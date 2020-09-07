@@ -9,7 +9,7 @@
       .line_top
     .workSlideContainer
       transition(name="fade" mode="out-in")
-        .workSlideBlock(v-for="(item, i) in animate_data.works[Math.ceil($route.params.workid-1)].pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+        .workSlideBlock(v-for="(item, i) in animate_data.works[Math.ceil($route.params.workid-1)].pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: '0 0', backgroundRepeat: 'no-repeat'}" :class="{yui: $route.path == '/Digital_Animation/work/8' && (p == 1 || p == 0)}")
       .workSlidePrev(@click="p === 0? p = animate_data.works[Math.ceil($route.params.workid-1)].pic.length-1 : p--")
         .line1
         .line2
@@ -17,7 +17,7 @@
         .line3
         .line4
     .workSlideOtherPicBlock
-      .workSlideOtherPic(v-for="(item, i) in animate_data.works[Math.ceil($route.params.workid-1)].pic" :key="i" @click="p = i" :class="{select: p === i}" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+      .workSlideOtherPic(v-for="(item, i) in animate_data.works[Math.ceil($route.params.workid-1)].pic" :key="i" @click="p = i" :class="{select: p === i}" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: '0 0', backgroundRepeat: 'no-repeat'}")
     .link_block
       a(:href="animate_data.works[Math.ceil($route.params.workid-1)].video" target="_blank" v-if="animate_data.works[Math.ceil($route.params.workid-1)].video")
         .video_icon
@@ -111,16 +111,20 @@ export default {
   position: relative
 
 .workSlideBlock
-  position: absolute
   width: 100%
   height: 40vw
   position: relative
+  background-position: 0 0 !important
   +smallcom
     height: 45vw
   +pad
     height: 50vw
   +phone
     height: 55vw
+  &.yui
+    height: 120vw
+    +smallcom
+      height: 130vw
 .workSlidePrev
   position: absolute
   top: 50%
