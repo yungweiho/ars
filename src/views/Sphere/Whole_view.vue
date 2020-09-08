@@ -104,7 +104,7 @@ export default {
           "title": "Le Penseur (沉思者)",
           "tag": "thinking",
           "if_url": "",
-          "description": "Le Penseur is a bronze sculpture by Auguste Rodin.  This sculptures is one of the official casts in 1998 numbered 25/25."
+          "description": "Le Penseur is a bronze sculpture by Auguste Rodin.  This sculptures is one of the official casts in 1998 numbered 23/23."
         },
         {
           "title": "Silent Conversation - Public Art (無聲的對話)",

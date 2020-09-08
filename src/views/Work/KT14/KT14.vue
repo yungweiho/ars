@@ -22,8 +22,9 @@
       a(:href="kt14_data.works[Math.ceil($route.params.workid-1)].video" targety="_blank" v-if="kt14_data.works[Math.ceil($route.params.workid-1)].video")
         .video_icon
     .workTextBlock
-      .workText {{ kt14_data.works[Math.ceil($route.params.workid-1)].description }}
+      .workText(v-if="kt14_data.works[Math.ceil($route.params.workid-1)].description") {{ kt14_data.works[Math.ceil($route.params.workid-1)].description }}
       .workText.en(v-if="kt14_data.works[Math.ceil($route.params.workid-1)].description_en") {{ kt14_data.works[Math.ceil($route.params.workid-1)].description_en }}
+      .workText.en(v-if="kt14_data.works[Math.ceil($route.params.workid-1)].description_html" v-html="kt14_data.works[Math.ceil($route.params.workid-1)].description_html")
     .workAuthorBlock(v-for="au in kt14_data.works[Math.ceil($route.params.workid-1)].authors")
       .workAuthorName {{ au.name }}
       .workAuthorSchool(v-if="au.school") {{ au.school }}
@@ -87,7 +88,7 @@ export default {
           url: '/',
         },
         {
-          title: 'Buds about to Blossom Exhibition',
+          title: 'Exhibition-B',
           url: '/Buds_about_to_Blossom_Exhibition',
         },
         {
@@ -156,11 +157,12 @@ export default {
   +phone
     height: 55vw
   &.lung
-    height: 80vw
-    +pad
-      height: 80vw
-    +phone
+    height: 100vw
+    +smallcom
       height: 120vw
+    +phone
+      height: 135vw
+    
     
 .workSlidePrev
   position: absolute

@@ -51,17 +51,17 @@ export default {
           url: '/',
         },
         {
-          title: 'Bitter Spring and Fruity Fall Exhibition',
+          title: 'Exhibition-A',
           url: '/Bitter_Spring_and_Fruity_Fall_Exhibition',
         },
       ],
-      intro: 'It is curated by Ho-Lin Lo & K.T. Li Foundation for Development of Science and Technology. It is an exhibition of the 15th KT Award for Technology Art, the most prestigious award for college students in digital arts in Taiwan. There are three kinds of awards: interactive art, digital animation, and digital game.',
+      intro: 'It is curated by Ho-Lin Lo & K.T. Li Foundation for Development of Science and Technology. It is an exhibition of the 15th KT Award for Technology Art, the most prestigious award for college students in digital arts in Taiwan. This year is the 15th edition. The process of holding KT award was very difficult. This is one of the few awards in the digital field in Taiwan that has persisted for so long. The award ceremony will be held at the Wang-hong Hall of Tsinghua University at 7pm on September 8. There are three kinds of KT awards: interactive art, digital animation, and digital game.',
       p5_file: code,
       kt15_data: [
         {
           title: 'Digital Animation',
           subtitle: 'K.T.15',
-          pic: require('../../../assets/KT15/animate/chen/chen_03.jpg'),
+          pic: require('../../../assets/KT15/animate/yuang/yuang_03.jpg'),
           url: '/Digital_Animation',
         },
         {

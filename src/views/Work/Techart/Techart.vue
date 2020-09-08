@@ -51,7 +51,7 @@ export default {
           url: '/',
         },
         {
-          title: 'Bitter Spring and Fruity Fall Exhibition',
+          title: 'Exhibition-A',
           url: '/Bitter_Spring_and_Fruity_Fall_Exhibition',
         },
         {

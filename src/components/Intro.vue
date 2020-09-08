@@ -54,14 +54,14 @@ export default {
       ],
       banner: code,
       title: 'Tsing Hua Garden',
-      subTitle: 'National Tsing Hua University (TW)',
+      subTitle: 'National Tsing Hua University (Hsinchu, TW)',
       introData: `<p style=" margin: 0cm 0cm 0.0001pt;"><span style="; ">The internationally renowned Electronic Arts Festival (ARS Electronica) in Linz, Austrian has been 41 years old. Due to the severe global epidemic of COVID-19 this year, ARS Electronica specially make &ldquo;Local Exhibition and Global Connection&rdquo; to hold the festival. There are more than 100 different cities on the five continents of the world are recruited online to exhibit simultaneously. The theme of this year is &ldquo;GARDEN&rdquo;. We can see the different styles and specialties in different cities online.</span></p>
         <p style=" margin: 0cm 0cm 0.0001pt;"><strong><span style="; ">Tsing Hua Garden</span></strong><span style="; ">&nbsp;is the joint event of Ars Electronica Festival 2020 hosted by National Tsing Hua University (NTHU). NTHU has a plenty of lakes and forests which constitute a big and beautiful garden. NTHU has a wide range of academic fields, converging creativities in science, technology, humanity and art. There are 2 exhibitions in Tsing Hua Garden:</span></p>
         <ol>
         <li><span style="; ">Bitter Spring and Fruity Fall Exhibition (</span><span style="; font-family: 標楷體; color: black;"><span style="font-family: avenir, arial, helvetica, sans-serif;">春苦秋實</span>)</span><span style="; ">: an exhibition of the 15th KT Award of Technology Art<br /></span><span style="; ">for studens in Taiwan.<br />- 15th KT Artworks of Interactive Art<br /></span><span style="; ">- 15th KT Artworks of Digital Animation<br /></span><span style="">- 15th</span>&nbsp;KT<span style=""> Artworks of Digital Game</span></li>
         </ol>
-        <p><span style="; ">&nbsp; 2. Buds about to Blossom Exhibition (</span><span style="; f">含苞待放</span><span style="; ">): shows the artworks of young artists in NTHU.</span></p>
-        <p style="margin: 0cm 0cm 0.0001pt 49.55pt; text-indent: -14.15pt; "><span style="; ">-&nbsp;&nbsp; Flower Illuminating Forest (</span><span style="; f">光花造林</span><span style="; ">): constructs from IoT, the climate and COVID-19 data collected in Tsing Hua campus.</span></p>
+        <p><span>&nbsp; 2. Buds about to Blossom Exhibition (</span><span style="; ">含苞待放</span><span style="; ">): shows the artworks of young artists in NTHU.</span></p>
+        <p style="margin: 0cm 0cm 0.0001pt 49.55pt; text-indent: -14.15pt; "><span style="; ">-&nbsp;&nbsp; Flower Illuminating Forest (</span><span style="; f">光花照林</span><span style="; ">): constructs from IoT, the climate and COVID-19 data collected in Tsing Hua campus.</span></p>
         <p style="margin: 0cm 0cm 0.0001pt 35.4pt; "><span style="; ">-&nbsp; COVID Flower Everywhere (</span><span style="; f">肺花遍野</span><span style="; ">): a behavioral art to recall the impacts of COVID-19<br />-&nbsp; Crazy Zero 2 (</span><span style="; f">瘋狂的兩個</span><span style="; ">0</span><span style="; f">點</span><span style="; ">)</span></p>
         <p style="margin: 0cm 0cm 0.0001pt 35.4pt;"><span style=" ">- &nbsp;Mingled Sensations in ConvNets (</span><span style="">卷積層的千絲萬縷</span><span style=" ">)</span></p>`,
     }
@@ -79,6 +79,8 @@ export default {
     +phone
       height: 100px
     // z-index: 100
+  P
+    margin: 0
 </style>
 <style lang="sass" scoped>
 @import '@/assets/mixin.sass'

@@ -1,10 +1,12 @@
 <template lang="pug">
 .ma
   .maBanner
+  .bread_block(v-if="$route.params.workid == undefined")
+    router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
   //- 移動版地點
   .ma_mobile_text_block(v-for="(item, i) in school_scene")
-    .number_title {{ abc[i] }}
-    .ma_mobile_place {{ item.title }}
+    .number_title(:class="{ke: i == 15}") {{ i == 15? 'K - Exhibition' : abc[i] }}
+    .ma_mobile_place(:class="{ke_place: i == 15}") {{ item.title }}
     .mobile_light(@click="to_sphere(i)")
       .mobile_light_circle
       .mobile_small_ball
@@ -14,10 +16,20 @@
     //- 地圖
     .map_big
     //- 展覽的圖示
-    .exh_light.warn
+    .exh_light.warn(@click="to_exhibition()")
     .exh_light.tai
     //- 表演的圖示
-    .per_light
+    .per_light(@click="to_sphere(6)")
+    //- 圖書館的展覽
+    .light_core.lib_ex K - Exhibition
+      .light.lib_light
+      el-popover(placement="top-start"
+        width="200"
+        trigger="hover")
+        .point_pic(:style="{background: 'url(' + require('../../assets/spere_cover.jpg') + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+        .maTitle 360° Exhibition
+        el-button.btn.btn-primary(type='info' plain @click="to_exhibition()") Click Here!
+        el-button(slot="reference").hover_button
     //- 北門
     .light_core.north_door A
       .light
@@ -191,6 +203,16 @@ export default {
   },
   data() {
     return {
+      bread_data: [
+        {
+          title: 'Home',
+          url: '/',
+        },
+        {
+          title: 'Tsing Hua Garden map (360 Garden View Entry)',
+          url: '/map',
+        },
+      ],
       abc: ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'],
       url: require('../../assets/map/map_mobile_nthu.png'),
         srcList: [
@@ -273,17 +295,28 @@ export default {
           description: '',
           cover: require('../../assets/sphere/radiation.png'),
         },
+        {
+          title: '360° Exhibition',
+        }
       ]
     }
   },
   methods: {
     to_sphere(id) {
-      this.$router.push({
-        path: '/panorama',
-        query: {
-          place_id: id
-        }
-      })
+      if (id == 15) {
+        window.open('https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609');
+      } else {
+        this.$router.push({
+          path: '/panorama',
+          query: {
+            place_id: id
+          }
+        })
+      }
+      
+    },
+    to_exhibition() {
+      window.open('https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609');
     }
   }
 
@@ -365,7 +398,9 @@ span
     display: none
 .maBanner
   width: 100%
-  height: 15vw
+  height: 8vw
+  +flexcolumn
+  align-items: center
   +phone
     height: 100px
 
@@ -447,6 +482,31 @@ span
   top: 580px
   left: 980px
 
+.lib_ex
+  position: absolute
+  top: 950px
+  left: 780px
+  width: auto
+  height: auto
+  border-radius: 6px
+  padding: 2px 10px 2px 10px
+  background-color: #f2e70c
+  // background: -webkit-linear-gradient(0deg,#f2e70c,rgba(#f2e70c, 0))
+  // background: -o-linear-gradient(0deg,#f2e70c,rgba(#f2e70c, 0))
+  // background: -moz-linear-gradient(0deg,#f2e70c,rgba(#f2e70c, 0))
+  // background: linear-gradient(0deg,#f2e70c,rgba(#f2e70c, 0))
+  color: #000
+  font-size: 15px
+  letter-spacing: 1px
+  // animation: ex_rote 1s linear infinite
+.lib_light
+  // position: relative
+  width: 50px !important
+  background-color: #f2e70c !important
+  border-radius: 10px !important
+  display: none
+
+
 .point_pic
   width: 100%
   height: 100px
@@ -466,7 +526,8 @@ span
   overflow: scroll
   border-radius: 6px
   box-sizing: border-box
-  // padding: 20px
+  max-width: 1820px
+  max-height: 1210px
   box-shadow: 0px 0px 100px 1px rgba(#333, 0.2)
   +smallcom
     display: none
@@ -520,6 +581,16 @@ span
     background-color: #000
     text-align: center
     margin-right: 10px
+    &.ke
+      width: auto
+      height: max-content
+      border-radius: 6px
+      padding: 1px 5px
+      letter-spacing: 1px
+      word-break: break-all
+      // +flexrow
+      // display: flex
+      // display: inline-block
 
     // word-break: break-all
   .ma_mobile_place
@@ -527,6 +598,11 @@ span
     letter-spacing: 1px
     +phone
       width: 80%
+    &.ke_place
+      +phone
+        width: 51%
+      +phone5
+        width: 47%
 .mobile_light
   position: relative
   width: 8px
@@ -566,6 +642,7 @@ span
   position: absolute
   top: 900px
   left: 790px
+  cursor: pointer
 .tai
   position: absolute
   top: 900px
@@ -577,11 +654,41 @@ span
   width: 150px
   height: 40px
   background: url('../../assets/map/pe.png')
+  cursor: pointer
   +bgcon
   animation: ex_up_down 1s ease infinite
   +smallcom
     display: none
-
+.bread_block
+  width: 100%
+  background-color: rgba(#333, 0.2)
+  margin-top: 10px
+  max-width: 1810px
+  margin-bottom: 30px
+  padding: 5px
+  +flexrow
+  flex-wrap: wrap
+  +smallcom
+    width: 100%
+    margin-top: 50px
+    margin-bottom: 20px
+  +pad
+    // width: 91vw
+  +phone
+    margin-top: 0px
+  .bread
+    font-size: 18px
+    margin-right: 10px
+    letter-spacing: 1px
+    color: #555
+    &:last-child
+      &:after
+        content: ''
+    &:after
+      content: '>'
+      margin-left: 10px
+    &.now
+      color: black
 @keyframes ex_up_down
   0%, 100%
     transform: translateY(-10%)
@@ -602,4 +709,26 @@ span
     transform: rotate(0deg)
   100%
     transform: rotate(360deg)
+
+// @keyframes ex_rote 
+//   0%, 100%
+//     background: -webkit-linear-gradient(0deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: -o-linear-gradient(0deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: -moz-linear-gradient(0deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: linear-gradient(0deg,#f2e70c,rgba(#f2e70c, 0))
+//   25%
+//     background: -webkit-linear-gradient(90deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: -o-linear-gradient(90deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: -moz-linear-gradient(90deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: linear-gradient(90deg,#f2e70c,rgba(#f2e70c, 0))
+//   50%
+//     background: -webkit-linear-gradient(180deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: -o-linear-gradient(180deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: -moz-linear-gradient(180deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: linear-gradient(180deg,#f2e70c,rgba(#f2e70c, 0))
+//   75%
+//     background: -webkit-linear-gradient(270deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: -o-linear-gradient(270deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: -moz-linear-gradient(270deg,#f2e70c,rgba(#f2e70c, 0))
+//     background: linear-gradient(270deg,#f2e70c,rgba(#f2e70c, 0))
 </style>

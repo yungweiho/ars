@@ -58,11 +58,11 @@ export default {
           url: '/',
         },
         {
-          title: 'Buds about to Blossom Exhibition',
+          title: 'Exhibition-B',
           url: '/Buds_about_to_Blossom_Exhibition',
         },
       ],
-      intro: 'This exhibition provides a stage for the younger artists in NTHU. Tsing Hua established College of Arts in 2017, and at the same time promote Technology and Arts. It is like buds about to blossom. There are four artworks: Crazy Zero 2, Mingled Sensations in ConvNets, Flower Illuminating Forest and COVID Flower Behavioral Art Everywhere.',
+      intro: 'It is curated by Su-Chu Hsu & Chu-Yin Chen. This exhibition provides a stage for the younger artists in NTHU. Tsing Hua established College of Arts in 2017 and promote Technology and Arts at the same time. It is like buds about to blossom. There are four artworks: Crazy Zero 2, Mingled Sensations in ConvNets, Flower Illuminating Forest, and COVID Flower Behavioral Art Everywhere.',
       p5_file: code,
       w: 0,
       p: 0,
@@ -92,12 +92,12 @@ export default {
                 school: 'National Tsing Hua University',
               },
               {
-                name: 'Hung-Kuo Chu',
+                name: 'Hung-Kuo Chu (supervisor)',
                 major: 'Department of Computer Science',
                 school: 'National Tsing Hua University',
               },
               {
-                name: 'Su-Chu Hsu',
+                name: 'Su-Chu Hsu (supervisor)',
                 major: 'College of Arts',
                 school: 'National Tsing Hua University',
               }
@@ -119,9 +119,14 @@ export default {
                 major: '資訊工程研究所'
               },
               {
-                name: '朱宏國',
+                name: '朱宏國 (指導老師)',
                 school: '國立清華大學',
                 major: '資訊工程系'
+              },
+              {
+                name: '許素朱 (指導老師)',
+                school: '國立清華大學',
+                major: '藝術學院'
               },
             ],
             pic: [
@@ -148,12 +153,12 @@ export default {
                 major: '跨院國際碩士'
               },
               {
-                name: '李哲榮',
+                name: '李哲榮 (指導老師)',
                 school: '國立清華大學',
                 major: '資訊工程研究所'
               },
               {
-                name: '許素朱',
+                name: '許素朱 (指導老師)',
                 school: '國立清華大學',
                 major: '藝術學院'
               },
@@ -170,12 +175,12 @@ export default {
                 school: 'National Tsing Hua University',
               },
               {
-                name: 'Che-Rung Lee',
+                name: 'Che-Rung Lee (supervisor)',
                 major: 'Department of Computer Science',
                 school: 'National Tsing Hua University',
               },
               {
-                name: 'Su-Chu Hsu',
+                name: 'Su-Chu Hsu (supervisor)',
                 major: 'College of Arts',
                 school: 'National Tsing Hua University',
               },
@@ -193,10 +198,10 @@ export default {
             description_en: 'This IoT installation art combines the climate data gathered by the smart streetlamp and COVID-19 screening data in Tsing Hua campus.',
             authors: [
               {
-                name: 'FBI Lab(Ching-Shun Chang ,Shih-Ta Liu, Su-Chu Hsu)',
+                name: 'FBI Lab (Ching-Shun Chang , Shih-Ta Liu, Su-Chu Hsu)',
               },
               {
-                name: 'HSCC Lab (Jang-Ping Sheu,  Yung-Ching Kuo)',
+                name: 'HSCC Lab (Jang-Ping Sheu, Yung-Ching Kuo)',
               },
             ],
             pic: [
@@ -207,16 +212,25 @@ export default {
           {
             id: 4,
             title: '肺花遍野 | COVID Flower Behavioral Art Everywhere',
-            description_en: 'After the epidemic wore off, people began to relax or even forget the changes brought about by the epidemic. So we will create Facebook Board to let people post their experiences through COVID-19. We also will carry out an action to let students lie quietly in Yuehan Pavilion and recall the impact of COVID-19 on our life through the audio/video art projected in the ceiling of pavilion.',
+            // description_en: 'After the epidemic wore off, people began to relax or even forget the changes brought about by the epidemic. So we will create Facebook Board to let people post their experiences through COVID-19. We also will carry out an action to let students lie quietly in Yuehan Pavilion and recall the impact of COVID-19 on our life through the audio/video art projected in the ceiling of pavilion.',
+            description_html: `<p>After the epidemic wore off, people began to relax or even forget the changes brought about by the epidemic. So we will create Facebook Board to let people post their ideas and experiences for COVID-19.</p>
+              <p>&ldquo;COVID Flower Behavioral Art Everywhere&rdquo; hopes to invite you all in the recording and discussion of:</p>
+              <ol>
+              <li>The short-term social phenomenons and changes brought about by COVID-19 (focusing on observations in Tsing Hua University）</li>
+              <li>The possible long-term changes within Tsing Hua University and other Taiwanese Universities brought about by COVID-19</li>
+              <li>The value and relativity of these changes in a globalizing and digitizing world From August 21st to September 12th, we would post relative news and articles everyday.</li>
+              </ol>
+              <p>9/12 at 8pm CST, at Tsing Hua's Yuehan Pavilion. We will carry out an action to let students lie quietly in Yuehan Pavilion and recall the impact of COVID-19 on our life through the audio/video art projected in the ceiling of pavilion. We would release our audio/video art on our facebook event page at the same time, we hope that people around the world to be able to join us in thought as they watch the video online</p>
+              <p>We look forward to having you join in on our discussion in FB and our action in Yuehan Pavilion.</p>`,
             authors_en: [
               {
                 name: 'Irene Li',
               },
               {
-                name: 'Xhei-Chi Liu',
+                name: 'Xuezhi Liu',
               },
               {
-                name: 'Xiaoniu Hsu',
+                name: 'Xiaoniu Hsu (supervisor)',
               },
             ],
             pic: [

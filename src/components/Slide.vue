@@ -2,12 +2,12 @@
 .sl
   .slContainer
     transition-group(name="fade", mode="in-out")
-      .slBlock(v-for="(item, i) in slideData.slice(s, s+1)" :key="s")
+      .slBlock(v-for="(item, i) in slideData.slice(s, s+1)" :key="item.title")
         .slPic(:style="{background: 'url(' + item.pic[0] + ')', backgroundSize: 'cover', backgroundPosition: '0 0', backgroundRepeat: 'no-repeat'}" :class="{eun: s == 4}")
           .slTextBlock(:key="i")
             .slTitle {{ item.title }}
             //- .slAuthor {{ item.author }}
-            .slContent(v-if="item.description_en") {{ item.description_en.slice(0, 180) }} ...
+            //- .slContent(v-if="item.description_en") {{ item.description_en.slice(0, 180) }} ...
             //- .slMore more + 
         .slDotBlock
           .slLeftButton(@click="s === 0 ? s = slideData.length-1 : s--")
@@ -241,7 +241,7 @@ export default {
     }
   },
   mounted() {
-    this.slidemove = setInterval(() => this.setSlide(), 8000)
+    this.slidemove = setInterval(() => this.setSlide(), 2000)
   },
   methods: {
     setSlide() {
@@ -257,7 +257,7 @@ export default {
     },
     //滑鼠離開
     nomouse() {
-      this.slidemove = setInterval(() => this.setSlide(), 5000)
+      this.slidemove = setInterval(() => this.setSlide(), 2000)
     },
   },
   //離開前把計時器關掉
@@ -283,6 +283,9 @@ export default {
       .slPic
         width: 100vw
         height: 100vh
+        +phone
+          background-position: center !important
+
         // +bb
         &.eun
           background-position: center !important
@@ -290,8 +293,8 @@ export default {
           padding: 30px
           box-sizing: border-box
           position: absolute
-          width: 500px
-          height: 300px
+          width: auto
+          height: 100px
           bottom: 100px
           left: -10px
           border-radius: 3px
@@ -301,7 +304,7 @@ export default {
           +phone
             width: 100%
             left: 0
-            height: 360px
+            height: auto
           +phone5
             height: 380px
         .slTitle
