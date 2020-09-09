@@ -3,7 +3,6 @@ import Router from 'vue-router';
 import Home from '@/views/Home/Home';
 // import Projects from '@/components/Projects';
 import Intro from '@/components/Intro';
-import Sphere from '@/views/Sphere/Sphere';
 import Map from '@/views/Sphere/Map';
 import Whole_view from '@/views/Sphere/Whole_view';
 import KT14_list from '@/views/Work/KT14/KT14_list';
@@ -33,11 +32,6 @@ export default new Router({
       path: '/about',
       name: 'Intro',
       component: Intro
-    },
-    {
-      path: '/sphere',
-      name: 'Sphere',
-      component: Sphere
     },
     {
       path: '/map',
