@@ -5,8 +5,8 @@
     router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
   //- 移動版地點
   .ma_mobile_text_block(v-for="(item, i) in school_scene")
-    .number_title(:class="{ke: i == 15}") {{ i == 15? 'K - Exhibition' : abc[i] }}
-    .ma_mobile_place(:class="{ke_place: i == 15}") {{ item.title }}
+    .number_title(:class="{ke: i == 15 || i == 16}") {{ i == 15 || i == 16? 'Exhibition' : abc[i] }}
+    .ma_mobile_place(:class="{ke_place: i == 15 || i == 16}") {{ item.title }}
     .mobile_light(@click="to_sphere(i)")
       .mobile_light_circle
       .mobile_small_ball
@@ -17,7 +17,7 @@
     .map_big
     //- 展覽的圖示
     .exh_light.warn(@click="to_exhibition()")
-    .exh_light.tai
+    .exh_light.tai(@click="to_sphere(16)")
     //- 表演的圖示
     .per_light(@click="to_sphere(6)")
     //- 圖書館的展覽
@@ -297,6 +297,9 @@ export default {
         },
         {
           title: '360° Exhibition',
+        },
+        {
+          title: '花光照林 | Flower Illuminating Forest',
         }
       ]
     }
@@ -647,6 +650,7 @@ span
   position: absolute
   top: 900px
   left: 1100px
+  cursor: pointer
 .per_light
   position: absolute
   top: 610px

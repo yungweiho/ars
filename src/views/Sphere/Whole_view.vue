@@ -11,6 +11,8 @@
         .selectBlock(:class="{opened_scroll: open_scroll === true}")
           .optionTitle(v-for="(item, i) in intro" @click="$router.push({query: {place_id: Math.ceil(i)}})") {{ item.title }}
       .description {{ intro[$route.query.place_id].description }}
+      a(v-if="intro[$route.query.place_id].url" :href="intro[$route.query.place_id].url")
+        .more more+
 </template>
 
 <script>
@@ -35,7 +37,9 @@ export default {
         '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_17.jpg&title=17%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E4%BA%BA%E7%A4%BE%E9%99%A2%E2%94%80%E7%84%A1%E8%81%B2%E7%9A%84%E5%B0%8D%E8%A9%B1&author=ARTOGO&autoLoad=true"></iframe>',
         '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_16.jpg&title=16%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E8%91%89%E5%AD%90%E8%A3%9D%E7%BD%AE%E8%97%9D%E8%A1%93&author=ARTOGO&autoLoad=true"></iframe>',
         '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_10.jpg&title=10%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E5%8E%9F%E5%AD%90%E7%A7%91%E5%AD%B8%E7%A0%94%E7%A9%B6%E6%89%80-%E5%8E%9F%E5%AD%90%E7%88%90&author=ARTOGO&autoLoad=true"></iframe>',
-        '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_12.jpg&title=12%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E5%8E%9F%E5%AD%90%E7%A7%91%E5%AD%B8%E7%A0%94%E7%A9%B6%E6%89%80-%E6%94%BE%E5%B0%84%E6%B2%BB%E7%99%82%E5%AE%A4&author=ARTOGO&autoLoad=true"></iframe>'
+        '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_12.jpg&title=12%E6%A0%A1%E5%9C%92%E5%9C%B0%E6%99%AF-%E5%8E%9F%E5%AD%90%E7%A7%91%E5%AD%B8%E7%A0%94%E7%A9%B6%E6%89%80-%E6%94%BE%E5%B0%84%E6%B2%BB%E7%99%82%E5%AE%A4&author=ARTOGO&autoLoad=true"></iframe>',
+        '',
+        '<iframe width="600" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.5/pannellum.htm#panorama=https%3A%2F%2F360.artogo.tw%2F360_NTHU%2Flandscape_20_1.jpg&title=20_1%E4%BD%9C%E5%93%81-%E8%8A%B1%E5%85%89%E7%85%A7%E6%9E%97&author=ARTOGO&autoLoad=true"></iframe>',
       ],
       intro: [
         {
@@ -129,6 +133,14 @@ export default {
           "tag": "radiation",
           "if_url": "",
           "description": "Connected with the nuclear reactor, the Radiotherapy Ward is designed for Boron Neutron Capture Therapy(BNCT) to treat cancer."
+        },
+        {
+
+        },
+        {
+          title: '花光照林 | Flower Illuminating Forest',
+          description: 'This IoT installation art combines the climate data gathered by the smart streetlamp and COVID-19 screening data in Tsing Hua campus.',
+          url: 'http://art.nthu.edu.tw/ars2020/#/Buds_about_to_Blossom_Exhibition/work/3'
         }
       ]
     }
@@ -275,7 +287,13 @@ export default {
   transform: rotate(90deg)
   cursor: pointer
   animation: splin 1s linear infinite
-
+.more
+  font-size: 20px
+  font-weight: bold
+  letter-spacing: 1px
+  margin-top: 50px
+  text-align: right
+  cursor: pointer
 /* width */
 ::-webkit-scrollbar 
   width: 8px
