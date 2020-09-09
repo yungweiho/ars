@@ -21,6 +21,11 @@
     .link_block
       a(:href="animate_data.works[Math.ceil($route.params.workid-1)].video" target="_blank" v-if="animate_data.works[Math.ceil($route.params.workid-1)].video")
         .video_icon
+      a(:href="animate_data.works[Math.ceil($route.params.workid-1)].sphere" target="_blank" v-if="animate_data.works[Math.ceil($route.params.workid-1)].sphere")
+        .sphere_icon
+    .awards_block
+      .awards_title Awards
+      .awards_text(v-if="animate_data.works[Math.ceil($route.params.workid-1)].awards") ✵ {{ animate_data.works[Math.ceil($route.params.workid-1)].awards }}
     .workTextBlock
       .workText {{ animate_data.works[Math.ceil($route.params.workid-1)].description }}
       .workText.en(v-if="animate_data.works[Math.ceil($route.params.workid-1)].description_en") {{ animate_data.works[Math.ceil($route.params.workid-1)].description_en }}
@@ -114,7 +119,7 @@ export default {
   width: 100%
   height: 40vw
   position: relative
-  background-position: 0 0 !important
+  // background-position: 0 0 !important
   +smallcom
     height: 45vw
   +pad
@@ -251,10 +256,51 @@ export default {
 .link_block
   width: 100%
   margin-top: 20px
+  +flexrow
   .video_icon
     width: 50px
     height: 50px
     background: url(../../../assets/video.png)
     +bgcon
     cursor: pointer
+    // animation: bling 1s 0.5s linear infinite
+    
+  .sphere_icon
+    width: 50px
+    height: 50px
+    // margin-top: 2.5px
+    background: url('../../../assets/sphere/sphere_icon.png')
+    +bgcon
+    cursor: pointer
+    margin-left: 10px
+    opacity: 0.5
+    animation: rote 2s linear infinite
+
+.awards_block
+  width: 100%
+  margin-top: 20px
+  +flexrow
+  // padding: 0 10px
+  .awards_title
+    font-size: 20px
+    font-weight: bold
+    letter-spacing: 1px 
+    text-decoration: underline
+  .awards_text
+    font-size: 20px
+    letter-spacing: 1px
+    margin-left: 20px
+    line-height: 35px
+
+@keyframes bling
+  0%, 100%
+    opacity: 1
+  50%
+    opacity: 0.2
+
+@keyframes rote
+  0%
+    transform: rotate(0)
+  100%
+    transform: rotate(360deg)
 </style>

@@ -134,7 +134,8 @@ export default {
               require('../../../assets/KT14/crazy/crazy_02.jpeg'),
               require('../../../assets/KT14/crazy/crazy_03.jpeg'),
             ],
-            video: 'https://youtu.be/FMJerfgvvS8'
+            video: 'https://youtu.be/FMJerfgvvS8',
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-.18,-.88&ss=109&qs=1',
           },
           {
             id: 2,
@@ -189,7 +190,8 @@ export default {
               require('../../../assets/KT14/ming/ming_01.jpg'),
               require('../../../assets/KT14/ming/ming_02.jpg'),
               require('../../../assets/KT14/ming/ming_03.jpg'),
-            ]
+            ],
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-2.79,-.84&ss=80&qs=1',
           },
           {
             id: 3,
@@ -207,7 +209,8 @@ export default {
             pic: [
               require('../../../assets/flower/flower_02.jpg'),
               require('../../../assets/flower/flower_01.jpg'),
-            ]
+            ],
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-3.11,-.03&ss=145',
           },
           {
             id: 4,

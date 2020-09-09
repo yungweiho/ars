@@ -21,6 +21,8 @@
     .link_block
       a(:href="kt14_data.works[Math.ceil($route.params.workid-1)].video" targety="_blank" v-if="kt14_data.works[Math.ceil($route.params.workid-1)].video")
         .video_icon
+      a(:href="kt14_data.works[Math.ceil($route.params.workid-1)].sphere" target="_blank" v-if="kt14_data.works[Math.ceil($route.params.workid-1)].sphere")
+        .sphere_icon
     .workTextBlock
       .workText(v-if="kt14_data.works[Math.ceil($route.params.workid-1)].description") {{ kt14_data.works[Math.ceil($route.params.workid-1)].description }}
       .workText.en(v-if="kt14_data.works[Math.ceil($route.params.workid-1)].description_en") {{ kt14_data.works[Math.ceil($route.params.workid-1)].description_en }}
@@ -289,12 +291,24 @@ export default {
 .link_block
   width: 100%
   margin-top: 20px
+  +flexrow
+
   .video_icon
     width: 50px
     height: 50px
     background: url(../../../assets/video.png)
     +bgcon
     cursor: pointer
+  .sphere_icon
+    width: 50px
+    height: 50px
+    // margin-top: 2.5px
+    background: url('../../../assets/sphere/sphere_icon.png')
+    +bgcon
+    cursor: pointer
+    margin-left: 10px
+    opacity: 0.5
+    animation: rote 2s linear infinite
 .flower_tab_block
   width: 100%
   border-top: solid 1px black
@@ -323,4 +337,10 @@ export default {
     font-size: 20px
     letter-spacing: 1.5px
     line-height: 35px
+
+@keyframes rote
+  0%
+    transform: rotate(0)
+  100%
+    transform: rotate(360deg)
 </style>

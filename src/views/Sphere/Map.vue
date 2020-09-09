@@ -16,8 +16,8 @@
     //- 地圖
     .map_big
     //- 展覽的圖示
-    .exh_light.warn(@click="to_exhibition()")
-    .exh_light.tai(@click="to_sphere(16)")
+    .exh_light.warn(@click="to_exhibition('main')")
+    .exh_light.tai(@click="to_exhibition('flower')")
     //- 表演的圖示
     .per_light(@click="to_sphere(6)")
     //- 圖書館的展覽
@@ -318,8 +318,12 @@ export default {
       }
       
     },
-    to_exhibition() {
-      window.open('https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609');
+    to_exhibition(place) {
+      if (place === 'main') {
+        window.open('https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609');
+      } else if (place === 'flower') {
+        window.open('https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-3.11,-.03&ss=145');
+      }
     }
   }
 

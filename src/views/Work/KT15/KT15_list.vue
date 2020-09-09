@@ -10,10 +10,16 @@
   .progTitle Program
   
   .wlCardBlock(v-if="$route.params.workid == undefined")
-    router-link.wlCard(v-for="(item, i) in kt15_data" :key="item.title" :to="item.url" :style="{background: 'url(' + item.pic + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+    router-link.wlCard(v-for="(item, i) in kt15_data" :key="item.title" :to="item.url" :style="{background: 'url(' + item.pic + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}" :class="{weather: i == 2}")
       .wlCardTextBlock
         .wlCardTitle {{ item.title }}
         .wlCardSubtitle KT15
+  .sphere_block
+    a(href="https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609" target="_blank")
+      .sphere_icon
+    a(href="https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609" target="_blank")
+      .sphere_text Virtual Exhibition
+    
 </template>
 
 <script>
@@ -61,19 +67,19 @@ export default {
         {
           title: 'Digital Animation',
           subtitle: 'K.T.15',
-          pic: require('../../../assets/KT15/animate/yuang/yuang_03.jpg'),
+          pic: require('../../../assets/KT15/animate/zhan/zhan_03.jpg'),
           url: '/Digital_Animation',
         },
         {
           title: 'Digital Game',
           subtitle: 'K.T.15',
-          pic: require('../../../assets/KT15/game/meleer/meleer_01.jpg'),
+          pic: require('../../../assets/KT15/game/antivine/antivine_01.jpg'),
           url: '/Digital_Game',
         },
         {
           title: 'Interactive Technology Art',
           subtitle: 'K.T.15',
-          pic: require('../../../assets/KT15/techart/flower/flower_03.jpg'),
+          pic: require('../../../assets/KT15/techart/weather/weather_01.jpg'),
           url: '/Interactive_Technology_Art',
         },
       ]
@@ -178,6 +184,8 @@ export default {
             opacity: 1
             transform: translateY(0%)
             transition: 0.5s
+      &.weather
+        background-position: 100% !important
       &:last-child:nth-child(3n-1)
         margin-right: 35%
         +phone
@@ -246,4 +254,36 @@ export default {
       margin-left: 10px
     &.now
       color: black
+.sphere_block
+  width: 100%
+  margin-top: 20px
+  +flexrow
+  justify-content: center
+  // align-items: center
+  .sphere_icon
+    width: 50px
+    height: 50px
+    // margin-top: 2.5px
+    background: url('../../../assets/sphere/sphere_icon.png')
+    +bgcon
+    cursor: pointer
+    margin-left: 10px
+    opacity: 0.5
+    animation: rote 2s linear infinite
+    // +bb
+  .sphere_text
+    // +bb
+    font-size: 20px
+    letter-spacing: 1px
+    margin-left: 20px
+    padding: 10px 0 0 0
+    &:hover
+      text-decoration: underline
+
+@keyframes rote 
+  0%
+    // transform-origin: -100px
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
 </style>

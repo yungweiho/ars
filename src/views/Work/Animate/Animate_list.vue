@@ -69,190 +69,38 @@ export default {
         title: '數位動畫組',
         works: [
           {
-            title: '化羽 | The Empress',
-            description: '隨著民主潮流的推波，女權運動近年來蓬勃發展，全球各地女性自主意識提升，許多女性權益看似逐漸改善，但即便是在二十一世紀今日，仍有許多國家及地區的傳統習俗或宗教文化，對女性平權的議題設下重重枷鎖，甚至視為異端禁止討論參與。藉由本次的動畫短片創作「化羽」，希望透過故事中父權至上的封建社會背景，傳達出女性自主意識的覺醒，期盼觀眾能瞭解爭取自由與權益的女性們，我們應給更多的尊重同理與包容。在製作及畫面技術上，小組三人發揮長才，使用PS、AI等繪圖軟體設計出人物以及場景；也使用了Cilp來繪製出逐格動畫，將所有繪製好的場景、角色、動態逐格結合進AE，使用合成及特效來呈現出完整的作品。',
-            description_en: `Following the trend of democracy, feminist movement flourished in recent years. All over the world, women’s awareness of autonomy has risen, and many women’s rights also seemed to have gradually improved. However, even today of the 21st century, the issues of women's equality are still chained by traditional customs or religious cultures in many regions and countries, and even been regarded as heterodox and banned on discussion and participation. By this short animation “The Empress,” the awakening of women’s awareness of autonomy is conveyed via the feudal society background of the patriarchalism reigning supreme in the story, expecting that the audience can understand the women striving for freedom and rights and that we should provide more respect, empathy and tolerance. On the production and graphic technology, our three team members used specialized drawing software, such as Photoshop and Illustrator, to design roles and scenes. Clip Studio Paint was also used to produce frame-by-frame animations, combining with the drawn scenes, roles and motions into After Effects frame by frame. The completed creation was presented by synthetization and special effects.`,
+            title: '綻放之種 | Blüte',
+            description: '綻放之種(2020) 以女性的角度出發，記錄少女在初次經歷戀愛的過程中，愛情悄然進入心房的心境描寫。以植物作為女性符號象征的複合式媒材，種子代表生命的誕生與再生，植物透過種子把生命延續到未來，愛情的旅程也是如此。將愛情最原始的形態視覺化，試圖尋找一種情感關係中的心靈寄託，脫離東方社會傳統思潮的束縛，從種子蛻變為小芽茁壯成長。每個女人都有愛與被愛的權利，請為自己勇於追逐愛情感到驕傲吧！',
+            description_en: 'Blüte (2020) explores the perspective of a woman as she experiences the first tinge of love as it colors her teenage heart for the first time. Plants have been chosen the composite medium of choice to symbolize feminity. Seeds represents birth and rebirth. Plants extend life through seeds into the future, and so does the journey of love. Visualize the most primitive form of love, and try to find the spiritual core of a relationship. Break through traditional Eastern notions of love, and let the seeds grow valiantly into a budding plant. Every woman has the right to love and be loved, so please be proud of your courage to chase after love!',
             authors: [
               {
-                name: '吳盈潔',
-                school: '樹德科技大學',
-                major: '動畫與遊戲設計系'
+                name: '潘妍希',
+                school: '國立臺灣藝術大學',
               },
               {
-                name: '張敬恩',
-                school: '樹德科技大學',
-                major: '動畫與遊戲設計系'
-              },
-              {
-                name: '柯雅琦',
-                school: '樹德科技大學',
-                major: '動畫與遊戲設計系'
+                name: '劉靜怡',
+                school: '國立臺灣藝術大學',
               },
             ],
             authors_en: [
               {
-                name: 'Ying-Chieh Wu',
-                school: 'Shu-Te University',
-                major: 'Department of Animation and Game Design'
+                name: 'YAN-SI PAN',
+                school: 'National Taiwan University of Arts',
               },
               {
-                name: 'Ching-En Chang',
-                school: 'Shu-Te University',
-                major: 'Department of Animation and Game Design'
-              },
-              {
-                name: 'Ya-Chi Ko',
-                school: 'Shu-Te University',
-                major: 'Department of Animation and Game Design'
+                name: 'JING-YI LIU',
+                school: 'National Taiwan University of Arts',
               },
             ],
             pic: [
-              require('../../../assets/KT15/animate/hua/hua_01.jpg'),
-              require('../../../assets/KT15/animate/hua/hua_02.jpg'),
-              require('../../../assets/KT15/animate/hua/hua_03.jpg'),
-              require('../../../assets/KT15/animate/hua/hua_04.jpg'),
-              require('../../../assets/KT15/animate/hua/hua_05.jpg'),
-              require('../../../assets/KT15/animate/hua/hua_06.jpg'),
+              require('../../../assets/KT15/animate/zhan/zhan_01.jpg'),
+              require('../../../assets/KT15/animate/zhan/zhan_02.jpg'),
+              require('../../../assets/KT15/animate/zhan/zhan_03.jpg'),
+              require('../../../assets/KT15/animate/zhan/zhan_04.jpg'),
             ],
-            video: 'https://youtu.be/bddgV2_dNT0'
-          },
-          {
-            title: '沉沒 | Sinking',
-            description: '故事描述一名女高中生被班上的同學利用、冷落的日常生活。在這樣的生活狀況之下主角逐漸感到絕望，並因壓力提升而開始產生了與深海有關的幻象。',
-            description_en: `The story describes a high school girl’s everyday life, being used and cold-shouldered by her classmates. Under such living conditions, the leading role feels desperate bit by bit, and due to increased pressure, starts to feel an illusion about deep seas.`,
-            authors: [
-              {
-                name: '羅巧涵',
-                school: '台南應用科技大學',
-                major: '多媒體動畫系'
-              },
-              {
-                name: '余聿平',
-                school: '台南應用科技大學',
-                major: '多媒體動畫系'
-              },
-              {
-                name: '陳玟憶',
-                school: '台南應用科技大學',
-                major: '多媒體動畫系'
-              },
-              {
-                name: '陳依君',
-                school: '台南應用科技大學',
-                major: '多媒體動畫系'
-              },
-              {
-                name: '冀心嵐',
-                school: '台南應用科技大學',
-                major: '多媒體動畫系'
-              },
-              {
-                name: '黃阡莉',
-                school: '台南應用科技大學',
-                major: '多媒體動畫系'
-              },
-            ],
-            authors_en: [
-              {
-                name: 'Chiao-Han Lo',
-                school: 'Tainan University of Technology',
-                major: 'Department of Multimedia and Animation'
-              },
-              {
-                name: 'Yu-Ping Yu',
-                school: 'Tainan University of Technology',
-                major: 'Department of Multimedia and Animation'
-              },
-              {
-                name: 'Wen-Yi Chen',
-                school: 'Tainan University of Technology',
-                major: 'Department of Multimedia and Animation'
-              },
-              {
-                name: 'Yi-Chun Chen',
-                school: 'Tainan University of Technology',
-                major: 'Department of Multimedia and Animation'
-              },
-              {
-                name: 'Hsin-Lan Chi',
-                school: 'Tainan University of Technology',
-                major: 'Department of Multimedia and Animation'
-              },
-              {
-                name: 'Chien-Li Huang',
-                school: 'Tainan University of Technology',
-                major: 'Department of Multimedia and Animation'
-              },
-            ],
-            pic: [
-              require('../../../assets/KT15/animate/chen/chen_01.jpg'),
-              require('../../../assets/KT15/animate/chen/chen_02.jpg'),
-              require('../../../assets/KT15/animate/chen/chen_03.jpg'),
-            ],
-            video: 'https://youtu.be/2HweJrVDY1g'
-          },
-          {
-            title: '妳只在乎妳在乎的 | Mother Figure',
-            description: '本作以導演好友的生命經驗， 發現他對於母愛總是充滿渴望，可是當他真正面對母親時，卻又無法拉近彼此的距離，隨著時光飛逝， 兩者都錯過挽回的機會， 留下無奈。透過回憶了解母親從未給予小孩真正想要的、運用孩童視角劃分現實與過去的時間軸與情緒氛圍， 將理性和感性連同環境比例區隔開、把影片溫度與童趣感用手繪筆觸加上紙質疊加出來、盡可能將手繪動畫質感還原到電腦動畫媒材上。',
-            description_en: `This animation is based on the director’s life experience. He found that he always eagers for mother’s love, but when really facing his mother, he failed to bring them closer. While time passed, they both missed the opportunity to retrieve the situation, only leaving helplessness. By recalling that mother never gave her child what he really wanted, a child’s angle of view was adopted to differentiate the timeline and emotional atmosphere of the present and the past, dividing rationality, sensibility and environment proportion. The animation sensibility and childlike sense were overlaid by hand-drawing strokes and paper textures; the textures of hand-drawing animation were tried to be recovered to the materials of computer animation.`,
-            authors: [
-              {
-                name: '張䕒澤',
-                school: '國立臺南藝術大學',
-                major: '動畫藝術與影像美學研究所'
-              },
-            ],
-            authors_en: [
-              {
-                name: 'Chia-Tse Chang',
-                school: 'Tainan National University of the Arts',
-                major: 'Institute of Animation and Film Art'
-              },
-            ],
-            pic: [
-              require('../../../assets/KT15/animate/mother/mother_01.jpg'),
-              require('../../../assets/KT15/animate/mother/mother_02.jpg'),
-              require('../../../assets/KT15/animate/mother/mother_03.jpg'),
-              require('../../../assets/KT15/animate/mother/mother_04.jpg'),
-              require('../../../assets/KT15/animate/mother/mother_05.jpg'),
-            ],
-            video: 'https://youtu.be/our28vFKUdc'
-          },
-          {
-            title: '苒冉 | TURN BACK THE CLOCK',
-            description: '西元2048年，在經歷過第三次世界大戰和人類對地球造成不可逆汙染的未來，風雲變色，失序的世界中使得大部分土地失去生機，徒留受到核汙染基因變異的生物和極少數散落各地的倖存者人類。身為其中一人的主角獨自生活在末日後的世界，從小就對機械有興趣，擅長東拼西湊組裝各種零件的他，在那裡為了實現自己的心願四處奔走搜集零件，完成一件可以讓意識回到過去的機器，接著由過去記憶中的場景交代主角的身世背景，並藉此響應環保議題。動畫為3D與2D混合使用的風格，場景為3D建模而角色則為2D繪製，藉由風格差異區隔兩者，突顯出主角與末日後的世界格格不入。',
-            description_en: `In 2048, the future experiencing the third world war and the irreversible pollution on the earth made by humans, everything has changed. In this disorderly world, most lands lost their vitality, only leaving the creatures with genetic mutation from nuclear pollution and very few human survivors scattered in different places. The leading role, one of those humans, living alone in the world after the doom, has always been interested in machinery since he was young. He is good at assembling different kinds of parts. In order to make his dream come true, he tries hard to gather parts from different places to create a machine which can bring consciousness back to the past. And then, the leading role’s family background is disclosed from the scenes in the past memories, and thereby responding to environmental protection issues. In the animation, combined with 3D and 2D styles, the scenes are modeled by 3D, and the roles are drawn by 2D. Differentiating two settings by style, it more clearly shows that the leading role is incompatible with the world after the doom.`,
-            authors: [
-              {
-                name: '王安懿',
-                school: '國立臺北教育大學',
-                major: '藝術與造形設計學系'
-              },
-              {
-                name: '王琬琇',
-                school: '國立臺北教育大學',
-                major: '藝術與造形設計學系'
-              },
-            ],
-            authors_en: [
-              {
-                name: 'An-Yi Wang',
-                school: 'National Taipei University of Education',
-                major: 'Department of Arts and Design'
-              },
-              {
-                name: 'Wan-Hsiu Wang',
-                school: 'National Taipei University of Education',
-                major: 'Department of Arts and Design'
-              },
-            ],
-            pic: [
-              require('../../../assets/KT15/animate/zan/zan_01.jpg'),
-              require('../../../assets/KT15/animate/zan/zan_02.jpg'),
-              require('../../../assets/KT15/animate/zan/zan_03.jpg'),
-              require('../../../assets/KT15/animate/zan/zan_04.jpg'),
-            ],
-            video: 'https://youtu.be/5oVyjf82LAI'
+            video: 'https://youtu.be/BmMeOp1ORdI',
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            awards: 'Gold Award in K.T. 15 (Digital Animation)',
           },
           {
             title: '浮標 | Buoy',
@@ -298,7 +146,38 @@ export default {
               require('../../../assets/KT15/animate/phoo/phoo_03.jpg'),
               require('../../../assets/KT15/animate/phoo/phoo_04.jpg'),
             ],
-            video: 'https://youtu.be/Pu1JpaIx8z8'
+            video: 'https://youtu.be/Pu1JpaIx8z8',
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            awards: 'Silver Award in K.T. 15 (Digital Animation)',
+          },
+          {
+            title: '妳只在乎妳在乎的 | Mother Figure',
+            description: '本作以導演好友的生命經驗， 發現他對於母愛總是充滿渴望，可是當他真正面對母親時，卻又無法拉近彼此的距離，隨著時光飛逝， 兩者都錯過挽回的機會， 留下無奈。透過回憶了解母親從未給予小孩真正想要的、運用孩童視角劃分現實與過去的時間軸與情緒氛圍， 將理性和感性連同環境比例區隔開、把影片溫度與童趣感用手繪筆觸加上紙質疊加出來、盡可能將手繪動畫質感還原到電腦動畫媒材上。',
+            description_en: `This animation is based on the director’s life experience. He found that he always eagers for mother’s love, but when really facing his mother, he failed to bring them closer. While time passed, they both missed the opportunity to retrieve the situation, only leaving helplessness. By recalling that mother never gave her child what he really wanted, a child’s angle of view was adopted to differentiate the timeline and emotional atmosphere of the present and the past, dividing rationality, sensibility and environment proportion. The animation sensibility and childlike sense were overlaid by hand-drawing strokes and paper textures; the textures of hand-drawing animation were tried to be recovered to the materials of computer animation.`,
+            authors: [
+              {
+                name: '張䕒澤',
+                school: '國立臺南藝術大學',
+                major: '動畫藝術與影像美學研究所'
+              },
+            ],
+            authors_en: [
+              {
+                name: 'Chia-Tse Chang',
+                school: 'Tainan National University of the Arts',
+                major: 'Institute of Animation and Film Art'
+              },
+            ],
+            pic: [
+              require('../../../assets/KT15/animate/mother/mother_01.jpg'),
+              require('../../../assets/KT15/animate/mother/mother_02.jpg'),
+              require('../../../assets/KT15/animate/mother/mother_03.jpg'),
+              require('../../../assets/KT15/animate/mother/mother_04.jpg'),
+              require('../../../assets/KT15/animate/mother/mother_05.jpg'),
+            ],
+            video: 'https://drive.google.com/file/d/1zrdhlu0aA5s07WASn5Tc-ieJDprTXoXp/view?usp=sharing',
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            awards: 'Bronze Award in K.T. 15 (Digital Animation)',
           },
           {
             title: '森生 | Born for forest',
@@ -374,39 +253,9 @@ export default {
               require('../../../assets/KT15/animate/san/san_03.jpg'),
               require('../../../assets/KT15/animate/san/san_04.jpg'),
             ],
-            video: 'https://youtu.be/K1wUJg0tPjI'
-          },
-          {
-            title: '綻放之種 | Blüte',
-            description: '綻放之種(2020) 以女性的角度出發，記錄少女在初次經歷戀愛的過程中，愛情悄然進入心房的心境描寫。以植物作為女性符號象征的複合式媒材，種子代表生命的誕生與再生，植物透過種子把生命延續到未來，愛情的旅程也是如此。將愛情最原始的形態視覺化，試圖尋找一種情感關係中的心靈寄託，脫離東方社會傳統思潮的束縛，從種子蛻變為小芽茁壯成長。每個女人都有愛與被愛的權利，請為自己勇於追逐愛情感到驕傲吧！',
-            description_en: 'Blüte (2020) explores the perspective of a woman as she experiences the first tinge of love as it colors her teenage heart for the first time. Plants have been chosen the composite medium of choice to symbolize feminity. Seeds represents birth and rebirth. Plants extend life through seeds into the future, and so does the journey of love. Visualize the most primitive form of love, and try to find the spiritual core of a relationship. Break through traditional Eastern notions of love, and let the seeds grow valiantly into a budding plant. Every woman has the right to love and be loved, so please be proud of your courage to chase after love!',
-            authors: [
-              {
-                name: '潘妍希',
-                school: '國立臺灣藝術大學',
-              },
-              {
-                name: '劉靜怡',
-                school: '國立臺灣藝術大學',
-              },
-            ],
-            authors_en: [
-              {
-                name: 'YAN-SI PAN',
-                school: 'National Taiwan University of Arts',
-              },
-              {
-                name: 'JING-YI LIU',
-                school: 'National Taiwan University of Arts',
-              },
-            ],
-            pic: [
-              require('../../../assets/KT15/animate/zhan/zhan_01.jpg'),
-              require('../../../assets/KT15/animate/zhan/zhan_02.jpg'),
-              require('../../../assets/KT15/animate/zhan/zhan_03.jpg'),
-              require('../../../assets/KT15/animate/zhan/zhan_04.jpg'),
-            ],
-            video: 'https://youtu.be/BmMeOp1ORdI'
+            video: 'https://youtu.be/K1wUJg0tPjI',
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            awards: 'K.T. science Award in K.T. 15 (Digital Animation)',
           },
           {
             title: '餘溫 | Everlasting Touch',
@@ -463,7 +312,59 @@ export default {
               require('../../../assets/KT15/animate/yui/yui_04.jpg'),
               require('../../../assets/KT15/animate/yui/yui_05.jpg'),
             ],
-            video: 'https://youtu.be/iyAKZhcvWCY'
+            video: 'https://youtu.be/iyAKZhcvWCY',
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            awards: 'Quality Award in K.T. 15 (Digital Animation)',
+          },
+          {
+            title: '化羽 | The Empress',
+            description: '隨著民主潮流的推波，女權運動近年來蓬勃發展，全球各地女性自主意識提升，許多女性權益看似逐漸改善，但即便是在二十一世紀今日，仍有許多國家及地區的傳統習俗或宗教文化，對女性平權的議題設下重重枷鎖，甚至視為異端禁止討論參與。藉由本次的動畫短片創作「化羽」，希望透過故事中父權至上的封建社會背景，傳達出女性自主意識的覺醒，期盼觀眾能瞭解爭取自由與權益的女性們，我們應給更多的尊重同理與包容。在製作及畫面技術上，小組三人發揮長才，使用PS、AI等繪圖軟體設計出人物以及場景；也使用了Cilp來繪製出逐格動畫，將所有繪製好的場景、角色、動態逐格結合進AE，使用合成及特效來呈現出完整的作品。',
+            description_en: `Following the trend of democracy, feminist movement flourished in recent years. All over the world, women’s awareness of autonomy has risen, and many women’s rights also seemed to have gradually improved. However, even today of the 21st century, the issues of women's equality are still chained by traditional customs or religious cultures in many regions and countries, and even been regarded as heterodox and banned on discussion and participation. By this short animation “The Empress,” the awakening of women’s awareness of autonomy is conveyed via the feudal society background of the patriarchalism reigning supreme in the story, expecting that the audience can understand the women striving for freedom and rights and that we should provide more respect, empathy and tolerance. On the production and graphic technology, our three team members used specialized drawing software, such as Photoshop and Illustrator, to design roles and scenes. Clip Studio Paint was also used to produce frame-by-frame animations, combining with the drawn scenes, roles and motions into After Effects frame by frame. The completed creation was presented by synthetization and special effects.`,
+            authors: [
+              {
+                name: '吳盈潔',
+                school: '樹德科技大學',
+                major: '動畫與遊戲設計系'
+              },
+              {
+                name: '張敬恩',
+                school: '樹德科技大學',
+                major: '動畫與遊戲設計系'
+              },
+              {
+                name: '柯雅琦',
+                school: '樹德科技大學',
+                major: '動畫與遊戲設計系'
+              },
+            ],
+            authors_en: [
+              {
+                name: 'Ying-Chieh Wu',
+                school: 'Shu-Te University',
+                major: 'Department of Animation and Game Design'
+              },
+              {
+                name: 'Ching-En Chang',
+                school: 'Shu-Te University',
+                major: 'Department of Animation and Game Design'
+              },
+              {
+                name: 'Ya-Chi Ko',
+                school: 'Shu-Te University',
+                major: 'Department of Animation and Game Design'
+              },
+            ],
+            pic: [
+              require('../../../assets/KT15/animate/hua/hua_01.jpg'),
+              require('../../../assets/KT15/animate/hua/hua_02.jpg'),
+              require('../../../assets/KT15/animate/hua/hua_03.jpg'),
+              require('../../../assets/KT15/animate/hua/hua_04.jpg'),
+              require('../../../assets/KT15/animate/hua/hua_05.jpg'),
+              require('../../../assets/KT15/animate/hua/hua_06.jpg'),
+            ],
+            video: 'https://youtu.be/bddgV2_dNT0',
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            awards: 'Honorable Mention in K.T. 15 (Digital Animation)',
           },
           {
             title: '願 | Hope',
@@ -529,7 +430,124 @@ export default {
               require('../../../assets/KT15/animate/yuang/yuang_03.jpg'),
               require('../../../assets/KT15/animate/yuang/yuang_04.jpg'),
             ],
-            video: 'https://youtu.be/jYXFGzPUeYI'
+            video: 'https://youtu.be/jYXFGzPUeYI',
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            awards: 'Honorable Mention in K.T. 15 (Digital Animation)',
+          },
+          {
+            title: '苒冉 | TURN BACK THE CLOCK',
+            description: '西元2048年，在經歷過第三次世界大戰和人類對地球造成不可逆汙染的未來，風雲變色，失序的世界中使得大部分土地失去生機，徒留受到核汙染基因變異的生物和極少數散落各地的倖存者人類。身為其中一人的主角獨自生活在末日後的世界，從小就對機械有興趣，擅長東拼西湊組裝各種零件的他，在那裡為了實現自己的心願四處奔走搜集零件，完成一件可以讓意識回到過去的機器，接著由過去記憶中的場景交代主角的身世背景，並藉此響應環保議題。動畫為3D與2D混合使用的風格，場景為3D建模而角色則為2D繪製，藉由風格差異區隔兩者，突顯出主角與末日後的世界格格不入。',
+            description_en: `In 2048, the future experiencing the third world war and the irreversible pollution on the earth made by humans, everything has changed. In this disorderly world, most lands lost their vitality, only leaving the creatures with genetic mutation from nuclear pollution and very few human survivors scattered in different places. The leading role, one of those humans, living alone in the world after the doom, has always been interested in machinery since he was young. He is good at assembling different kinds of parts. In order to make his dream come true, he tries hard to gather parts from different places to create a machine which can bring consciousness back to the past. And then, the leading role’s family background is disclosed from the scenes in the past memories, and thereby responding to environmental protection issues. In the animation, combined with 3D and 2D styles, the scenes are modeled by 3D, and the roles are drawn by 2D. Differentiating two settings by style, it more clearly shows that the leading role is incompatible with the world after the doom.`,
+            authors: [
+              {
+                name: '王安懿',
+                school: '國立臺北教育大學',
+                major: '藝術與造形設計學系'
+              },
+              {
+                name: '王琬琇',
+                school: '國立臺北教育大學',
+                major: '藝術與造形設計學系'
+              },
+            ],
+            authors_en: [
+              {
+                name: 'An-Yi Wang',
+                school: 'National Taipei University of Education',
+                major: 'Department of Arts and Design'
+              },
+              {
+                name: 'Wan-Hsiu Wang',
+                school: 'National Taipei University of Education',
+                major: 'Department of Arts and Design'
+              },
+            ],
+            pic: [
+              require('../../../assets/KT15/animate/zan/zan_01.jpg'),
+              require('../../../assets/KT15/animate/zan/zan_02.jpg'),
+              require('../../../assets/KT15/animate/zan/zan_03.jpg'),
+              require('../../../assets/KT15/animate/zan/zan_04.jpg'),
+            ],
+            video: 'https://youtu.be/5oVyjf82LAI',
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            awards: 'Honorable Mention in K.T. 15 (Digital Animation)',
+          },
+          {
+            title: '沉沒 | Sinking',
+            description: '故事描述一名女高中生被班上的同學利用、冷落的日常生活。在這樣的生活狀況之下主角逐漸感到絕望，並因壓力提升而開始產生了與深海有關的幻象。',
+            description_en: `The story describes a high school girl’s everyday life, being used and cold-shouldered by her classmates. Under such living conditions, the leading role feels desperate bit by bit, and due to increased pressure, starts to feel an illusion about deep seas.`,
+            authors: [
+              {
+                name: '羅巧涵',
+                school: '台南應用科技大學',
+                major: '多媒體動畫系'
+              },
+              {
+                name: '余聿平',
+                school: '台南應用科技大學',
+                major: '多媒體動畫系'
+              },
+              {
+                name: '陳玟憶',
+                school: '台南應用科技大學',
+                major: '多媒體動畫系'
+              },
+              {
+                name: '陳依君',
+                school: '台南應用科技大學',
+                major: '多媒體動畫系'
+              },
+              {
+                name: '冀心嵐',
+                school: '台南應用科技大學',
+                major: '多媒體動畫系'
+              },
+              {
+                name: '黃阡莉',
+                school: '台南應用科技大學',
+                major: '多媒體動畫系'
+              },
+            ],
+            authors_en: [
+              {
+                name: 'Chiao-Han Lo',
+                school: 'Tainan University of Technology',
+                major: 'Department of Multimedia and Animation'
+              },
+              {
+                name: 'Yu-Ping Yu',
+                school: 'Tainan University of Technology',
+                major: 'Department of Multimedia and Animation'
+              },
+              {
+                name: 'Wen-Yi Chen',
+                school: 'Tainan University of Technology',
+                major: 'Department of Multimedia and Animation'
+              },
+              {
+                name: 'Yi-Chun Chen',
+                school: 'Tainan University of Technology',
+                major: 'Department of Multimedia and Animation'
+              },
+              {
+                name: 'Hsin-Lan Chi',
+                school: 'Tainan University of Technology',
+                major: 'Department of Multimedia and Animation'
+              },
+              {
+                name: 'Chien-Li Huang',
+                school: 'Tainan University of Technology',
+                major: 'Department of Multimedia and Animation'
+              },
+            ],
+            pic: [
+              require('../../../assets/KT15/animate/chen/chen_01.jpg'),
+              require('../../../assets/KT15/animate/chen/chen_02.jpg'),
+              require('../../../assets/KT15/animate/chen/chen_03.jpg'),
+            ],
+            video: 'https://youtu.be/2HweJrVDY1g',
+            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            awards: 'Honorable Mention in K.T. 15 (Digital Animation)',
           },
         ]
       }
