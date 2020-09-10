@@ -175,7 +175,7 @@ export default {
               require('../../../assets/KT15/animate/mother/mother_04.jpg'),
               require('../../../assets/KT15/animate/mother/mother_05.jpg'),
             ],
-            video: 'https://drive.google.com/file/d/1zrdhlu0aA5s07WASn5Tc-ieJDprTXoXp/view?usp=sharing',
+            video: 'https://vimeo.com/392397306',
             sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
             awards: 'Bronze Award in K.T. 15 (Digital Animation)',
           },
