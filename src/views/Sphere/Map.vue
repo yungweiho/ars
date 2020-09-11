@@ -21,15 +21,15 @@
     //- 表演的圖示
     .per_light(@click="to_sphere(6)")
     //- 圖書館的展覽
-    .light_core.lib_ex K - Exhibition
-      .light.lib_light
-      el-popover(placement="top-start"
-        width="200"
-        trigger="hover")
-        .point_pic(:style="{background: 'url(' + require('../../assets/spere_cover.jpg') + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
-        .maTitle 360° Exhibition
-        el-button.btn.btn-primary(type='info' plain @click="to_exhibition()") Click Here!
-        el-button(slot="reference").hover_button
+    //- .light_core.lib_ex K - Exhibition
+    //-   .light.lib_light
+    //-   el-popover(placement="top-start"
+    //-     width="200"
+    //-     trigger="hover")
+    //-     .point_pic(:style="{background: 'url(' + require('../../assets/spere_cover.jpg') + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
+    //-     .maTitle 360° Exhibition
+    //-     el-button.btn.btn-primary(type='info' plain @click="to_exhibition()") Click Here!
+    //-     el-button(slot="reference").hover_button
     //- 北門
     .light_core.north_door A
       .light
@@ -296,7 +296,7 @@ export default {
           cover: require('../../assets/sphere/radiation.png'),
         },
         {
-          title: '360° Exhibition',
+          title: 'Virtual Exhibition',
         },
         {
           title: '花光照林 | Flower Illuminating Forest',
