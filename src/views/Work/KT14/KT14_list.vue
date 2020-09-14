@@ -210,6 +210,7 @@ export default {
               require('../../../assets/flower/flower_02.jpg'),
               require('../../../assets/flower/flower_01.jpg'),
             ],
+            video: 'https://www.youtube.com/watch?v=kNeCvEUfa8E&feature=youtu.be',
             sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-3.11,-.03&ss=145',
           },
           {

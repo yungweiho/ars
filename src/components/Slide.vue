@@ -291,7 +291,7 @@ export default {
     },
     //滑鼠離開
     nomouse() {
-      this.slidemove = setInterval(() => this.setSlide(), 2000)
+      this.slidemove = setInterval(() => this.setSlide(), 3000)
     },
   },
   //離開前把計時器關掉
