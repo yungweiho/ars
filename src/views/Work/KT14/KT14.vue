@@ -9,7 +9,7 @@
       .line_top
     .workSlideContainer
       transition(name="fade" mode="out-in")
-        .workSlideBlock(v-for="(item, i) in kt14_data.works[Math.ceil($route.params.workid-1)].pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}" :class="{lung: Number($route.params.workid) === 4}")
+        .workSlideBlock(v-for="(item, i) in kt14_data.works[Math.ceil($route.params.workid-1)].pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}" :class="{lung: Number($route.params.workid) === 4 && p === 2}")
       .workSlidePrev(@click="p === 0? p = kt14_data.works[Math.ceil($route.params.workid-1)].pic.length-1 : p--")
         .line1
         .line2
@@ -20,6 +20,8 @@
       .workSlideOtherPic(v-for="(item, i) in kt14_data.works[Math.ceil($route.params.workid-1)].pic" :key="i" @click="p = i" :class="{select: p === i}" :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat'}")
     .link_block
       a(:href="kt14_data.works[Math.ceil($route.params.workid-1)].video" targety="_blank" v-if="kt14_data.works[Math.ceil($route.params.workid-1)].video")
+        .video_icon
+      a(:href="kt14_data.works[Math.ceil($route.params.workid-1)].video2" targety="_blank" v-if="kt14_data.works[Math.ceil($route.params.workid-1)].video2" style="margin-left: 10px")
         .video_icon
       a(:href="kt14_data.works[Math.ceil($route.params.workid-1)].sphere" target="_blank" v-if="kt14_data.works[Math.ceil($route.params.workid-1)].sphere")
         .sphere_icon

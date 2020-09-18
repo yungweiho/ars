@@ -238,8 +238,13 @@ export default {
               },
             ],
             pic: [
-              require('../../../assets/KT14/lung/lung.jpg'),
-            ]
+              // require('../../../assets/KT14/lung/lung.jpg'),
+              require('../../../assets/KT14/lung/lung_02.jpg'),
+              require('../../../assets/KT14/lung/lung_03.jpg'),
+              require('../../../assets/KT14/lung/lung_04.jpg'),
+            ],
+            video: 'https://youtu.be/tfMia4F2evg',
+            video2: 'https://youtu.be/99pWVcRvJMc'
           }
         ]
       }
