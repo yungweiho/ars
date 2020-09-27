@@ -307,7 +307,7 @@ export default {
   methods: {
     to_sphere(id) {
       if (id == 15) {
-        window.open('https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609');
+        window.open('https://mpembed.com/show/?m=WoLAYDidS4M&mpu=609&mpv=1');
       } else {
         this.$router.push({
           path: '/panorama',
@@ -320,7 +320,7 @@ export default {
     },
     to_exhibition(place) {
       if (place === 'main') {
-        window.open('https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609');
+        window.open('https://mpembed.com/show/?m=WoLAYDidS4M&mpu=609&mpv=1');
       } else if (place === 'flower') {
         window.open('https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-3.11,-.03&ss=145');
       }

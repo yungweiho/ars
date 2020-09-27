@@ -3,14 +3,14 @@
   header.Head(:class="{scroll: slideHeight > 50}")
     nav.MenuBlock(:class="{scroll: slideHeight > 50}")
       router-link.MenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
-      a(href="https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609" target="_blank")
+      a(href="https://mpembed.com/show/?m=WoLAYDidS4M&mpu=609&mpv=1" target="_blank")
         .MenuItem Virtual Exhibition
     .SmallMenuIcon(@click="small_menu = !small_menu")
       .line1(:class="{push: small_menu === true}")
       .line2(:class="{push: small_menu === true}")
     .SmallMenuBlock(:class="{push: small_menu === true}")
       router-link.SmallMenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
-      a(href="https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609" target="_blank")
+      a(href="https://mpembed.com/show/?m=WoLAYDidS4M&mpu=609&mpv=1" target="_blank")
         .SmallMenuItem Virtual Exhibition
   main
     transition(name="fade" mode="out-in")
