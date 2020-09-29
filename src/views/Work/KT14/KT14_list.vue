@@ -244,7 +244,8 @@ export default {
               require('../../../assets/KT14/lung/lung_04.jpg'),
             ],
             video: 'https://youtu.be/tfMia4F2evg',
-            video2: 'https://youtu.be/99pWVcRvJMc'
+            video2: 'https://youtu.be/99pWVcRvJMc',
+            video3: 'https://youtu.be/wfPA5bfs1_8'
           }
         ]
       }
