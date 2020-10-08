@@ -225,8 +225,11 @@ export default {
 
 <style lang="sass">
 #map
+  position: absolute
   z-index: 2
-  width: 1920px
+  width: 1750px
+  margin-top: 50px
+  margin-left: 50px
   overflow-x: auto
 .cls-1, .cls-2, .cls-3, .cls-4, .cls-5
   fill: rgba(#fff, 0)

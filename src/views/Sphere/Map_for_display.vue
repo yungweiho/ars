@@ -1,8 +1,8 @@
 <template lang="pug">
 .ma
   .maBanner
-  .bread_block(v-if="$route.params.workid == undefined")
-    router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
+  //- .bread_block(v-if="$route.params.workid == undefined")
+  //-   router-link.bread(v-for="item in bread_data" :to="item.url" :class="{now: $route.path === item.url}") {{ item.title }}
   //- 移動版地點
   .ma_mobile_text_block(v-for="(item, i) in school_scene")
     .number_title(:class="{ke: i == 15 || i == 16}") {{ i == 15 || i == 16? 'Exhibition' : abc[i] }}
@@ -13,14 +13,14 @@
   //- 移動版地圖
   el-image(:src="url" :preview-src-list="srcList").ma_map_mobile
   .maBlock
-    //- Map_sketch
+    Map_sketch
     //- 地圖
-    .map_big
+    //- .map_big
     //- 展覽的圖示
     .exh_light.warn(@click="to_exhibition('main')")
-    .exh_light.tai(@click="to_exhibition('flower')")
+    //- .exh_light.tai(@click="to_exhibition('flower')")
     //- 表演的圖示
-    .per_light(@click="to_sphere(6)")
+    //- .per_light(@click="to_sphere(6)")
     //- 圖書館的展覽
     //- .light_core.lib_ex K - Exhibition
     //-   .light.lib_light
@@ -414,52 +414,52 @@ span
 
 .north_door
   position: absolute
-  top: 1050px
-  left: 400px
+  top: 800px
+  left: 520px
 
 .south_door
   position: absolute
-  top: 420px
-  left: 1230px
+  top: 100px
+  left: 1300px
 
 .famous_entry
   position: absolute
-  top: 800px
+  top: 520px
   left: 980px
 
 .famous_1f
   position: absolute
-  top: 800px
-  left: 1010px
+  top: 520px
+  left: 1015px
 
 .success_bridge
   position: absolute
-  top: 820px
-  left: 630px
+  top: 520px
+  left: 600px
 
 .success_lake
   position: absolute
-  top: 790px
+  top: 520px
   left: 700px
 .moon
   position: absolute
-  top: 660px
-  left: 1290px
+  top: 400px
+  left: 1350px
 
 .mei
   position: absolute
-  top: 690px
-  left: 1320px
+  top: 390px
+  left: 1310px
 
 .mei_2
   position: absolute
-  top: 700px
-  left: 1290px
+  top: 420px
+  left: 1325px
 
 .yi_out
   position: absolute
-  top: 480px
-  left: 1060px
+  top: 150px
+  left: 1100px
 
 // .yi_in
 //   position: absolute
@@ -468,27 +468,27 @@ span
 
 .thinking
   position: absolute
-  top: 910px
-  left: 750px
+  top: 680px
+  left: 720px
 .no_talk
   position: absolute
-  top: 590px
+  top: 290px
   left: 1160px
 
 .leaf
   position: absolute
-  top: 470px
-  left: 1280px
+  top: 170px
+  left: 1330px
 
 .atom
   position: absolute
-  top: 580px
-  left: 950px
+  top: 280px
+  left: 1000px
 
 .radiation
   position: absolute
-  top: 580px
-  left: 980px
+  top: 280px
+  left: 965px
 
 .lib_ex
   position: absolute
@@ -639,18 +639,21 @@ span
     top: -9px
 
 .exh_light
+  position: absolute
+  z-index: 4
   width: 150px
-  height: 40px
-  background: url('../../assets/map/ex.png')
+  height: 60px
+  background: url('../../assets/sphere/exh_b.png')
   +bgcon
   animation: ex_up_down 1s ease infinite
   +smallcom
     display: none
 .warn
   position: absolute
-  top: 900px
+  top: 650px
   left: 790px
   cursor: pointer
+  // box-shadow: 1px 1px 5px 6px rgba(#333, 0.5)
 .tai
   position: absolute
   top: 900px

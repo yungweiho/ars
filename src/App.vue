@@ -1,27 +1,32 @@
 <template lang="pug">
 #app
-  header.Head(:class="{scroll: slideHeight > 50}")
-    nav.MenuBlock(:class="{scroll: slideHeight > 50}")
-      router-link.MenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
-      a(href="https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609" target="_blank")
-        .MenuItem Virtual Exhibition
-    .SmallMenuIcon(@click="small_menu = !small_menu")
-      .line1(:class="{push: small_menu === true}")
-      .line2(:class="{push: small_menu === true}")
-    .SmallMenuBlock(:class="{push: small_menu === true}")
-      router-link.SmallMenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
-      a(href="https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609" target="_blank")
-        .SmallMenuItem Virtual Exhibition
+  //- header.Head(:class="{scroll: slideHeight > 50}")
+  //-   nav.MenuBlock(:class="{scroll: slideHeight > 50}")
+  //-     router-link.MenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
+  //-     a(href="https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609" target="_blank")
+  //-       .MenuItem Virtual Exhibition
+  //-   .SmallMenuIcon(@click="small_menu = !small_menu")
+  //-     .line1(:class="{push: small_menu === true}")
+  //-     .line2(:class="{push: small_menu === true}")
+  //-   .SmallMenuBlock(:class="{push: small_menu === true}")
+  //-     router-link.SmallMenuItem(v-for="item in navData" :to="item.url") {{ item.title }}
+  //-     a(href="https://mpembed.com/show/?m=wDdsuDgVHqg&mpu=609" target="_blank")
+  //-       .SmallMenuItem Virtual Exhibition
   main
+    Map_for_display(v-if="$route.path === '/'")
     transition(name="fade" mode="out-in")
-      router-view(:key="$route.path")
-  footer
-    .Foot
-      .FootText 國立清華大學 | National Tsing Hua University
+      router-view(:key="$route.path" v-if="$route.path !== '/'")
+  //- footer
+    //- .Foot
+      //- .FootText 國立清華大學 | National Tsing Hua University
 </template>
 
 <script>
+import Map_for_display from '@/views/Sphere/Map_for_display'
 export default {
+  components: {
+    Map_for_display
+  },
   name: 'app',
   data() {
     return {
