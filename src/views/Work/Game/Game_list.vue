@@ -162,7 +162,7 @@ export default {
               require('../../../assets/KT15/game/antivine/antivine_04.jpg'),
             ],
             video: 'https://youtu.be/X76SmZrGdeY',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-3.13,.71&ss=73&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-3.06,.74&ss=73',
             awards: 'Gold Award in K.T. 15 (Digital Game)',
           },
           {
@@ -236,7 +236,7 @@ export default {
               require('../../../assets/KT15/game/meleer/meleer_04.jpg'),
             ],
             video: 'https://youtu.be/ezD52uquFC8',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-3.13,.68&ss=71&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-2.94,.66&ss=71',
             awards: 'Silver Award in K.T. 15 (Digital Game)',
           },
           {
@@ -321,7 +321,7 @@ export default {
               require('../../../assets/KT15/game/somnus/somnus_04.jpg'),
             ],
             video: 'https://youtu.be/iyjFVcfWW1A',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-3.13,.64&ss=70&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-3.1,.64&ss=70',
             awards: 'Bronze Award in K.T. 15 (Digital Game)',
           },
           {
@@ -385,7 +385,7 @@ export default {
               require('../../../assets/KT15/game/vuvu/vuvu_08.jpg'),
             ],
             video: 'https://youtu.be/ew4xpLH9Eek',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=3.13,.58&ss=69&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-3.07,.5&ss=69',
             awards: 'K.T. science Award in K.T. 15 (Digital Game)',
           },
           {
@@ -439,7 +439,7 @@ export default {
               require('../../../assets/KT15/game/shadau/shadau_04.jpg'),
             ],
             video: 'https://www.youtube.com/watch?v=hHBEmgDpFSs&feature=youtu.be',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=3.1,.53&ss=72&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-3.13,.51&ss=72',
             awards: 'Quality Award in K.T. 15 (Digital Game)',
           },
         ]

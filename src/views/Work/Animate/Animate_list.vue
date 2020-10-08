@@ -99,7 +99,7 @@ export default {
               require('../../../assets/KT15/animate/zhan/zhan_04.jpg'),
             ],
             video: 'https://youtu.be/BmMeOp1ORdI',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.01,-.05&ss=53',
             awards: 'Gold Award in K.T. 15 (Digital Animation)',
           },
           {
@@ -147,7 +147,7 @@ export default {
               require('../../../assets/KT15/animate/phoo/phoo_04.jpg'),
             ],
             video: 'https://youtu.be/Pu1JpaIx8z8',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.01,-.05&ss=53',
             awards: 'Silver Award in K.T. 15 (Digital Animation)',
           },
           {
@@ -176,7 +176,7 @@ export default {
               require('../../../assets/KT15/animate/mother/mother_05.jpg'),
             ],
             video: 'https://vimeo.com/392397306',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.01,-.05&ss=53',
             awards: 'Bronze Award in K.T. 15 (Digital Animation)',
           },
           {
@@ -254,7 +254,7 @@ export default {
               require('../../../assets/KT15/animate/san/san_04.jpg'),
             ],
             video: 'https://youtu.be/K1wUJg0tPjI',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.01,-.05&ss=53',
             awards: 'K.T. science Award in K.T. 15 (Digital Animation)',
           },
           {
@@ -313,7 +313,7 @@ export default {
               require('../../../assets/KT15/animate/yui/yui_05.jpg'),
             ],
             video: 'https://youtu.be/iyAKZhcvWCY',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.01,-.05&ss=53',
             awards: 'Quality Award in K.T. 15 (Digital Animation)',
           },
           {
@@ -363,7 +363,7 @@ export default {
               require('../../../assets/KT15/animate/hua/hua_06.jpg'),
             ],
             video: 'https://youtu.be/bddgV2_dNT0',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.01,-.05&ss=53',
             awards: 'Honorable Mention in K.T. 15 (Digital Animation)',
           },
           {
@@ -431,7 +431,7 @@ export default {
               require('../../../assets/KT15/animate/yuang/yuang_04.jpg'),
             ],
             video: 'https://youtu.be/jYXFGzPUeYI',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.01,-.05&ss=53',
             awards: 'Honorable Mention in K.T. 15 (Digital Animation)',
           },
           {
@@ -469,7 +469,7 @@ export default {
               require('../../../assets/KT15/animate/zan/zan_04.jpg'),
             ],
             video: 'https://youtu.be/5oVyjf82LAI',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.01,-.05&ss=53',
             awards: 'Honorable Mention in K.T. 15 (Digital Animation)',
           },
           {
@@ -546,7 +546,7 @@ export default {
               require('../../../assets/KT15/animate/chen/chen_03.jpg'),
             ],
             video: 'https://youtu.be/2HweJrVDY1g',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&qs=1&sr=&ss=53&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.01,-.05&ss=53',
             awards: 'Honorable Mention in K.T. 15 (Digital Animation)',
           },
         ]

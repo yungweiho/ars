@@ -90,7 +90,7 @@ export default {
               require('../../../assets/KT15/techart/weather/weather_03.jpg'),
             ],
             video: 'https://youtu.be/dVpQnionPKc',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-.1,-1.09&ss=98&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.7,-.2&ss=99',
             awards: 'Gold Award & K.T. science Award in K.T. 15 (Interactive Technology Art)',
           },
           {
@@ -147,7 +147,7 @@ export default {
               require('../../../assets/KT15/techart/fish/fish_03.jpg'),
             ],
             video: 'https://youtu.be/KIyOln8W894',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=.01,-.31&ss=93&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.17,-.73&ss=94',
             awards: 'Silver Award in K.T. 15 (Interactive Technology Art)',
           },
           {
@@ -175,7 +175,7 @@ export default {
               require('../../../assets/KT15/techart/eun/eun_04.jpg'),
             ],
             video: 'https://streamable.com/d9wmdo',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-.05,.54&ss=75&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-3.08,.96&ss=76',
             awards: 'Bronze Award in K.T. 15 (Interactive Technology Art)',
           },
           {
@@ -203,7 +203,7 @@ export default {
               require('../../../assets/KT15/techart/body/body_04.jpg'),
             ],
             video: 'https://youtu.be/Co_yVVdvsPQ',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-3.14,1&ss=58&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-3.07,1.33&ss=59',
             awards: 'Quality Award in K.T. 15 (Interactive Technology Art)',
           },
           {
@@ -271,7 +271,7 @@ export default {
               require('../../../assets/KT15/techart/flower/flower_04.jpg'),
             ],
             video: 'https://youtu.be/7h5UNT9QpGk',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=,-.33&ss=90&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=.01,-.17&ss=90',
             awards: 'Honorable Mention in K.T. 15 (Interactive Technology Art)',
           },
           {
@@ -298,7 +298,7 @@ export default {
               require('../../../assets/KT15/techart/tiny/tiny_03.jpg'),
             ],
             video: 'https://www.youtube.com/watch?v=ZkHaD7KUogU',
-            sphere: 'https://my.matterport.com/show/?m=wDdsuDgVHqg&sr=-.02,-.45&ss=30&qs=1',
+            sphere: 'https://my.matterport.com/show/?m=WoLAYDidS4M&sr=-.07,.9&ss=33',
             awards: 'Honorable Mention in K.T. 15 (Interactive Technology Art)',
           },
         ]

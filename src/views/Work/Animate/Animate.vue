@@ -9,7 +9,7 @@
       .line_top
     .workSlideContainer
       transition(name="fade" mode="out-in")
-        .workSlideBlock(v-for="(item, i) in animate_data.works[Math.ceil($route.params.workid-1)].pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: '0 0', backgroundRepeat: 'no-repeat'}" :class="{yui: $route.path == '/Digital_Animation/work/8' && (p == 1 || p == 0)}")
+        .workSlideBlock(v-for="(item, i) in animate_data.works[Math.ceil($route.params.workid-1)].pic.slice(p, p+1)" :key="p"  :style="{background: 'url(' + item + ')', backgroundSize: 'cover', backgroundPosition: '0 0', backgroundRepeat: 'no-repeat'}" :class="{yui: $route.path == '/Digital_Animation/work/5' && (p == 1 || p == 0)}")
       .workSlidePrev(@click="p === 0? p = animate_data.works[Math.ceil($route.params.workid-1)].pic.length-1 : p--")
         .line1
         .line2

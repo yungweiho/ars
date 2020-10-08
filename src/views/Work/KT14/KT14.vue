@@ -23,6 +23,8 @@
         .video_icon
       a(:href="kt14_data.works[Math.ceil($route.params.workid-1)].video2" targety="_blank" v-if="kt14_data.works[Math.ceil($route.params.workid-1)].video2" style="margin-left: 10px")
         .video_icon
+      a(:href="kt14_data.works[Math.ceil($route.params.workid-1)].video3" targety="_blank" v-if="kt14_data.works[Math.ceil($route.params.workid-1)].video3" style="margin-left: 10px")
+        .video_icon
       a(:href="kt14_data.works[Math.ceil($route.params.workid-1)].sphere" target="_blank" v-if="kt14_data.works[Math.ceil($route.params.workid-1)].sphere")
         .sphere_icon
     .workTextBlock
